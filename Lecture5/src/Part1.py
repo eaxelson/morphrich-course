@@ -15,7 +15,8 @@
 #
 # or use a copies available in this directory. We will use a simplified test case.
 
-# First, the file kala.lexc (one-stem version of stems/nouns.lexc):
+# First, the file kala.lexc (one-stem version of stems/nouns.lexc).
+# TODO: Multichar_Symbols must be listed (+N +Pl +Ade {back} ^A2O etc.)
 #
 # ```
 # LEXICON Root
@@ -76,3 +77,23 @@
 # ```
 
 # First, compile the lexc files:
+#
+# TODO: we have to catenate the files: cat kala.lexc nouns.lexc clitics.lexc > kala_nouns_clitics.lexc
+from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect
+
+kala = compile_lexc_file('kala_nouns_clitics.lexc')
+print(kala.lookup('kala+N+Pl+Ade'))
+
+# Then compile twolc rules (TODO: result is written to file):
+compile_twolc_file('olo-phon.twolc','olo-phon.hfst')
+istr = HfstInputStream('olo-phon.hfst')
+rules = istr.read_all()
+istr.close()
+print(len(rules))
+
+# lexicon = regex('k a l a %{back%} %^A2O %> i %> l')
+# lexicon.compose_intersect(rules)
+# print(lexicon.lookup('kala{back}^A2O>i>l'))
+
+kala.compose_intersect(rules)
+print(kala.lookup('kala+N+Pl+Ade'))

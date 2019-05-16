@@ -5,9 +5,13 @@
 # * lexc: practices and automated documentation
 # * production and reuse of test materials for development of analysers/generators
 #
+# Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
+# file for Olonetsian Karelian nouns.
+# Download it from
 # https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml
+# or use a copy available in this directory.
 
-# First the configuration:
+# First the configuration that defines the analysis and generation transducers for hfst and xfst tools:
 #
 # ```
 #
@@ -22,7 +26,7 @@
 #
 # # ```
 
-# Then the tests (singular/plural * case * clitics):
+# Then the tests that define a full paradigm for the given test word:
 #
 # ```
 # Tests:
