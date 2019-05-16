@@ -16,11 +16,6 @@
 # * <a href="https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md">Foma Simple Intro</a>
 # * <a href="http://emmtee.net/oe/nodalida13/conference/43.pdf">Building an open-source development infrastructure for language technology projects</a>
 # 
-# Exercises: **install foma or hfst**
-# 
-# * <a href="https://fomafst.github.io/">foma</a>
-# * <a href="https://github.com/hfst/hfst/wiki/Download-And-Install">hfst</a>
-# 
 # ## The Giella infra
 # 
 # From the previous lecture:
@@ -228,7 +223,7 @@
 # 
 # * <a href="https://fomafst.github.io/">foma</a>
 # * <a href="https://github.com/hfst/hfst/wiki/Download-And-Install">hfst</a>
-# * <a href="http://divvun.no/doc/infra/infraremake/GettingStartedWithTheNewInfra.html#Only+the+GT+core+and+the+wanted+language%28s%29">The Giella infra</a>
+# * <a href="http://divvun.no/doc/infra/infraremake/GettingStartedWithTheNewInfra.html#Only+the+GT+core+and+the+wanted+language%28s%29">The Giella infra</a> (TODO: fix link)
 # 
 # ## Some finite-state tasks
 # 

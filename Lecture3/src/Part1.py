@@ -21,25 +21,25 @@ print(tr.lookup('345678.'))
 
 # Note that Uralic numerals follow a pattern different from e.g. Germanic ones
 # In both language groups, numerals 1-10 must be listed individually.
-
-# In Uralic: 11-19 follow the pattern N + TOISTA (TOISTA: 'of a second')
-# In Germanic: 11, 12, 13 separate and 14-19 N + TEEN (but e.g. five -> fifteen)
-
+#
+# In Uralic (Finnish): 11-19 follow the pattern N + TOISTA (TOISTA: 'of a second')
+# In Germanic (English): 11, 12, 13 separate and 14-19 N + TEEN (but e.g. five -> fifteen)
+#
 # In Uralic: 20-99 follow the pattern N + KYMMENTA (+ M)
 # In Germanic: same pattern but 20, 30 often separate (two -> twenty, three -> thirty || zwei/zwo -> zwanzig || två -> tjugo)
-
+#
 # Also note that Uralic cardinals use singular partitive instead of (teen/zehn/ton || ty/ig/ti)
-# E.g. kolmesataaneljäkymmentä, 'three of a hundred four of a ten'
-
+# E.g. kolmesataaneljäkymmentä, 'three of a hundred + four of a ten'
+#
 # Ordinal numbers:
 # In Uralic: ordinality is visible in all parts: 145. -> sada*s*neljä*s*kymmene*s*viide*s*
 # In Germanic: ordinality is visible only in last part: 145. -> hundred fourty-fifth
-
+#
 # In Uralic: cardinals and ordinals are inflected in case and in number (singular, plural, even dual?)
-
+#
 # 145. sadasneljäskymmenesviides
 # 145. in translative: sadanneksineljänneksikymmenenneksiviidenneksi
-
+#
 # 145. in plural: sadannetneljännetkymmenennetviidennet
 # 145. in plural translative: sadansiksineljänsiksikymmenensiksiviidensiksi
 
