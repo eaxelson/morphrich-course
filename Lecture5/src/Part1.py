@@ -76,7 +76,7 @@
 # First, compile the lexc files:
 #
 # TODO: we have to catenate the files: cat kala.lexc nouns.lexc clitics.lexc > kala_nouns_clitics.lexc
-from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect
+from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
 
 kala = compile_lexc_file('kala_nouns_clitics.lexc')
 print(kala.lookup('kala+N+Pl+Ade'))
@@ -103,7 +103,8 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # Storing rules.
 # ```
 
-compile_twolc_file('olo-phon.twolc','olo-phon.hfst')
+# compile_twolc_file('olo-phon.twolc','olo-phon.hfst')
+
 istr = HfstInputStream('olo-phon.hfst')
 rules = istr.read_all()
 istr.close()
@@ -115,7 +116,47 @@ print(len(rules))
 
 kala.compose_intersect(rules)
 print(kala.lookup('kala+N+Pl+Ade'))
+print(kala.lookup('kala+N+Pl+Abl'))
 
 # and get the result (('kalo>i>l', 0.0),)
 #
 # '>' means morpheme boundary
+
+# ```
+# kala+N+Pl+Ade: kaloil
+# kala+N+Pl+Abl: [kaloilpäi, kaloil]
+# ```
+
+for testcase in ('kala+N+Pl+Ade','kala+N+Pl+Abl'):
+    results = kala.lookup(testcase)
+    for res in results:
+        print(res[0].replace('>',''))
+
+# Get rid of morpheme boundary '>'.
+kala.substitute('>',EPSILON)
+kala.minimize()
+
+# Check that each generated form produced by kala is listed
+# as a possible result in yaml file:
+
+with open ("N-kala_gt-norm.yaml", "r") as myfile:
+    data=myfile.readlines()
+for line in data:
+    if '     ' in line:
+        # kala+N+Sg+Abe: [kalata, kalattah]
+        pair = line.split(': ')
+        # 'kala+N+Sg+Abe'
+        analysis = pair[0].replace('     ','')
+        # ('kalata', 'kalattah')
+        generation = pair[1].replace('\n','').replace('[','').replace(']','').split(', ')
+        results = kala.lookup(analysis)
+        for res in results:
+            # res[0] is the output form, res[1] is the weight
+            if res[0] not in generation:
+                print('unknown result for analysis "' + analysis + '": "' + res[0] + '"')
+
+# Invert the generator to get an analyser.
+
+kala.invert()
+kala.minimize()
+print(kala.lookup('kaloil'))

@@ -114,3 +114,29 @@
 # ```
 
 # If there are hundreds or thousands of forms, best to list them alphabetically...
+# See verb inflection (https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml).
+# 141 forms. There are even more.
+
+
+# Compare e.g. with Low German verb inflection.
+# (https://victorio.uit.no/langtech/trunk/langs/nds/test/src/gt-norm-yamls/V-waien_gt-norm.yaml)
+#
+# ```
+#   Verb - waien: # Verb 'to blow (of wind)' - full paradigm
+#      waien+V+Ind+Prs+Sg1: waie
+#      waien+V+Ind+Prs+Sg2: waist
+#      waien+V+Ind+Prs+Sg3: wait
+#      waien+V+Ind+Prs+Pl: [waiet, waien]
+# 
+#      waien+V+Ind+Prt+Sg1: waide
+#      waien+V+Ind+Prt+Sg2: waidest
+#      waien+V+Ind+Prt+Sg3: waide
+#      waien+V+Ind+Prt+Pl: waiden
+# 
+#      waien+V+Inf:  waien
+#      waien+V+PrfPrc:  waid
+#      waien+V+PrsPrc:  waien
+# 
+#      waien+V+Imprt+Sg2:  wai
+#      waien+V+Imprt+Pl2:  waiet
+# ```

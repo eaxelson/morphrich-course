@@ -58,4 +58,4 @@ print(tr.lookup('1.1.'))
 
 tr = compile_lexc_file('transcriptor-clock-digit2text.lexc')
 print(tr.lookup('11:30'))
-print(tr.lookup('22:15'))
+print(tr.lookup('22:15')) # TODO
