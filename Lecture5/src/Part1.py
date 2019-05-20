@@ -16,10 +16,10 @@
 # or use a copies available in this directory. We will use a simplified test case.
 
 # First, the file kala.lexc (one-stem version of stems/nouns.lexc).
-# TODO: Multichar_Symbols must be listed (+N +Pl +Ade {back} ^A2O etc.)
+# Multicharacter symbols are listed in file (src/morphology/root.lexc)
 #
 # ```
-# LEXICON Root
+# LEXICON nouns
 # kala+N:kala N_KALA ;
 # ```
 
@@ -44,7 +44,7 @@
 #
 # and the continuation lexica (...).
 
-# We modify the clitics file by adding lexicon WORD-END
+# The clitics file (WORD-END is defined in file root.lexc):
 #
 # ```
 # !! Clitics
@@ -58,9 +58,6 @@
 # +Clt/bo:%>bo WORD-END " / -pA" ;
 # +Qst:%>go WORD-END " / -kO" ;
 # WORD-END ; 
-# 
-# LEXICON WORD-END
-# # ;
 # 
 # ! vim: set ft=xfst-lexc:
 # # ```
@@ -84,16 +81,41 @@ from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, reg
 kala = compile_lexc_file('kala_nouns_clitics.lexc')
 print(kala.lookup('kala+N+Pl+Ade'))
 
+# Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
+
+# Phonetic rules in file olo-phon.twolc, e.g.:
+#
+# ```
+# "a:o in the plural and preterite"
+# !! __@RULENAME@__
+# a:o <=> Cns: _ (%{back%}:) (%^WGStem:) %^A2O: ;
+# ```
+
 # Then compile twolc rules (TODO: result is written to file):
+# This takes some time and we get verbose output:
+#
+# ```
+# Reading alphabet.
+# Reading sets.
+# Reading and compiling definitions.
+# Reading rules and compiling their contexts and centers.
+# Compiling rules.
+# Storing rules.
+# ```
+
 compile_twolc_file('olo-phon.twolc','olo-phon.hfst')
 istr = HfstInputStream('olo-phon.hfst')
 rules = istr.read_all()
 istr.close()
+
+# We get 86 rules in total:
 print(len(rules))
 
-# lexicon = regex('k a l a %{back%} %^A2O %> i %> l')
-# lexicon.compose_intersect(rules)
-# print(lexicon.lookup('kala{back}^A2O>i>l'))
+# We compose-intersect the lexicon with the rules
 
 kala.compose_intersect(rules)
 print(kala.lookup('kala+N+Pl+Ade'))
+
+# and get the result (('kalo>i>l', 0.0),)
+#
+# '>' means morpheme boundary
