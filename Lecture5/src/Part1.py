@@ -4,19 +4,24 @@
 #
 # * Twolc & xfst rewrite rules
 #
-# Have a look at some Olonetsian Karelian lexc files.
+# <ul>
+# <li>1. <a href="#"></a></li>
+# </ul>
 #
-# Download them from:
+# Have a look at some Olonetsian Karelian lexc/twolc files in Giella repo:
 #
-# * https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc
-# * https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc
-# * https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/clitics.lexc
-# * https://victorio.uit.no/langtech/trunk/langs/olo/src/phonology/olo-phon.twolc
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a>
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc">affixes/nouns.lexc</a>
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/clitics.lexc">affixes/clitics.lexc</a>
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/phonology/olo-phon.twolc">olo-phon.twolc</a>
 #
-# or use a copies available in this directory. We will use a simplified test case.
+# or use a copies available in this directory. We will use a simplified test case where stems/nouns.lexc will be
+# replaced with a single-stem file kala.lexc.
 
-# First, the file kala.lexc (one-stem version of stems/nouns.lexc).
-# Multicharacter symbols are listed in file (src/morphology/root.lexc)
+# Multicharacter symbols and root and end lexica are listed in file
+# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
+
+# We used a simplified one-stem version of stems/nouns.lexc named kala.lexc.
 #
 # ```
 # LEXICON nouns
@@ -42,7 +47,7 @@
 # +Sem/Hum: NMN_KALA ;
 # # ```                
 #
-# and the continuation lexica (...).
+# and the continuation lexica (N_KALA-SG, N_KALA-PL, NMN_KALA, NMN_KALA-PL, N-HUM_KALA).
 
 # The clitics file (WORD-END is defined in file root.lexc):
 #
@@ -58,8 +63,7 @@
 # +Clt/bo:%>bo WORD-END " / -pA" ;
 # +Qst:%>go WORD-END " / -kO" ;
 # WORD-END ; 
-# 
-# ! vim: set ft=xfst-lexc:
+#
 # # ```
 
 # We use olo-phon.lexc as such. Note e.g.:
@@ -75,10 +79,10 @@
 
 # First, compile the lexc files:
 #
-# TODO: we have to catenate the files: cat kala.lexc nouns.lexc clitics.lexc > kala_nouns_clitics.lexc
+# TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
 from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
 
-kala = compile_lexc_file('kala_nouns_clitics.lexc')
+kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
 print(kala.lookup('kala+N+Pl+Ade'))
 
 # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)

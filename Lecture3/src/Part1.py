@@ -4,16 +4,22 @@
 #
 # Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian</a>.
 #
-# ## Numerals
+# <ul>
+# <li>1. <a href="#1.-Numerals">Numerals</a></li>
+# <li>2. <a href="#2.-Dates">Dates</a></li>
+# <li>3. <a href="#3.-Clocks">Clocks</a></li>
+# </ul>
+
+# ## 1. Numerals
 #
-# Download transcriptor-numbers-digit2text.lexc (or use a copy available in this directory).
+# Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-numbers-digit2text.lexc">transcriptor-numbers-digit2text.lexc</a>
+# (or use a copy available in this directory).
 #
 
 from hfst_dev import compile_lexc_file
 tr = compile_lexc_file('transcriptor-numbers-digit2text.lexc')
 
-# test cases
-
+# test some numerals
 print(tr.lookup('111'))
 print(tr.lookup('111.'))
 print(tr.lookup('345678'))
@@ -43,17 +49,19 @@ print(tr.lookup('345678.'))
 # 145. in plural: sadannetneljännetkymmenennetviidennet
 # 145. in plural translative: sadansiksineljänsiksikymmenensiksiviidensiksi
 
-# ## Dates
+# ## 2. Dates
 #
-# https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-date-digit2text.lexc
+# Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-date-digit2text.lexc">transcriptor-date-digit2text.lexc</a>
+# (or use a copy available in this directory).
 #
 
 tr = compile_lexc_file('transcriptor-date-digit2text.lexc')
 print(tr.lookup('1.1.'))
 
-# ## Clocks
+# ## 3. Clocks
 #
-# https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-clock-digit2text.lexc
+# Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-clock-digit2text.lexc">transcriptor-clock-digit2text.lexc</a>
+# (or use a copy available in this directory).
 #
 
 tr = compile_lexc_file('transcriptor-clock-digit2text.lexc')

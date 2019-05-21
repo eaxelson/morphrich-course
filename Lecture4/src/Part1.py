@@ -5,10 +5,14 @@
 # * lexc: practices and automated documentation
 # * production and reuse of test materials for development of analysers/generators
 #
+# <ul>
+# <li>1. <a href="#"></a></li>
+# </ul>
+#
 # Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
-# file for Olonetsian Karelian nouns.
+# file for Olonetsian Karelian nouns (N-kala_gt-norm.yaml).
 # Download it from
-# https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml
+# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml">Giella repo</a>
 # or use a copy available in this directory.
 
 # First the configuration that defines the analysis and generation transducers for hfst and xfst tools:
@@ -114,12 +118,11 @@
 # ```
 
 # If there are hundreds or thousands of forms, best to list them alphabetically...
-# See verb inflection (https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml).
-# 141 forms. There are even more.
+# See <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml">verb inflection</a>.
+# There are 141 forms listed but there are even more.
 
 
-# Compare e.g. with Low German verb inflection.
-# (https://victorio.uit.no/langtech/trunk/langs/nds/test/src/gt-norm-yamls/V-waien_gt-norm.yaml)
+# Compare e.g. with <a href="https://victorio.uit.no/langtech/trunk/langs/nds/test/src/gt-norm-yamls/V-waien_gt-norm.yaml">Low German verb inflection</a>:
 #
 # ```
 #   Verb - waien: # Verb 'to blow (of wind)' - full paradigm

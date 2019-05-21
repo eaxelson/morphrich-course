@@ -1,10 +1,7 @@
 # # MORPHOLOGICALLY RICH LANGUAGES WITH HFST TOOLS - LECTURE 2
 #
 # <ul>
-# <li>1. <a href="#1.-Prerequisites">Prerequisites</a></li>
-# <li>2. <a href="#2.-Course-material">Course material</a></li>
-# <li>3. <a href="#3.-Course-overview">Course overview</a></li>
-# <li>4. <a href="#6.-Majority-vs-minority-language-technology">Majority vs. minority language technology</a></li>
+# <li>1. <a href="#1.-The-Giella-infra">The Giella infra</a></li>
 # </ul>
 #
 # Intro to the Giella infra and a variety of finite-state tasks
@@ -165,8 +162,7 @@
 # It does require that all language independent changes are done via the templates, and *only there*. Otherwise you will get `svn` conflicts when merging, and the cost increases very fast.
 # 
 # ### Testing
-# 
-# 
+#  
 # Systematic testing is essential, and the infrastructure supports several types of tests:
 # 
 # * classes of words/inflections/alternations
@@ -192,7 +188,6 @@
 # ```
 # 
 # This can be used both as a development gold standard, and as regression testing later.
-# 
 # 
 # There is more about testing <a href="http://divvun.no/doc/infra/infraremake/AddingMorphologicalTestData.html">here</a>. (todo: fix link)
 # 

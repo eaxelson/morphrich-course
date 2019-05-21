@@ -4,7 +4,7 @@
 # <li>1. <a href="#1.-Prerequisites">Prerequisites</a></li>
 # <li>2. <a href="#2.-Course-material">Course material</a></li>
 # <li>3. <a href="#3.-Course-overview">Course overview</a></li>
-# <li>4. <a href="#6.-Majority-vs-minority-language-technology">Majority vs. minority language technology</a></li>
+# <li>4. <a href="#4.-Majority-vs-minority-language-technology">Majority vs. minority language technology</a></li>
 # </ul>
 #
 # ## HFST - Helsinki Finite-State Technology
