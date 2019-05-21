@@ -107,7 +107,7 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # Storing rules.
 # ```
 
-# compile_twolc_file('olo-phon.twolc','olo-phon.hfst')
+compile_twolc_file('olo-phon.twolc','olo-phon.hfst',verbose=True)
 
 istr = HfstInputStream('olo-phon.hfst')
 rules = istr.read_all()

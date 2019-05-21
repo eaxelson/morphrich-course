@@ -13,7 +13,7 @@
 # * <a href="https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md">Foma Simple Intro</a>
 # * <a href="http://emmtee.net/oe/nodalida13/conference/43.pdf">Building an open-source development infrastructure for language technology projects</a>
 # 
-# ## The Giella infra
+# ## 1. The Giella infra
 # 
 # From the previous lecture:
 # 

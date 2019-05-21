@@ -41,13 +41,12 @@ print(tr.lookup('345678.'))
 # In Uralic: ordinality is visible in all parts: 145. -> sada*s*neljä*s*kymmene*s*viide*s*
 # In Germanic: ordinality is visible only in last part: 145. -> hundred fourty-fifth
 #
-# In Uralic: cardinals and ordinals are inflected in case and in number (singular, plural, even dual?)
+# In Uralic: cardinals and ordinals are inflected in case and in number (singular, plural, even dual?). For example for the ordinal 145:
 #
-# 145. sadasneljäskymmenesviides
-# 145. in translative: sadanneksineljänneksikymmenenneksiviidenneksi
-#
-# 145. in plural: sadannetneljännetkymmenennetviidennet
-# 145. in plural translative: sadansiksineljänsiksikymmenensiksiviidensiksi
+# * singular nominative: sadasneljäskymmenesviides
+# * singular translative: sadanneksineljänneksikymmenenneksiviidenneksi
+# * plural nominative: sadannetneljännetkymmenennetviidennet
+# * plural translative: sadansiksineljänsiksikymmenensiksiviidensiksi
 
 # ## 2. Dates
 #
