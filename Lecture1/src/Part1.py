@@ -92,7 +92,7 @@ print(hfst_dev.__version__)
 # * typing:
 #     * Gutenberg increased production speed tremendously, and similarly reduced costs
 #     * but the initial costs got much higher — now a pen or a knife or a stick was not enough anymore, you need types, lots of types, and a big machine
-#     * <a href="img/printpress.jpg">Gutenberg</a>)
+#     * Gutenberg <img src="img/printpress.jpg">
 # * digitalisation:
 #     * reducing the cost of text production dramatically once more
 #     * but the initial costs and barriers again goes up, as you need:
@@ -102,7 +102,7 @@ print(hfst_dev.__version__)
 #         * an encoding standard
 #         * standards for languages, writing systems, areas, etc
 #         * operating systems that can render your text properly using all the above (and this is still not the case for some writing systems: <a href="https://en.wikipedia.org/wiki/Mongolian_script#Font_issues">«As of 2015 there are no fonts that successfully display all of Mongolian correctly when written in Unicode.»</a>, cf also Kildin Sámi and any other language forced to use combining diacritics because Unicode does not allow any new precomposed letters)
-#         * <a href="img/internet.jpg">Internet</a>
+#         * Internet <img src="img/internet.jpg">
 #
 #
 # That is just the prerequisite costs. To actually get the LT tools you expect for e.g. Finnish, you would also need:
@@ -137,7 +137,7 @@ print(hfst_dev.__version__)
 # 
 # And there are really big languages with tens of millions of speakers with no language technology support at all, as documented in the article linked to for this lecture.
 # 
-# <a href="img/293-2067-1-PB.jpg">digital divide</a>
+# <img src="img/293-2067-1-PB.jpg">
 # 
 # #### Linguistic differences
 # 

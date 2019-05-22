@@ -2,6 +2,8 @@
 #
 # <ul>
 # <li>1. <a href="#1.-The-Giella-infra">The Giella infra</a></li>
+# <li>2. <a href="#2.-</a></li>
+# <li>3. <a href="#3.-Some-finite-state-tasks</a>Some finite-state tasks</li>
 # </ul>
 #
 # Intro to the Giella infra and a variety of finite-state tasks
@@ -214,14 +216,15 @@
 # 
 # We use the exact same setup for desktop keyboards. The infrastructure / build commands will take the above text definition of the keyboard, and turn it into an iOS app, an Android app, a Windows keyboard installer and so on.
 # 
-# ## Install Hfst / Foma, optionally the full giella infra
+# ## 2. Install Hfst / Foma, optionally the full giella infra
 # 
 # * <a href="https://fomafst.github.io/">foma</a>
 # * <a href="https://github.com/hfst/hfst/wiki/Download-And-Install">hfst</a>
 # * <a href="http://divvun.no/doc/infra/infraremake/GettingStartedWithTheNewInfra.html#Only+the+GT+core+and+the+wanted+language%28s%29">The Giella infra</a> (TODO: fix link)
 # 
-# ## Some finite-state tasks
+# ## 3. Some finite-state tasks
 # 
-# We run through (some of) the excercises here:
+# We run through (some of) the excercises here (TODO: make a corresponding page for HFST at github wiki):
 # 
 # * <a href="https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md">Foma Simple Intro</a>
+

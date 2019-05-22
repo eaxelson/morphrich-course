@@ -13,35 +13,38 @@
 # ## 1. Numerals
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-numbers-digit2text.lexc">transcriptor-numbers-digit2text.lexc</a>
-# (or use a copy available in this directory).
+# (or use a copy available in this directory). The file describes how digits are converted into text.
 #
 
 from hfst_dev import compile_lexc_file
 tr = compile_lexc_file('transcriptor-numbers-digit2text.lexc')
 
-# test some numerals
+# test some numerals, both cardinal and ordinal
 print(tr.lookup('111'))
 print(tr.lookup('111.'))
 print(tr.lookup('345678'))
 print(tr.lookup('345678.'))
 
-# Note that Uralic numerals follow a pattern different from e.g. Germanic ones
-# In both language groups, numerals 1-10 must be listed individually.
+# Note that Uralic numerals follow a pattern different from e.g. Germanic ones.
+# Below are listed numerals 1-99 for Finnish and English:
 #
-# In Uralic (Finnish): 11-19 follow the pattern N + TOISTA (TOISTA: 'of a second')
-# In Germanic (English): 11, 12, 13 separate and 14-19 N + TEEN (but e.g. five -> fifteen)
+# * In both languages, numerals 1-10 must be listed individually.
+# * Numerals 11-19:
+#   * In Finnish: 11-19 follow the pattern N + TOISTA
+#   * In English: 11, 12, 13 must be listed separately and 14-19 follow the pattern N + TEEN (but e.g. five -> fifteen)
+# * Numerals 20-99:
+#   * In Finnish: the pattern N + KYMMENTÄ (+ M)
+#   * In English: same pattern but 20, 30 separate: two -> twenty, three -> thirty)
+#   * c.f. German zwei/zwo -> zwanzig, Swedish två -> tjugo
 #
-# In Uralic: 20-99 follow the pattern N + KYMMENTA (+ M)
-# In Germanic: same pattern but 20, 30 often separate (two -> twenty, three -> thirty || zwei/zwo -> zwanzig || två -> tjugo)
-#
-# Also note that Uralic cardinals use singular partitive instead of (teen/zehn/ton || ty/ig/ti)
-# E.g. kolmesataaneljäkymmentä, 'three of a hundred + four of a ten'
+# Also note that Finnish cardinals use singular partitive, e.g. 340: kolmesataaneljäkymmentä ('three of a hundred + four of a ten').
 #
 # Ordinal numbers:
-# In Uralic: ordinality is visible in all parts: 145. -> sada*s*neljä*s*kymmene*s*viide*s*
-# In Germanic: ordinality is visible only in last part: 145. -> hundred fourty-fifth
 #
-# In Uralic: cardinals and ordinals are inflected in case and in number (singular, plural, even dual?). For example for the ordinal 145:
+# * In Finnish: ordinality is visible in all parts: 145. -> sada*s*neljä*s*kymmene*s*viide*s*
+# * In English: ordinality is visible only in last part: 145. -> hundred fourty-fifth
+#
+# In Finnish: cardinals and ordinals are inflected in case and in number (singular, plural). For example for the ordinal 145:
 #
 # * singular nominative: sadasneljäskymmenesviides
 # * singular translative: sadanneksineljänneksikymmenenneksiviidenneksi
@@ -53,10 +56,29 @@ print(tr.lookup('345678.'))
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-date-digit2text.lexc">transcriptor-date-digit2text.lexc</a>
 # (or use a copy available in this directory).
 #
+# Ordinals and month names are both needed. Since there are only 31 ordinals, they can be listed individually.
 
 tr = compile_lexc_file('transcriptor-date-digit2text.lexc')
 print(tr.lookup('1.1.'))
 
+# Result is (('enzimäine päivy pakkaskuudu', 0.0), ('Pakkaskuun+Use/NG enzimäine päivy', 0.0), ('pakkaskuun+Use/NG enzimäine päivy', 0.0))
+#
+# Date can be expressed with:
+#
+# * partitive: 'enzimäine päivy pakkaskuudu' ("first day of pakkaskuu")
+# * genitive: 'pakkaskuun enzimäine päivy' ("pakkaskuu's first day").
+
+# Print all names of months
+
+for month in range(1,13):
+    res = tr.lookup('1.' + str(month) + '.')
+    print(res[0][0].replace('enzimäine päivy ','').replace('du',''))
+
+# Result: pakkaskuu, tuhukuu, kevätkuu, sulakuu, oraskuu, kezäkuu, heinykuu, elokuu, syvyskuu, ligakuu, kylmykuu, talvikuu
+#
+# * c.f. Finnish: tammikuu, helmikuu, maaliskuu, huhtikuu, toukokuu, kesäkuu, heinäkuu, elokuu, syyskuu, lokakuu, marraskuu, joulukuu
+# * c.f. Estonian: jaanuar, veebruar, märts, aprill, mai, juuni, juuli, august, september, oktoober, november, detsember
+  
 # ## 3. Clocks
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-clock-digit2text.lexc">transcriptor-clock-digit2text.lexc</a>
@@ -64,5 +86,22 @@ print(tr.lookup('1.1.'))
 #
 
 tr = compile_lexc_file('transcriptor-clock-digit2text.lexc')
-print(tr.lookup('11:30'))
+hour = '11'
+for minutes in range(0,60):
+    minutes = str(minutes)
+    if len(minutes) == 1:
+        minutes = '0' + minutes
+    clock = hour + ':' + minutes
+    print(clock + '\t' + str(tr.lookup(clock)))
+
+# <table>
+# <tr> <th>Clock</th> <th>Translation</th> </tr>
+# <tr> <td>11:00</td> <td>'eleven'</td> </tr>
+# <tr> <td>11:01 - 11:19</td> <td>'N past eleven'</td> </tr>
+# <tr> <td>11:20 - 11:29</td> <td>'N to half twelve'</td> </tr>
+# <tr> <td>11:30</td> <td>'half twelve'</td> </tr>
+# <tr> <td>11:31 - 11:40</td> <td>'N past half twelve'</td> </tr>
+# <tr> <td>11:40 - 11:59</td> <td>'N to twelve'</td> </tr>
+# </table>
+
 print(tr.lookup('22:15')) # TODO
