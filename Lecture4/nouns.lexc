@@ -1,0 +1,3542 @@
+!! !!!Noun inflection
+! ---------------
+!! Livvi nouns inflect in cases.
+!! Vowel harmony involves front and back
+!! Gradation does not affect all consonants, therefore
+!! there are three values: Yes, No and NA (not applicable)
+
+!! !!The file proper
+
+LEXICON N_
++Sg+Nom+TYÄ: # ;
+
+!! !ONE-SYLLABLE VOWEL-FINAL STEMS ENDING IN LONG VOWEL SEGMENT
+LEXICON N_SUO !!= @CODE@ suo:suo
+!! Gradation: No
+!! Harmony: Back
+:%{back%} ATTESTED-NOUN-STEM ; 
+:%{back%} NMN_KUU/PII ;
+
+LEXICON N_VYÖ !!= @CODE@ vyö:vyö
+!! Gradation: No
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ; 
+:%{front%} NMN_VYÖ ;
+
+LEXICON N_KUU !!= @CODE@ kuu:kuu
+!! Gradation: No
+!! Harmony: Back
+:%{back%} ATTESTED-NOUN-STEM ; 
+ N_KUU-SG ;
+ N_KUU-PL ;
+LEXICON N_KUU-SG
+:%{back%} NMN_KUU/PII-SG ;
+LEXICON N_KUU-PL
+:%{back%} NMN_KUU/PII-PL ;
+
+LEXICON N_PII !!= @CODE@ pii:pii
+!! Gradation: No
+!! Harmony: front
+:%{front%} ATTESTED-NOUN-STEM ; 
+ N_PII-SG ;
+ N_PII-PL ;
+LEXICON N_PII-SG
+:%{front%} NMN_KUU/PII-SG ;
+LEXICON N_PII-PL
+:%{front%} NMN_KUU/PII-PL ;
+
+LEXICON N_MUA !!= @CODE@ mua:mua
+!! Gradation: No
+!! Harmony: Back
+:%{back%} ATTESTED-NOUN-STEM ; 
+:%{back%} NMN_MUA ;
+
+LEXICON N_PIÄ !!= @CODE@ piä:piä
+!! Gradation: No
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ; 
+ N_PIÄ-SG ;
+ N_PIÄ-PL ;
+LEXICON N_PIÄ-SG
+:%{front%} NMN_PIÄ-SG ;
+LEXICON N_PIÄ-PL
+:%{front%} NMN_PIÄ-PL ;
+
+!! !TWO-SYLLABLE VOWEL-FINAL STEMS
+
+LEXICON N_PAPPI !!= @CODE@ pappi:pappi
+!! Gradation: Yes
+!! Harmony: Back
+!! stem final i is retained
+: ATTESTED-NOUN-STEM ; 
+	N_PAPPI-SG ;
+	N_PAPPI-PL ;
+LEXICON N_PAPPI-SG
+:%{back%} NMN_PAPPI/HÄKKI-SG ;
+LEXICON N_PAPPI-PL
+:%{back%} NMN_PAPPI/HÄKKI-PL ;
+
+LEXICON N_HÄKKI !!= @CODE@ häkki:häkki
+!! Gradation: Yes
+!! Harmony: Front
+!! stem final i is retained
+: ATTESTED-NOUN-STEM ; 
+	N_HÄKKI-SG ;
+	N_HÄKKI-PL ;
+LEXICON N_HÄKKI-SG
+:%{front%} NMN_PAPPI/HÄKKI-SG ;
+LEXICON N_HÄKKI-PL
+:%{front%} NMN_PAPPI/HÄKKI-PL ;
+
+LEXICON N_LEIRI !!= @CODE@ leiri:leiri
+!! Gradation NA
+!! Harmony: Front
+!! stem	final i is retained
+: ATTESTED-NOUN-STEM ; 
+	N_LEIRI-SG ;
+	N_LEIRI-PL ;
+LEXICON N_LEIRI-SG
+:%{front%} NMN_ARTELI/LEIRI-SG ;
+LEXICON N_LEIRI-PL
+:%{front%} NMN_ARTELI/LEIRI-PL ;
+
+LEXICON N_PADA !!= @CODE@ pada:pada
+!! Gradation Yes
+!! Harmony: Back
+!! stem final a changes to u in Sg Par
+!! stem final a changes to o before i in Pl stem
+: ATTESTED-NOUN-STEM ; 
+	N_PADA-SG  ;
+	N_PADA-PL  ;
+LEXICON N_PADA-SG
+:%{back%} NMN_PADA ;
+LEXICON N_PADA-PL
+:%{back%} NMN_PADA-PL ;
+
+
+LEXICON N_KALA !!= @CODE@ kala:kala
+!! Gradation NA
+!! Harmony: Back
+!! stem final a changes to u in Sg Par
+!! stem final a changes to o before i in Pl stem
+: ATTESTED-NOUN-STEM ; 
+	N_KALA-SG  ;
+	N_KALA-PL  ;
+LEXICON N_KALA-SG
+:%{back%} NMN_KALA ;
+LEXICON N_KALA-PL
+:%{back%} NMN_KALA-PL ;
+LEXICON N-HUM_KALA
++Sem/Hum: NMN_KALA ;
+
+LEXICON N_OZA !!= @CODE@ oza:oza
+!! Gradation NA
+!! Harmony: Back
+!! stem final a changes to u in Sg Par
+!! stem final a changes to 0 before i in Pl stem
+: ATTESTED-NOUN-STEM ; 
+	N_OZA-SG  ;
+	N_OZA-PL  ;
+
+LEXICON N_OZA-SG
+:%{back%} NMN_OZA/SÄYNÄ-SG ;
+
+LEXICON N_OZA-PL
+:%{back%} NMN_OZA/SÄYNÄ-PL ;
+
+LEXICON N_SÄYNÄ !!= @CODE@ säynä:säynä
+!! Gradation NA
+!! Harmony: Front
+!! stem final ä changes to i in Sg Par
+!! stem final ä changes to 0 before i in Pl stem
+
+: ATTESTED-NOUN-STEM ; 
+	N_SÄYNÄ-SG  ;
+	N_SÄYNÄ-PL  ;
+
+LEXICON N_SÄYNÄ-SG
+:%{front%} NMN_OZA/SÄYNÄ-SG ;
+
+LEXICON N_SÄYNÄ-PL
+:%{front%} NMN_OZA/SÄYNÄ-PL ;
+
+LEXICON N_KOIVU !!= @CODE@ koivu:koivu
+!! Gradation NA
+!! Harmony: Back
+!! There are no changes in stem-final __u__
+!! Plural stem in __loi__
+: ATTESTED-NOUN-STEM ; 
+        N_KOIVU-SG ;
+        N_KOIVU-PL ;
+
+LEXICON N_KOIVU-SG
+:%{back%} NMN_KOIVU/HERY-SG        ;
+
+LEXICON N_KOIVU-PL
+:%{back%} NMN_KOIVU/HERY-PL        ;
+
+LEXICON N_HERY !!= @CODE@ hery:hery
+!! Gradation NA
+!! Harmony: Front
+!! There are no	changes	in stem-final __y__
+!! Plural stem in __löi__
+: ATTESTED-NOUN-STEM ; 
+        N_HERY-SG ;
+        N_HERY-PL ;
+
+LEXICON N_HERY-SG
+:%{front%} NMN_KOIVU/HERY-SG        ;
+
+LEXICON N_HERY-PL
+:%{front%} NMN_KOIVU/HERY-PL        ;
+
+LEXICON N_IDY !!= @CODE@ idy:idy
+!! Gradation Yes
+!! Harmony: Front
+!! There are no changes in stem-final __y__
+!! Plural stem in __löi__
+: ATTESTED-NOUN-STEM ;
+        N_IDY-SG ;
+        N_IDY-PL ;
+
+LEXICON N_IDY-SG
+:%{front%} NMN_LUGU/IDY-SG        ;
+
+LEXICON N_IDY-PL
+:%{front%} NMN_LUGU/IDY-PL        ;
+
+LEXICON N_LUGU !!= @CODE@ lugu:lugu
+!! Gradation Yes
+!! Harmony: Back
+!! There are no changes in stem-final __u__
+!! Plural stem in __loi__
+: ATTESTED-NOUN-STEM ;
+        N_LUGU-SG ;
+        N_LUGU-PL ;
+
+LEXICON N_LUGU-SG
+:%{back%} NMN_LUGU/IDY-SG        ;
+
+LEXICON N_LUGU-PL
+:%{back%} NMN_LUGU/IDY-PL        ;
+
+LEXICON N_RUNO !!= @CODE@ runo:runo
+!! Gradation NA
+!! Harmony: Back
+!! Stem-fianl o changes to u in Sg Par
+!! Plural stem in __loi__
+: ATTESTED-NOUN-STEM ;
+	 N_RUNO-SG ;
+	 N_RUNO-PL ;
+
+LEXICON N_RUNO-SG
+:%{back%} NMN_RUNO/HÖRÖ-SG   ;
+LEXICON N_RUNO-PL
+:%{back%} NMN_RUNO/HÖRÖ-PL   ;
+
+LEXICON N_HÖRÖ !!= @CODE@ hörö:hörö
+!! Gradation NA
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+	 N_HÖRÖ-SG ;
+	 N_HÖRÖ-PL ;
+
+LEXICON N_HÖRÖ-SG
+:%{front%} NMN_RUNO/HÖRÖ-SG   ;
+LEXICON N_HÖRÖ-PL
+:%{front%} NMN_RUNO/HÖRÖ-PL   ;
+
+LEXICON N_RUADO !!= @CODE@ ruado:ruado
+!! Gradation Yes
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+	 N_RUADO-SG ;
+	 N_RUADO-PL ;
+
+LEXICON N_RUADO-SG
+:%{back%} NMN_RUADO/KYNDÖ-SG   ;
+LEXICON N_RUADO-PL
+:%{back%} NMN_RUADO/KYNDÖ-PL   ;
+
+LEXICON N_KYNDÖ !!= @CODE@ kyndö:kyndö
+!! Gradation Yes
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+	 N_KYNDÖ-SG ;
+	 N_KYNDÖ-PL ;
+
+LEXICON N_KYNDÖ-SG
+:%{front%} NMN_RUADO/KYNDÖ-SG   ;
+LEXICON N_KYNDÖ-PL
+:%{front%} NMN_RUADO/KYNDÖ-PL   ;
+
+!! !TWO-SYLLABLE VOWEL-FINAL STEM WITH UNIQUE +Nom+Sg VOWEL
+
+LEXICON N_JÄLGI  !!= @CODE@ jälgi:jälg
+!! Gradation Yes
+!! Harmony: Front
+:i ATTESTED-NOUN-STEM ;
+ N_JÄLGI-SG ;
+ N_JÄLGI-PL ;
+
+LEXICON N_JÄLGI-SG
+:%{front%} NMN_JÄLGI-SG ;
+LEXICON N_JÄLGI-PL
+:%{front%} NMN_JÄLGI-PL ;
+
+LEXICON N_JOGI  !!= @CODE@ jogi:jog
+!! Gradation Yes
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+ N_JOGI-SG ;
+ N_JOGI-PL ;
+
+LEXICON N_JOGI-SG
+:%{back%} NMN_JOGI-SG ;
+LEXICON N_JOGI-PL
+:%{back%} NMN_JOGI-PL ;
+
+
+LEXICON N_MUAMO !!= @CODE@ muamo:muama
+!! Gradation NA
+!! Harmony: Back
+:%^A2O ATTESTED-NOUN-STEM ;
+ N_MUAMO-SG ;
+ N_MUAMO-PL ;
+
+LEXICON N_MUAMO-SG
+:%{back%} NMN_MUAMO-SG ;
+LEXICON N_MUAMO-PL
+:%{back%} NMN_MUAMO-PL ;
+
+
+LEXICON N_TUATTO !!= @CODE@ tuatto:tuatta
+!! Gradation Yes
+!! Harmony: Back
+:%^A2O ATTESTED-NOUN-STEM ;
+ N_TUATTO-SG ;
+ N_TUATTO-PL ;
+
+LEXICON N_TUATTO-SG
+:%{back%} NMN_TUATTO-SG ;
+LEXICON N_TUATTO-PL
+:%{back%} NMN_TUATTO-PL ;
+
+LEXICON N_DIÄDÖ !!= @CODE@ diädö:diädä
+!! Gradation No
+!! Harmony: Front
+:%^A2O ATTESTED-NOUN-STEM ;
+ N_DIÄDÖ-SG ;
+ N_DIÄDÖ-PL ;
+
+LEXICON N_DIÄDÖ-SG
+:%{front%} NMN_DIÄDÖ-SG ;
+LEXICON N_DIÄDÖ-PL
+:%{front%} NMN_DIÄDÖ-PL ;
+
+LEXICON N_MUARJU !!= @CODE@ muarju:muarja
+!! Gradation No
+!! Harmony: Back
+:%^A2UÄ2Y ATTESTED-NOUN-STEM ;
+ N_MUARJU-SG ;
+ N_MUARJU-PL ;
+
+LEXICON N_MUARJU-SG
+:%{back%} NMN_MUARJU/PIÄSTÄNDY-SG ;
+LEXICON N_MUARJU-PL
+:%{back%} NMN_MUARJU/PIÄSTÄNDY-PL ;
+
+LEXICON N_PIÄSTÄNDY !!= @CODE@ piäständy:piäständä
+!! Gradation No
+!! Harmony: Front
+:%^A2UÄ2Y ATTESTED-NOUN-STEM ;
+ N_PIÄSTÄNDY-SG ;
+ N_PIÄSTÄNDY-PL ;
+
+LEXICON N_PIÄSTÄNDY-SG
+:%{front%} NMN_MUARJU/PIÄSTÄNDY-SG ;
+LEXICON N_PIÄSTÄNDY-PL
+:%{front%} NMN_MUARJU/PIÄSTÄNDY-PL ;
+
+
+LEXICON N_SUAJU !!= @CODE@ suaju:suaja
+!! Gradation No
+!! Harmony: Back
+:%^A2UÄ2Y ATTESTED-NOUN-STEM ;
+ N_SUAJU-SG ;
+ N_SUAJU-PL ;
+
+LEXICON N_SUAJU-SG
+:%{back%} NMN_SUAJU/XX-SG ;
+LEXICON N_SUAJU-PL
+:%{back%} NMN_SUAJU/XX-PL ;
+
+LEXICON N_AKKU !!= @CODE@ akku:akka
+!! Gradation Yes
+!! Harmony: Back
+:%^A2UÄ2Y ATTESTED-NOUN-STEM ;
+ N_AKKU-SG ;
+ N_AKKU-PL ;
+
+LEXICON N_AKKU-SG
+:%{back%} NMN_AKKU-SG ;
+LEXICON N_AKKU-PL
+:%{back%} NMN_AKKU-PL ;
+
+LEXICON N_KNIIGU !!= @CODE@ kniigu:kniiga
+!! Gradation No
+!! Harmony: Back
+:%{back%}%^A2U ATTESTED-NOUN-STEM ;
+ N_KNIIGU-SG ;
+ N_KNIIGU-PL ;
+
+LEXICON N_KNIIGU-SG
+:%{back%} NMN_KNIIGU-SG ;
+LEXICON N_KNIIGU-PL
+:%{back%} NMN_KNIIGU-PL ;
+
+LEXICON N_SULGU !!= @CODE@ sulgu:sulga
+!! Gradation Yes
+!! Harmony: Back
+:%^A2U ATTESTED-NOUN-STEM ;
+ N_SULGU-SG ;
+ N_SULGU-PL ;
+
+LEXICON N_SULGU-SG
+:%{back%} NMN_SULGU-SG ;
+
+LEXICON N_SULGU-PL
+:%{back%} NMN_SULGU-PL ;
+
+
+
+LEXICON N_KOIRU !!= @CODE@ koiru:koira
+!! Gradation NA
+!! Harmony: Back
+:%^A2U ATTESTED-NOUN-STEM ;
+ N_KOIRU-SG ;
+ N_KOIRU-PL ;
+
+LEXICON N_KOIRU-SG
+:%{back%} NMN_KOIRU/PÄIVY-SG ;
+
+LEXICON N_KOIRU-PL
+:%{back%} NMN_KOIRU/PÄIVY-PL ;
+
+LEXICON N_NIMI !!= @CODE@ nimi:nim
+!! Gradation NA
+!! Harmony: Front
+:i ATTESTED-NOUN-STEM ;
+	N_NIMI-SG  ;
+	N_NIMI-PL  ;
+
+LEXICON N_NIMI-SG
+:%{front%} NMN_HANGI/NIMI-SG ;
+
+LEXICON N_NIMI-PL
+:%{front%} NMN_HANGI/NIMI-PL ;
+
+LEXICON N_HANGI !!= @CODE@ hangi:hang
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+	N_HANGI-SG  ;
+	N_HANGI-PL  ;
+
+LEXICON N_HANGI-SG
+:%{back%} NMN_HANGI/NIMI-SG ;
+
+LEXICON N_HANGI-PL
+:%{back%} NMN_HANGI/NIMI-PL ;
+
+LEXICON N_PÄIVY !!= @CODE@ päivy:päivä
+!! Gradation NA
+!! Harmony: Front
+:%^A2U ATTESTED-NOUN-STEM ;
+	N_PÄIVY-SG ;
+	N_PÄIVY-PL ;
+
+LEXICON N_PÄIVY-SG
+:%{front%} NMN_KOIRU/PÄIVY-SG	;
+
+LEXICON N_PÄIVY-PL
+:%{front%} NMN_KOIRU/PÄIVY-PL	;
+
+LEXICON N_MEČČY !!= @CODE@ meččy:meččä
+!! Gradation Yes
+!! Harmony: Front
+:%^A2U ATTESTED-NOUN-STEM ;
+ N_MEČČY-SG ;
+ N_MEČČY-PL ;
+
+LEXICON N_MEČČY-SG
+:%{front%} NMN_MEČČY-SG ;
+LEXICON N_MEČČY-PL
+:%{front%} NMN_MEČČY-PL ;
+
+
+LEXICON N_IŽÄNDY !!= @CODE@ ižändy:ižändä
+!! Gradation No
+!! Harmony: Front
+:%^A2U ATTESTED-NOUN-STEM ;
+	N_IŽÄNDY-SG ;
+	N_IŽÄNDY-PL ;
+
+LEXICON N_IŽÄNDY-SG
+:%{front%} NMN_IŽÄNDY-SG	;
+
+LEXICON N_IŽÄNDY-PL
+:%{front%} NMN_IŽÄNDY-PL	;
+
+LEXICON N_LATE !!= @CODE@ late:latte
+!! Gradation Yes
+!! Harmony: Back
+!: ATTESTED-NOUN-STEM ; Work needed
+	N_LATE-SG	;
+	N_LATE-PL	;
+LEXICON N_LATE-SG
+:%{back%}	NMN_LATE/SIVE-SG	;
+
+LEXICON N_LATE-PL
+:%{back%}	NMN_LATE/SIVE-PL	;
+
+LEXICON N_SIVE !!= @CODE@ sive:side
+!! Gradation Yes
+!! Harmony: Front
+!: ATTESTED-NOUN-STEM ; Work needed
+	N_SIVE-SG	;
+	N_SIVE-PL	;
+LEXICON N_SIVE-SG
+:%{front%}	NMN_LATE/SIVE-SG	;
+
+LEXICON N_SIVE-PL
+:%{front%}	NMN_LATE/SIVE-PL	;
+
+LEXICON N_HARDIE_SUB
++Err/Orth: N_HARDIE ;
+LEXICON N_HARDIE !!= @CODE@ hardie:hardie
+!! Gradation NA
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_HARDIE-SG ;
+        N_HARDIE-PL ;
+
+LEXICON N_HARDIE-SG
+:%{back%} NMN_HARDIE-SG        ;
+
+LEXICON N_HARDIE-PL
+:%{back%} NMN_HARDIE-PL        ;
+
+LEXICON N_KONDII !!= @CODE@ kondii:kondi
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_KONDII-SG ;
+        N_KONDII-PL ;
+
+LEXICON N_KONDII-SG
+:%{back%} NMN_KONDII/STIPENDII-SG        ;
+
+LEXICON N_KONDII-PL
+:%{back%} NMN_KONDII/STIPENDII-PL        ;
+
+LEXICON N_STIPENDII !!= @CODE@ stipendii:stipendi
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_STIPENDII-SG ;
+        N_STIPENDII-PL ;
+
+LEXICON N_STIPENDII-SG
+:%{front%} NMN_KONDII/STIPENDII-SG        ;
+
+LEXICON N_STIPENDII-PL
+:%{front%} NMN_KONDII/STIPENDII-PL        ;
+
+LEXICON N_REBOI !!= @CODE@ reboi:reboi
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_REBOI-SG ;
+        N_REBOI-PL ;
+LEXICON N_REBOI-SG
+:%{back%} NMN_REBOI/JÄNÖI-SG ;
+LEXICON N_REBOI-PL
+:%{back%} NMN_REBOI/JÄNÖI-PL ;
+
+LEXICON N_JÄNÖI !!= @CODE@ jänöi:jänöi
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_JÄNÖI-SG ;
+        N_JÄNÖI-PL ;
+LEXICON N_JÄNÖI-SG
+:%{front%} NMN_REBOI/JÄNÖI-SG ;
+LEXICON N_JÄNÖI-PL
+:%{front%} NMN_REBOI/JÄNÖI-PL ;
+
+LEXICON N_PÖČÖI !!= @CODE@ pöčöi:pöččö
+!! Gradation Yes
+!! Harmony: Front
+:%^WGStemi ATTESTED-NOUN-STEM ;
+        N_PÖČÖI-SG ;
+        N_PÖČÖI-PL ;
+LEXICON N_PÖČÖI-SG
+:%{front%} NMN_PÖČÖI-SG ;
+LEXICON N_PÖČÖI-PL
+:%{front%} NMN_PÖČÖI-PL ;
+
+LEXICON N_VALGEI !!= @CODE@ valgei:valge
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_VALGEI-SG ;
+        N_VALGEI-PL ;
+
+LEXICON N_VALGEI-SG
+:%{back%} NMN_VALGEI/LIBEI-SG        ;
+
+LEXICON N_VALGEI-PL
+:%{back%} NMN_VALGEI/LIBEI-PL        ;
+
+LEXICON N_LIBEI !!= @CODE@ libei:libe
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_LIBEI-SG ;
+        N_LIBEI-PL ;
+
+LEXICON N_LIBEI-SG
+:%{front%} NMN_VALGEI/LIBEI-SG        ;
+
+LEXICON N_LIBEI-PL
+:%{front%} NMN_VALGEI/LIBEI-PL        ;
+
+LEXICON N_OSTAI !!= @CODE@ ostai:osta
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_OSTAI-SG ;
+        N_OSTAI-PL ;
+
+LEXICON N_OSTAI-SG
+:%>%{ijPRC%} NMN_OSTAI-SG        ;
+
+LEXICON N_OSTAI-PL
+:%>%{ijPRC%} NMN_OSTAI-PL        ;
+
+LEXICON N_PEZII !!= @CODE@ pezii:pezi
+!! Gradation NA
+!! Harmony: Front
+:i ATTESTED-NOUN-STEM ;
+        N_PEZII-SG ;
+        N_PEZII-PL ;
+
+LEXICON N_PEZII-SG
+:%>%{ijPRC%} NMN_PEZII-SG        ;
+
+LEXICON N_PEZII-PL
+:%>%{ijPRC%} NMN_PEZII-PL        ;
+
+
+LEXICON N_KESTÄY !!= @CODE@ kestäy:kestä
+!! Gradation NA
+!! Harmony: Front
+:y ATTESTED-NOUN-STEM ;
+        N_KESTÄY-SG ;
+        N_KESTÄY-PL ;
+
+LEXICON N_KESTÄY-SG
+:%> NMN_KESTÄY-SG        ;
+
+LEXICON N_KESTÄY-PL
+:%> NMN_KESTÄY-PL        ;
+
+!! !TWO-SYLLABLE VOWEL-FINAL STEMS WITH CONSONANT-FINAL PARTITIVE STEM
+LEXICON N_UKSI !!= @CODE@ uksi:uks
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+	N_UKSI-SG ;
+	N_UKSI-PL ;
+LEXICON N_UKSI-SG
+:%{back%} NMN_UKSI-SG ;
+LEXICON N_UKSI-PL
+:%{back%} NMN_UKSI-PL ;
+
+LEXICON N_SUARI !!= @CODE@ suari:suar
+!! Harmony: Back
+:%{back%} N_SUARI/KIELI_01 ;
+LEXICON N_SUARI-PL !!= @CODE@ suari:suar
+!! Harmony: Back
+:%{back%} N_SUARI/KIELI-PL ;
+
+LEXICON N_SUARI/KIELI_01 !!= @CODE@ kieli:kiel
+!! Gradation No
+:i ATTESTED-NOUN-STEM ;
+ N_SUARI/KIELI-SG ;
+ N_SUARI/KIELI-PL ;
+
+LEXICON N_SUARI/KIELI-SG
+:%{front%} 	NMN_SUARI/KIELI-SG ;
+LEXICON N_SUARI/KIELI-PL
+:%{front%} 	NMN_SUARI/KIELI-PL ;
+
+LEXICON N_KIELI !!= @CODE@ kieli:kiel
+!! Harmony: Front
+ N_KIELI-SG ;
+ N_KIELI-PL ;
+
+LEXICON N_KIELI-SG !!= @CODE@ kieli:kiel
+:%{front%} NMN_KIELI-SG ;
+LEXICON N_KIELI-PL !!= @CODE@ kieli:kiel
+!! Harmony: Front
+:%{front%} NMN_KIELI-PL ;
+
+
+
+LEXICON N_LAPSI !!= @CODE@ lapsi:laps lapsi:laps
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_LAPSI-SG  ;
+        N_LAPSI-PL  ;
+
+LEXICON N_LAPSI-SG
+:%{back%} NMN_LAPSI-SG ;
+
+LEXICON N_LAPSI-PL
+:%{back%} NMN_LAPSI-PL ;
+
+LEXICON N_VEZI !!= @CODE@ vezi:ved
+!! Gradation NA
+!! Harmony: Front
+:%^D2Z%>i ATTESTED-NOUN-STEM ;
+ N_VEZI-SG ;
+ N_VEZI-PL ;
+
+LEXICON N_VEZI-SG
+:%{front%} NMN_VUOZI/VEZI-SG ;
+
+LEXICON N_VEZI-PL
+:%{front%} NMN_VUOZI/VEZI-PL ;
+
+LEXICON N_SUZI !!= @CODE@ suzi:su
+!! Gradation NA
+!! Harmony: Back
+:zi ATTESTED-NOUN-STEM ;
+ N_SUZI-SG ;
+ N_SUZI-PL ;
+
+LEXICON N_SUZI-SG
+:%{back%} NMN_SUZI-SG ;
+
+LEXICON N_SUZI-PL
+:%{back%} NMN_SUZI-PL ;
+
+LEXICON N_VUOZI !!= @CODE@ vuozi:vuod
+!! Gradation NA
+!! Harmony: Back
+:%^D2Z%>i ATTESTED-NOUN-STEM ;
+ N_VUOZI-SG        ;
+ N_VUOZI-PL        ;
+
+LEXICON N_VUOZI-SG
+:%{back%} NMN_VUOZI/VEZI-SG	;
+LEXICON N_VUOZI-PL
+:%{back%} NMN_VUOZI/VEZI-PL	;
+
+!! !THREE-SYLLABLE VOWEL-FINAL STEMS
+LEXICON N_SYGYZY !!= @CODE@ sygyzy:sygyzy
+!! Gradation NA
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+        N_SYGYZY-SG ;
+        N_SYGYZY-PL ;
+
+LEXICON N_SYGYZY-SG
+:%{front%} NMN_SYGYZY-SG        ;
+
+LEXICON N_SYGYZY-PL
+:%{front%} NMN_SYGYZY-PL        ;
+
+LEXICON N_VASKIČČU !!= @CODE@ vaskičču:vaskičča
+!! Gradation Yes
+!! Harmony: Back
+:%^A2U ATTESTED-NOUN-STEM ;
+        N_VASKIČČU-SG ;
+        N_VASKIČČU-PL ;
+
+LEXICON N_VASKIČČU-SG
+:%{back%} NMN_VASKIČČU-SG        ;
+
+LEXICON N_VASKIČČU-PL
+:%{back%} NMN_VASKIČČU-PL        ;
+
+!! !THREE-SYLLABLE STEMS WITH TWO-SYLLABLE NOMINATIVE SINGULAR
+LEXICON N_KARJAL !!= @CODE@ karjal:karjal
+!! Gradation NA
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+	N_KARJAL-SG ;
+	N_KARJAL-PL ;
+LEXICON N_KARJAL-SG !!= @CODE@ karjal:karjal
+:	NMN_KARJAL-SG ;
+LEXICON N_KARJAL-PL !!= @CODE@ karjal:karjal
+:	NMN_KARJAL-PL ;
+
+LEXICON N_MADAL !!= @CODE@ madal:madal
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+	N_MADAL-SG ;
+	N_MADAL-PL ;
+LEXICON N_MADAL-SG !!= @CODE@ madal:madal
+:	NMN_MADAL-SG ;
+LEXICON N_MADAL-PL !!= @CODE@ madal:madal
+:	NMN_MADAL-PL ;
+
+LEXICON N_PIIRAI !!= @CODE@ piirai:piira CHECK THIS
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_PIIRAI-SG ;
+        N_PIIRAI-PL ;
+
+LEXICON N_PIIRAI-SG
+:%{back%} NMN_PIIRAI/VERÄI-SG ;
+
+LEXICON N_PIIRAI-PL
+:%{back%} NMN_PIIRAI/VERÄI-PL ;
+
+LEXICON N_VERÄI !!= @CODE@ veräi:verä CHECK THIS
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_VERÄI-SG ;
+        N_VERÄI-PL ;
+
+LEXICON N_VERÄI-SG
+:%{front%} NMN_PIIRAI/VERÄI-SG ;
+
+LEXICON N_VERÄI-PL
+:%{front%} NMN_PIIRAI/VERÄI-PL ;
+
+
+LEXICON N_KANDAI !!= @CODE@ kandai:kanda
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+        N_KANDAI-SG ;
+        N_KANDAI-PL ;
+
+LEXICON N_KANDAI-SG
+:%{back%} NMN_KANDAI-SG ;
+
+LEXICON N_KANDAI-PL
+:%{back%} NMN_KANDAI-PL ;
+
+LEXICON  N_AVUAJU !!= @CODE@ 
+!! Gradation NA
+!! Harmony: Back
+!!:%^A2U ATTESTED-NOUN-STEM ; Work needed
+:%{back%}%>%{ijPRC%}a NMN_AVUAJU/KERIÄJY ;
+
+LEXICON  N_KERIÄJY !!= @CODE@ piästäjy:piästä
+!! Gradation NA
+!! Harmony: Front
+!!:%^A2U ATTESTED-NOUN-STEM ; Work needed
+:%{front%}%>%{ijPRC%}ä NMN_AVUAJU/KERIÄJY ;
+
+
+LEXICON N_PAGIZII !!= @CODE@ pagizii:pagizi
+!! Gradation NA
+!! Harmony: Back
+:i ATTESTED-NOUN-STEM ;
+ N_PAGIZII-SG ;
+ N_PAGIZII-PL ;
+LEXICON N_PAGIZII-SG !!= @CODE@ 
+:%{back%}%>%{ijPRC%} NMN_PAGIZII-SG ;
+LEXICON N_PAGIZII-PL !!= @CODE@ 
+:%{back%}%>%{ijPRC%} NMN_PAGIZII-PL ;
+
+LEXICON N_HUOLETOI !!= @CODE@ huoletoi: huolet
+!! Gradation Yes
+!! Harmony: Back
+!:%^A2U ATTESTED-NOUN-STEM ; Work needed
+ N_HUOLETOI-SG ;
+ N_HUOLETOI-PL ;
+
+LEXICON N_HUOLETOI-SG
+:%{back%} NMN_HUOLETOI/JIÄTÖI-SG ;
+
+LEXICON N_HUOLETOI-PL
+:%{back%} NMN_HUOLETOI/JIÄTÖI-PL ;
+
+
+LEXICON N_SAMMAL !!= @CODE@ sammal:sammal
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+ N_SAMMAL-SG ;
+ N_SAMMAL-PL ;
+
+LEXICON N_SAMMAL-SG
+:%{back%} NMN_SAMMAL-SG ;
+
+LEXICON N_SAMMAL-PL
+:%{back%} NMN_SAMMAL-PL ;
+
+LEXICON N_TVER !!= @CODE@ tver:tver
+ N_TVER-SG ;
+ N_TVER-PL ;
+
+LEXICON N_TVER-SG
+:%{front%} NMN_TVER-SG ;
+
+LEXICON N_TVER-PL
+:%{front%} NMN_TVER-PL ;
+
+LEXICON N_ŠOUFER !!= @CODE@ šoufer:šoufer
+!! Vowel Harmony: Back
+ N_ŠOUFER-SG ;
+ N_ŠOUFER-PL ;
+
+LEXICON N_ŠOUFER-SG
+:%{back%} NMN_ŠOUFER-SG ;
+
+LEXICON N_ŠOUFER-PL
+:%{back%} NMN_ŠOUFER-PL ;
+
+LEXICON N_VANUIN !!= @CODE@ vanuin:vanui
+!! Gradation Yes
+!! Harmony: Back
+!! Stem	     consonant n/m
+!! Singular stem vowel 0/0/e
+!! Plural stem vowel i
+:n ATTESTED-NOUN-STEM ;
+ N_VANUIN-SG ;
+ N_VANUIN-PL ;
+
+LEXICON N_VANUIN-SG
+:%{back%} NMN_VANUIN-SG ;
+
+LEXICON N_VANUIN-PL
+:%{back%} NMN_VANUIN-PL ;
+
+LEXICON N_SAMMUTIN !!= @CODE@ sammutin:sammutti
+!! Gradation Yes
+!! Harmony: Back
+!! Stem consonant n/m
+!! Singular stem vowel 0/0/e
+!! Plural stem vowel i
+:%^WGStem%>n ATTESTED-NOUN-STEM ;
+ N_SAMMUTIN-SG ;
+ N_SAMMUTIN-PL ;
+
+LEXICON N_SAMMUTIN-SG
+:%{back%} NMN_SAMMUTIN/KEITIN-SG ;
+
+LEXICON N_SAMMUTIN-PL
+:%{back%} NMN_SAMMUTIN/KEITIN-PL ;
+
+LEXICON N_KEITIN !!= @CODE@ keitin:keitti
+!! Gradation Yes
+!! Harmony: Front
+!! Stem consonant n/m
+!! Singular stem vowel 0/0/e
+!! Plural stem vowel i
+:%^WGStem%>n ATTESTED-NOUN-STEM ;
+ N_KEITIN-SG ;
+ N_KEITIN-PL ;
+
+LEXICON N_KEITIN-SG
+:%{front%} NMN_SAMMUTIN/KEITIN-SG ;
+
+LEXICON N_KEITIN-PL
+:%{front%} NMN_SAMMUTIN/KEITIN-PL ;
+
+LEXICON N_LÄMMIN !!= @CODE@ lämmin:lämbi
+!! Gradation Yes
+!! Harmony: Front
+:%^WGStem%>n ATTESTED-NOUN-STEM ;
+ N_LÄMMIN-SG ;
+ N_LÄMMIN-PL ;
+
+LEXICON N_LÄMMIN-SG
+:%{front%} NMN_LÄMMIN-SG ;
+
+LEXICON N_LÄMMIN-PL
+:%{front%} NMN_LÄMMIN-PL ;
+
+LEXICON N_TAIGIN !!= @CODE@ taigin:taigin
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+ N_TAIGIN-SG ;
+ N_TAIGIN-PL ;
+
+LEXICON N_TAIGIN-SG
+:%{back%} NMN_TAIGIN-SG ;
+
+LEXICON N_TAIGIN-PL
+:%{back%} NMN_TAIGIN-PL ;
+
+LEXICON N_KARJALAINE !!= @CODE@ karjalaine:karjala
+!! Gradation NA
+!! Harmony: Back
+:s ATTESTED-NOUN-STEM ;
+ N_KARJALAINE-SG     ;
+ N_KARJALAINE-PL     ;
+
+LEXICON N_KARJALAINE-SG
+:%{back%} NMN_KARJALAINE/LIYGILÄINE-SG	 ;
+
+LEXICON N_KARJALAINE-PL
+:%{back%} NMN_KARJALAINE/LIYGILÄINE-PL	 ;
+
+LEXICON N_LIYGILÄINE !!= @CODE@ liygiläine:liygilä
+!! Gradation NA
+!! Harmony: Front
+:s ATTESTED-NOUN-STEM ;
+ N_LIYGILÄINE-SG     ;
+ N_LIYGILÄINE-PL     ;
+
+LEXICON N_LIYGILÄINE-SG
+:%{front%} NMN_KARJALAINE/LIYGILÄINE-SG	 ;
+
+LEXICON N_LIYGILÄINE-PL
+:%{front%} NMN_KARJALAINE/LIYGILÄINE-PL	 ;
+
+LEXICON N_NAINE !!= @CODE@ naine:nai
+!! Gradation NA
+!! Harmony: Back
+:s ATTESTED-NOUN-STEM ;
+ N_NAINE-SG     ;
+ N_NAINE-PL     ;
+
+LEXICON N_NAINE-SG
+:%{back%}    NMN_NAINE/KIELINE-SG         ;
+LEXICON N_NAINE-PL
+:%{back%}    NMN_NAINE/KIELINE-PL         ;
+
+LEXICON N_KIELINE !!= @CODE@ kieline:kieli
+!! Gradation NA
+!! Harmony: Front
+:s ATTESTED-NOUN-STEM ;
+ N_KIELINE-SG     ;
+ N_KIELINE-PL     ;
+
+LEXICON N_KIELINE-SG
+:%{front%}    NMN_NAINE/KIELINE-SG         ;
+LEXICON N_KIELINE-PL
+:%{front%}    NMN_NAINE/KIELINE-PL         ;
+
+LEXICON N_TOINE !!= @CODE@ toine:to
+!! Gradation NA
+!! Harmony: Back
+!:%^A2U ATTESTED-NOUN-STEM ; Work needed
+ N_TOINE-SG     ;
+ N_TOINE-PL     ;
+
+LEXICON N_TOINE-SG
+:%{back%} NMN_TOINE-SG         ;
+
+LEXICON N_TOINE-PL
+:%{back%} NMN_TOINE-PL         ;
+
+
+
+LEXICON N_RAIŠ !!= @CODE@ raiš:ra
+!! Gradation Yes
+!! Harmony: Back
+!:%^A2U ATTESTED-NOUN-STEM ; Work needed
+	N_RAIŠ-SG	;
+	N_RAIŠ-PL	;
+LEXICON N_RAIŠ-SG
+:	NMN_RAIŠ-SG	;
+
+LEXICON N_RAIŠ-PL
+:	NMN_RAIŠ-PL	;
+
+LEXICON N_TOVESTEH !!= @CODE@ tovesteh:tovesteh
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+	N_TOVESTEH-SG	;
+	N_TOVESTEH-PL	;
+LEXICON N_TOVESTEH-SG
+:%{back%}	NMN_TOVESTEH/PEREH-SG	;
+
+LEXICON N_TOVESTEH-PL
+:%{back%}	NMN_TOVESTEH/PEREH-PL	;
+
+LEXICON N_PEREH !!= @CODE@ pereh:pereh
+!! Gradation No
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+	N_PEREH-SG	;
+	N_PEREH-PL	;
+LEXICON N_PEREH-SG
+:%{front%}	NMN_TOVESTEH/PEREH-SG	;
+
+LEXICON N_PEREH-PL
+:%{front%}	NMN_TOVESTEH/PEREH-PL	;
+
+LEXICON N_HUIKEH !!= @CODE@ huikeh:huikkeh
+!! Gradation Yes
+!! Harmony: Front
+:%^WGStem ATTESTED-NOUN-STEM ;
+	N_HUIKEH-SG	;
+	N_HUIKEH-PL	;
+LEXICON N_HUIKEH-SG
+:%{back%}	NMN_HUIKEH/LIIKEH-SG	;
+
+LEXICON N_HUIKEH-PL
+:%{back%}	NMN_HUIKEH/LIIKEH-PL	;
+
+LEXICON N_LIIKEH !!= @CODE@ liikeh:liikkeh
+!! Gradation Yes
+!! Harmony: Front
+:%^WGStem ATTESTED-NOUN-STEM ;
+	N_LIIKEH-SG	;
+	N_LIIKEH-PL	;
+LEXICON N_LIIKEH-SG
+:%{front%}	NMN_HUIKEH/LIIKEH-SG	;
+
+LEXICON N_LIIKEH-PL
+:%{front%}	NMN_HUIKEH/LIIKEH-PL	;
+
+LEXICON N_PENGER !!= @CODE@ penger:penger
+!! Gradation No
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+	N_PENGER-SG	;
+	N_PENGER-PL	;
+LEXICON N_PENGER-SG
+:	NMN_PENGER-SG	;
+
+LEXICON N_PENGER-PL
+:	NMN_PENGER-PL	;
+
+LEXICON N_ARTELI !!= @CODE@ arteli:arteli
+!! Gradation No
+!! Harmony: Back
+:%{back%} ATTESTED-NOUN-STEM ;
+	N_ARTELI-SG ;
+	N_ARTELI-PL ;
+LEXICON N_ARTELI-SG
+:%{back%} NMN_ARTELI/LEIRI-SG ;
+LEXICON N_ARTELI-PL
+:%{back%} NMN_ARTELI/LEIRI-PL ;
+
+LEXICON N_PUHTAHUS !!= @CODE@ puhtahus:puhtahu
+!! Harmony: Back
+!! Gradation NA
+:%{back%}%>s ATTESTED-NOUN-STEM ;
+	N_PUHTAHUS-SG ;
+        N_PUHTAHUS-PL ;
+LEXICON N_PUHTAHUS-SG
+:%{back%} NMN_PUHTAHUS/VÄHYS-SG ;
+LEXICON N_PUHTAHUS-PL
+:%{back%} NMN_PUHTAHUS/VÄHYS-PL ;
+
+LEXICON N_VÄHYS !!= @CODE@ vähys:vähy
+!! Harmony: Back
+!! Gradation NA
+:%{back%}%>s ATTESTED-NOUN-STEM ;
+	N_VÄHYS-SG ;
+        N_VÄHYS-PL ;
+LEXICON N_VÄHYS-SG
+:%{front%} NMN_PUHTAHUS/VÄHYS-SG ;
+LEXICON N_VÄHYS-PL
+:%{front%} NMN_PUHTAHUS/VÄHYS-PL ;
+
+
+LEXICON N_AIGOMUS
+ N_ALUS ;
+
+LEXICON N_ALUS !!= @CODE@ alus:aluks
+!! Gradation No
+!! Harmony: Back
+:%^KS2S ATTESTED-NOUN-STEM ;
+ N_ALUS-SG ;
+ N_ALUS-PL ;
+
+LEXICON N_ALUS-SG !!= @CODE@ alus:aluks
+:%{back%} NMN_ALUS/ILVES-SG ;
+
+LEXICON N_ALUS-PL !!= @CODE@ alus:aluks
+:%{back%} NMN_ALUS/ILVES-PL ;
+
+LEXICON N_ILVES !!= @CODE@ ilves:ilveks
+!! Gradation No
+!! Harmony: Front
+:%^KS2S ATTESTED-NOUN-STEM ;
+ N_ILVES-SG ;
+ N_ILVES-PL ;
+
+LEXICON N_ILVES-SG !!= @CODE@ ilves:ilveks
+:%{front%} NMN_ALUS/ILVES-SG ;
+
+LEXICON N_ILVES-PL !!= @CODE@ ilves:ilveks
+:%{front%} NMN_ALUS/ILVES-PL ;
+
+LEXICON N_MIES !!= @CODE@ mies:mie
+!! Gradation No
+!! Harmony: Front
+:s ATTESTED-NOUN-STEM ;
+ N_MIES-SG ;
+ N_MIES-PL ;
+
+LEXICON N_MIES-SG !!= @CODE@ mies:mie
+:%{front%} NMN_MIES-SG ;
+
+LEXICON N_MIES-PL !!= @CODE@ mies:mie
+:%{front%} NMN_MIES-PL ;
+
+LEXICON N_KUURNIS !!= @CODE@ kuurnis:kuurne
+!! Gradation NA
+!! Harmony: Back
+:%>is ATTESTED-NOUN-STEM ;
+	N_KUURNIS-SG ;
+        N_KUURNIS-PL ;
+LEXICON N_KUURNIS-SG
+:%{back%} NMN_KUURNIS-SG ;
+LEXICON N_KUURNIS-PL
+:%{back%} NMN_KUURNIS-PL ;
+
+LEXICON N_SUALIŠ !!= @CODE@ suališ:suali
+!! Gradation NA
+!! Harmony: Back
+:š ATTESTED-NOUN-STEM ;
+ N_SUALIŠ-SG ;
+ N_SUALIŠ-PL ;
+
+LEXICON N_SUALIŠ-SG !!= @CODE@ suališ:suali
+:%{back%} NMN_SUALIŠ-SG ;
+
+LEXICON N_SUALIŠ-PL !!= @CODE@ suališ:suali
+:%{back%} NMN_SUALIŠ-PL ;
+
+LEXICON N_OLUT !!= @CODE@ olut:olu
+!! Gradation No
+!! Harmony: Back
+:t ATTESTED-NOUN-STEM ;
+ N_OLUT-SG ;
+ N_OLUT-PL ;
+
+LEXICON N_OLUT-SG
+:%{back%} NMN_OLUT-SG ;
+
+LEXICON N_OLUT-PL
+:%{back%} NMN_OLUT-PL ;
+
+LEXICON N_KEVÄT !!= @CODE@ kevät:kevä
+!! Gradation No
+!! Harmony: Front
+:t ATTESTED-NOUN-STEM ;
+ N_KEVÄT-SG ;
+ N_KEVÄT-PL ;
+
+LEXICON N_KEVÄT-SG
+:%{front%} NMN_KEVÄT-SG ;
+
+LEXICON N_KEVÄT-PL
+:%{front%} NMN_KEVÄT-PL ;
+
+LEXICON N_TUHAT !!= @CODE@ tuhat:tuha
+!! Gradation No
+!! Harmony: Back
+!: ATTESTED-NOUN-STEM ; Work needed
+ N_TUHAT-SG ;
+ N_TUHAT-PL ;
+
+LEXICON N_TUHAT-SG
+:%{back%} NMN_TUHAT-SG ;
+
+LEXICON N_TUHAT-PL
+:%{back%} NMN_TUHAT-PL ;
+
+LEXICON N_ARMAS !!= @CODE@ armas:arma
+!! Gradation NA
+!! Harmony: Back
+:s ATTESTED-NOUN-STEM ;
+    N_ARMAS-SG        ;
+    N_ARMAS-PL        ;
+LEXICON N_ARMAS-SG
+:%{back%} NMN_ARMAS/EVAES-SG	;
+LEXICON N_ARMAS-PL
+:%{back%} NMN_ARMAS/EVAES-PL	;
+
+LEXICON N_EVAES !!= @CODE@ eväs:evä
+!! Gradation Yes
+!! Harmony: Front
+:s ATTESTED-NOUN-STEM ;
+    N_EVAES-SG        ;
+    N_EVAES-PL        ;
+LEXICON N_EVAES-SG
+:%{front%} NMN_ARMAS/EVAES-SG	;
+LEXICON N_EVAES-PL
+:%{front%} NMN_ARMAS/EVAES-PL	;
+
+LEXICON N_VARVAS !!= @CODE@ varvas:varba
+!! Gradation NA
+!! Harmony: Back
+:%^WGStem%>s ATTESTED-NOUN-STEM ;
+    N_VARVAS-SG        ;
+    N_VARVAS-PL        ;
+LEXICON N_VARVAS-SG
+:%{back%} NMN_VARVAS-SG	;
+LEXICON N_VARVAS-PL
+:%{back%} NMN_VARVAS-PL	;
+
+
+LEXICON N_PAREMBI !!= @CODE@ parembi:paremb
+!! Gradation NA
+!! Harmony: Back
+!:i ATTESTED-NOUN-STEM ; Work needed
+ N_PAREMBI-SG	  ;
+ N_PAREMBI-PL	  ;
+
+LEXICON N_PAREMBI-SG
+:%{back%} NMN_PAREMBI/ENÄMBI-SG   ;
+LEXICON N_PAREMBI-PL
+:%{back%} NMN_PAREMBI/ENÄMBI-PL   ;
+
+LEXICON N_PESSYH !!= @CODE@ pessyh:pessy
+!! Gradation NA
+!! Harmony: Front
+!: ATTESTED-NOUN-STEM ; Work needed
+ N_PESSYH-SG ;
+ N_PESSYH-PL ;
+LEXICON N_PESSYH-SG
+:%{front%} NMN_TULLUH/PESSYH-SG ;
+LEXICON N_PESSYH-PL
+:%{front%} NMN_TULLUH/PESSYH-PL ;
+
+LEXICON N_TULLUH !!= @CODE@ tulluh
+!! Gradation NA
+!! Harmony: Front
+!: ATTESTED-NOUN-STEM ; Work needed
+ N_TULLUH-SG ;
+ N_TULLUH-PL ;
+LEXICON N_TULLUH-SG
+:%{back%} NMN_TULLUH/PESSYH-SG ;
+LEXICON N_TULLUH-PL
+:%{back%} NMN_TULLUH/PESSYH-PL ;
+
+
+
+LEXICON N_BEMMEL !!= @CODE@ bemmel:bembel
+!! Gradation Yes
+!! Harmony: Front
+:%^WGStem ATTESTED-NOUN-STEM ;
+    N_BEMMEL-SG        ;
+    N_BEMMEL-PL        ;
+LEXICON N_BEMMEL-SG
+:%{front%} NMN_BEMMEL-SG	;
+LEXICON N_BEMMEL-PL
+:%{front%} NMN_BEMMEL-PL	;
+
+LEXICON N_VIDEL !!= @CODE@ videl:videl
+!! Gradation NA
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+    N_VIDEL-SG        ;
+    N_VIDEL-PL        ;
+LEXICON N_VIDEL-SG
+:%{front%} NMN_VIDEL-SG	;
+LEXICON N_VIDEL-PL
+:%{front%} NMN_VIDEL-PL	;
+
+
+
+LEXICON N_SUURIM !!= @CODE@ suurim:suurim
+!! Gradation NA
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_SUURIM-SG  ;
+        N_SUURIM-PL  ;
+
+LEXICON N_SUURIM-SG
+:%{back%} NMN_SUURIM-SG ;
+
+LEXICON N_SUURIM-PL
+:%{back%} NMN_SUURIM-PL ;
+
+LEXICON N_TUATINDAM !!= @CODE@ tuatindam:tuatindam
+!! Gradation NA
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_TUATINDAM-SG  ;
+        N_TUATINDAM-PL  ;
+
+LEXICON N_TUATINDAM-SG
+:%{back%} NMN_TUATINDAM-SG ;
+
+LEXICON N_TUATINDAM-PL
+:%{back%} NMN_TUATINDAM-PL ;
+
+
+LEXICON N_TUATANDIM !!= @CODE@ tuatandim:tuatandim
+!! Gradation NA
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_TUATANDIM-SG  ;
+        N_TUATANDIM-PL  ;
+
+LEXICON N_TUATANDIM-SG
+:%{back%} NMN_TUATANDIM-SG ;
+
+LEXICON N_TUATANDIM-PL
+:%{back%} NMN_TUATANDIM-PL ;
+
+LEXICON N_TYTÄRDIM !!= @CODE@ tytärdim:tytärdim
+!! Gradation NA
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+        N_TYTÄRDIM-SG  ;
+        N_TYTÄRDIM-PL  ;
+
+LEXICON N_TYTÄRDIM-SG
+:%{front%} NMN_TYTÄRDIM-SG ;
+
+LEXICON N_TYTÄRDIM-PL
+:%{front%} NMN_TYTÄRDIM-PL ;
+
+LEXICON N_SIEMEN !!= @CODE@ siemen:siemen
+!! Gradation NA
+!! Harmony: Front
+: ATTESTED-NOUN-STEM ;
+        N_SIEMEN-SG  ;
+        N_SIEMEN-PL  ;
+
+LEXICON N_SIEMEN-SG
+        N_PAIMEN-SG  ;
+LEXICON N_SIEMEN-PL
+        N_PAIMEN-PL  ;
+
+
+LEXICON N_PAIMEN !!= @CODE@ paimen:paimen
+!! Gradation NA
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_PAIMEN-SG  ;
+        N_PAIMEN-PL  ;
+
+LEXICON N_PAIMEN-SG
+:%{back%} NMN_PIENAR-SG ;
+
+LEXICON N_PAIMEN-PL
+:%{back%} NMN_PIENAR-PL ;
+
+
+LEXICON N_SALBOIN !!= @CODE@ salboin:salboi
+!! Gradation No
+!! Harmony: Back
+:n ATTESTED-NOUN-STEM ;
+        N_SALBOIN-SG  ;
+        N_SALBOIN-PL  ;
+
+LEXICON N_SALBOIN-SG
+:%{back%} NMN_SALBOIN-SG ;
+
+LEXICON N_SALBOIN-PL
+:%{back%} NMN_SALBOIN-PL ;
+
+
+LEXICON N_ENIN !!= @CODE@ enin:eni
+!! Gradation NA
+!! Harmony: Front
+:n ATTESTED-NOUN-STEM ;
+        N_ENIN-SG  ;
+        N_ENIN-PL  ;
+
+LEXICON N_ENIN-SG
+:%{front%} NMN_ENIN-SG ;
+
+LEXICON N_ENIN-PL
+:%{front%} NMN_ENIN-PL ;
+
+LEXICON N_UDAR !!= @CODE@ udar:udar
+!! Gradation No
+!! Harmony: Back
+: ATTESTED-NOUN-STEM ;
+        N_UDAR-SG  ;
+        N_UDAR-PL  ;
+
+LEXICON N_UDAR-SG
+:%{back%} NMN_UDAR-SG ;
+
+LEXICON N_UDAR-PL
+:%{back%} NMN_UDAR-PL ;
+
+
+LEXICON N_PIENAR !!= @CODE@ pienar:piendar
+!! Gradation Yes
+!! Harmony: Back
+:%^WGStem ATTESTED-NOUN-STEM ;
+        N_PIENAR-SG  ;
+        N_PIENAR-PL  ;
+
+LEXICON N_PIENAR-SG
+:%{back%} NMN_PIENAR-SG ;
+
+LEXICON N_PIENAR-PL
+:%{back%} NMN_PIENAR-PL ;
+
+LEXICON N_TYTÄR !!= @CODE@ tytär:tyttär
+!! Gradation Yes
+!! Harmony: Front
+:%^WGStem ATTESTED-NOUN-STEM ;
+        N_TYTÄR-SG  ;
+        N_TYTÄR-PL  ;
+
+LEXICON N_TYTÄR-SG
+:%{front%} NMN_TYTÄR-SG ;
+
+LEXICON N_TYTÄR-PL
+:%{front%} NMN_TYTÄR-PL ;
+
+!! !NOMINAL DECLENSION BEGINS
+
+LEXICON NMN_MUAMO !!= @CODE@ muamo:muama
+!! Back vowel
+!! gradation NA
+ NMN_MUAMO-SG ;
+ NMN_MUAMO-PL ;
+
+LEXICON NMN_MUAMO-SG
+:%^A2O SGNOMSUF ;
+ SGNOM/PXSP3 ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_MUAMO-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>i PL-GEN/COM/APRSUF_N ;			! muamoloin
+:%>i PLPARSUF_Zero ;
+:%>i PLINSSUF ;
++Pl:%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_TUATTO !!= @CODE@ tuatto:tuatta
+!! Back vowel
+!! gradation Yes
+! NMN_TUATTO-SG ;
+! NMN_TUATTO-PL ;
+
+LEXICON NMN_TUATTO-SG
+:%^A2O SGNOMSUF ;
+ SGNOM/PXSP3 ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+LEXICON NMN_TUATTO-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%>i PL-GEN/COM/APRSUF_N ; 
+:%>i PLPARSUF_Zero ;
+:%>i%^WGStem PLINSSUF ;
++Pl:%>i%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:%>i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+:%^A2O%>l%{oö%}i PL-GEN/COM/APRSUF_N ;			! tuattol%{oö%}in
+:%^A2O%>l%{oö%}i PLPARSUF_Zero ;
+:%^A2O%>l%{oö%}i%^WGStem PLINSSUF ;
++Pl:%^A2O%>l%{oö%}i%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:%^A2O%>l%{oö%}i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_DIÄDÖ !!= @CODE@ diädö:diädä
+ NMN_DIÄDÖ-SG ;
+ NMN_DIÄDÖ-PL ;
+
+LEXICON NMN_DIÄDÖ-SG
+:%^A2O SGNOMSUF ;
+ SGNOM/PXSP3 ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_DIÄDÖ-PL 
+ PLNOMSUF-USUALLY-WEAK ;
+:%>i PL-GEN/COM/APRSUF_N ; 
+:%>i PLPARSUF_Zero ;
+:%>i PLINSSUF ;
++Pl:%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_MUARJU/PIÄSTÄNDY !!= @CODE@ muarju:muarja
+!! gradation NA
+ NMN_MUARJU/PIÄSTÄNDY-SG ;
+ NMN_MUARJU/PIÄSTÄNDY-PL ;
+
+LEXICON NMN_MUARJU/PIÄSTÄNDY-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SGNOM/PXSP3 ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_MUARJU/PIÄSTÄNDY-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^A2O%>i PL-GEN/COM/APRSUF_N ; 
+:%^A2O%>i PLPARSUF_Zero ;
+:%^A2O%>i PLINSSUF ;
++Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SUAJU/XX !!= @CODE@ muarju:muarja
+!! gradation NA
+ NMN_SUAJU/XX-SG ;
+ NMN_SUAJU/XX-PL ;
+
+LEXICON NMN_SUAJU/XX-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SGNOM/PXSP3 ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_SUAJU/XX-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^A2O%>i PL-GEN/COM/APRSUF_N ; 
+:%^A2O%>i PLPARSUF_Zero ;
+:%^A2O%>i PLINSSUF ;
++Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_N ; 
+:%^RmVow%>i PLPARSUF_Zero ;
+:%^RmVow%>i PLINSSUF ;
++Pl:%^RmVow%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_AKKU !!= @CODE@ akku:akka
+!! gradation Yes
+ NMN_AKKU-SG ;
+ NMN_AKKU-PL ;
+
+LEXICON NMN_AKKU-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SGNOM/PXSP3 ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+LEXICON NMN_AKKU-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%^A2O%>i PL-GEN/COM/APRSUF_N ; 
+:%^A2O%>i PLPARSUF_Zero ;
+:%^A2O%>i%^WGStem PLINSSUF ;
++Pl:%^A2O%>i%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:%^A2O%>i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_KNIIGU !!= @CODE@ kniigu:kniiga
+!! gradation No
+ NMN_KNIIGU-SG ;
+ NMN_KNIIGU-PL ;
+
+LEXICON NMN_KNIIGU-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SGNOM/PXSP3 ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_KNIIGU-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^A2O%>i PL-GEN/COM/APRSUF_N ; 
+:%^A2O%>i PLPARSUF_Zero ;
+:%^A2O%>i PLINSSUF ;
++Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_LAPSI !!= @CODE@ lapsi:laps lapsi:laps
+        NMN_LAPSI-SG  ;
+	NMN_LAPSI-PL  ;
+
+LEXICON NMN_LAPSI-SG
+:i SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%^KS2S SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_LAPSI-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_VEZI !!= @CODE@ vezi:ved
+! NMN_VEZI-SG ;
+! NMN_VEZI-PL ;
+
+LEXICON NMN_VEZI-SG
+:%^D2Z%>i SGNOMSUF ;
+:e%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:e%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:e OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_VEZI-PL
+:e%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%^D2Z%>i PL-GEN/COM/APRSUF_EN ;		! vezien
+!:%^D2Z%>i PLPARSUF_Zero ;
+:%^D2Z%>i PLINSSUF ;
++Pl:%^D2Z%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+:%^D2Z%>i%>l%{oö%}i PL-GEN/COM/APRSUF_EN ; 
+:%^D2Z%>i%>l%{oö%}i PLPARSUF_Zero ;
+:%^D2Z%>i%>l%{oö%}i PLINSSUF ;
++Pl:%^D2Z%>i%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_SUZI !!= @CODE@ suzi:su
+! NMN_SUZI-SG ;
+! NMN_SUZI-PL ;
+
+LEXICON NMN_SUZI-SG
+:z%>i SGNOMSUF ;
+:ze SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:ze OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SUZI-PL
+:ze PLNOMSUF-USUALLY-WEAK ;
+:z%>i%>l%{oö%}i PL-GEN/COM/APRSUF_EN ; 
+:z%>i%>l%{oö%}i PLPARSUF_i ;
+:z%>i%>l%{oö%}i PLINSSUF ;
++Pl:z%>i%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!! !NMN = Nominals mutually shared case marking for nouns, adjectives, proper ouns, numerals
+LEXICON NMN_HANGI/NIMI
+	NMN_HANGI/NIMI-SG	;
+	NMN_HANGI/NIMI-PL	;
+
+LEXICON NMN_HANGI/NIMI-SG
+:i SGNOMSUF ;
+:e SGPARSUF_A2 ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_HANGI/NIMI-PL
+:e PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_JÄLGI
+!! Front Vowel
+!! Gradation Yes
+	NMN_JÄLGI-SG	;
+	NMN_JÄLGI-PL	;
+
+LEXICON NMN_JÄLGI-SG
+:i SGNOMSUF ;
+:e SGPARSUF_A2 ;
+:e%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:e OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_JÄLGI-PL
+:e%^WGStem PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i%^WGStem PLINSSUF ;
++Pl:i%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_JOGI !!= @CODE@ jogi:jog
+!! Back Vowel
+!! Gradation Yes
+	NMN_JOGI-SG	;
+	NMN_JOGI-PL	;
+
+LEXICON NMN_JOGI-SG
+:i SGNOMSUF ;
+:e SGPARSUF_A2 ;
+:e%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:e OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_JOGI-PL
+:e%^WGStem PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;    	 		   ! jogii
+:%>i%^WGStem PLINSSUF ;			   ! jovin
++Pl:i%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SUARI/KIELI
+	NMN_SUARI/KIELI-SG ;
+	NMN_SUARI/KIELI-PL ;
+LEXICON NMN_SUARI/KIELI-SG
+:i SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SUARI/KIELI-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_KIELI
+	NMN_KIELI-SG ;
+	NMN_KIELI-PL ;
+LEXICON NMN_KIELI-SG
+:i SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KIELI-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:i%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:i%>l%{oö%}i PLPARSUF_Zero ;
+:i%>l%{oö%}i PLINSSUF ;
++Pl:i%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+
+LEXICON NMN_YKSI  !!= @CODE@ yksi:y
+	NMN_YKSI-SG ;
+	NMN_YKSI-PL ;
+
+LEXICON NMN_YKSI-SG
+:ksi SGNOMSUF ;
+:hte SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:h SGPARSUF_dU ;
++Sg:hte OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_YKSI-PL
+:hte PLNOMSUF-USUALLY-WEAK ;
+:ksi PL-GEN/COM/APRSUF_EN ; 
+:ksi PLPARSUF_i ;
+:ksi PLINSSUF ;
++Pl:ksi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_NELLI  !!= @CODE@ nelli:nell
+	NMN_NELLI-SG ;
+	NMN_NELLI-PL ;
+
+LEXICON NMN_NELLI-SG
+:i SGNOMSUF ;
+:%>ä SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%>i SGPARSUF_A2 ;
++Sg:%>ä OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_NELLI-PL
+:%>ä PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ; 
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_VUOZI/VEZI !!= @CODE@ vuozi:vuod
+	NMN_VUOZI/VEZI-SG ;
+	NMN_VUOZI/VEZI-PL ;
+
+LEXICON NMN_VUOZI/VEZI-SG
+:%^D2Z%>i SGNOMSUF ;
+:e%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:e%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:e OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_VUOZI/VEZI-PL
+:e%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%^D2Z%>i PL-GEN/COM/APRSUF_EN ; 
+:%^D2Z%>i PLPARSUF_i ;
+:%^D2Z%>i PLINSSUF ;
++Pl:%^D2Z%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+:%^D2Z%>i%>l%{oö%}i PL-GEN/COM/APRSUF_N ; 
+:%^D2Z%>i%>%{oö%}i PLPARSUF_Zero ;
+:%^D2Z%>i%>%{oö%}i PLINSSUF ;
++Pl:%^D2Z%>i%>%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PAREMBI/ENÄMBI !!= @CODE@ parembi:paremb
+!!€gt-norm: Adjective comparative
+!!€ tuorehembi: tuores+A+Der/mbi+Comp+Sg+Nom
+!!$ tuorehembembannu: tuores+A+Der/mbi+Comp+Der/mbi+Comp+Sg+Ess
+ NMN_PAREMBI/ENÄMBI-SG ;
+ NMN_PAREMBI/ENÄMBI-PL ;
+
+LEXICON NMN_PAREMBI/ENÄMBI-SG
+:i SGNOMSUF ;
+:%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%{ui%} SGPARSUF_A2 ;
++Sg:%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PAREMBI/ENÄMBI-PL
+:%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON	NMN_KUDAI !!= @CODE@ kudai:kuda
+ NMN_KUDAI-SG ;
+ NMN_KUDAI-PL ;
+LEXICON NMN_KUDAI-SG
+:i SGNOMSUF ;
+:m%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:m%>%{ui%} SGPARSUF_A2 ;
++Sg:m%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KUDAI-PL
+:m%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:mi PL-GEN/COM/APRSUF_EN ;
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+
+LEXICON NMN_PIIRAI/VERÄI !!= @CODE@ piirai:piira
+	NMN_PIIRAI/VERÄI-SG ;
+	NMN_PIIRAI/VERÄI-PL ;
+
+LEXICON NMN_PIIRAI/VERÄI-SG
+:i SGNOMSUF ;
+:%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%{aä%} SGPARSUF_dU ;
++Sg:%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PIIRAI/VERÄI-PL
+:%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:%{aä%}l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%{aä%}l%{oö%}i PLPARSUF_Zero ;
+:%{aä%}l%{oö%}i PLINSSUF ;
++Pl:%{aä%}l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_PAGIZII
+ NMN_PAGIZII-SG ;
+ NMN_PAGIZII-PL ;
+
+LEXICON NMN_PAGIZII-SG !!= @CODE@ 
+ SGNOMSUF ;
+:%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%{ui%} SGPARSUF_A2 ;
+
+LEXICON NMN_PAGIZII-PL !!= @CODE@ 
+:%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:%>%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>%{oö%}i PLPARSUF_i ;
+:%>%{oö%}i PLINSSUF ;
+:A2 OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ; !CHECKME 2016-08-18
+:%>%{oö%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+:%>ii PL-GEN/COM/APRSUF_N ;
+:%>ii PLPARSUF_i ;
+:%>ii PLINSSUF ;
+:%>ii OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_HUOLETOI/JIÄTÖI !!= @CODE@ huoletoi: huolet
+ NMN_HUOLETOI/JIÄTÖI-SG ;
+ NMN_HUOLETOI/JIÄTÖI-PL ;
+
+LEXICON NMN_HUOLETOI/JIÄTÖI-SG	
+:%{oö%}i SGNOMSUF ;
+:t%{oö%}m%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t%{oö%}m%{ui%} SGPARSUF_A2 ;
++Sg:t%{oö%}m%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_HUOLETOI/JIÄTÖI-PL	
+:t%{oö%}m%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:t%{oö%}mi PL-GEN/COM/APRSUF_EN ;
+:t%{oö%}mi PLPARSUF_i ;
+:t%{oö%}mi PLINSSUF ;
++Pl:t%{oö%}mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_SULGU !!= @CODE@ sulgu:sulga
+!! Gradation Yes
+!! Vowel Harmony Back
+! NMN_SULGU-SG ;
+! NMN_SULGU-PL ;
+
+LEXICON NMN_SULGU-SG
+:%^A2UÄ2Y SGNOMSUF ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:%^WGStem  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:  OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_SULGU-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_EN ; 
+:%^RmVow%>i PLPARSUF_i ;
+:%^WGStem%^RmVow%>i PLINSSUF ;
++Pl:%^WGStem%^RmVow%>i  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:%^RmVow%>i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_KOIRU/PÄIVY !!= @CODE@ koiru:koira
+!! Gradation NA
+!! Vowel Harmony Back
+ NMN_KOIRU/PÄIVY-SG ;
+ NMN_KOIRU/PÄIVY-PL ;
+
+LEXICON NMN_KOIRU/PÄIVY-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KOIRU/PÄIVY-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_EN ; 
+:%^RmVow%>i PLPARSUF_i ;
+:%^RmVow%>i PLINSSUF ;
++Pl:%^RmVow%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_AVUAJU/KERIÄJY !!= @CODE@ päivy:päivä
+!! Gradation NA
+ NMN_AVUAJU/KERIÄJY-SG ;
+ NMN_AVUAJU/KERIÄJY-PL ;
+
+LEXICON NMN_AVUAJU/KERIÄJY-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_AVUAJU/KERIÄJY-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_EN ; 
+:%^RmVow%>i PLPARSUF_i ;
+:%^RmVow%>i PLINSSUF ;
++Pl:%^RmVow%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+:%^RmVow%>%{oö%}i PL-GEN/COM/APRSUF_EN ; 
+:%^RmVow%>%{oö%}i PLPARSUF_i ;
+:%^RmVow%>%{oö%}i PLINSSUF ;
++Pl:%^RmVow%>%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_MEČČY !!= @CODE@ meččy:meččä
+!! gradation Yes
+! NMN_MEČČY-SG ;
+! NMN_MEČČY-PL ;
+
+LEXICON NMN_MEČČY-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SGNOM/PXSP3 ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+LEXICON NMN_MEČČY-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_N ; 
+:%^RmVow%>i PLPARSUF_Zero ;
+:%^WGStem%^RmVow%>i PLINSSUF ;
++Pl:%^WGStem%^RmVow%>i OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:%^RmVow%>i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+
+LEXICON NMN_IŽÄNDY !!= @CODE@ ižändy:ižändä
+!! Gradation No
+!! VowelHarmony Front
+ NMN_IŽÄNDY-SG ;
+ NMN_IŽÄNDY-PL ;
+
+LEXICON NMN_IŽÄNDY-SG
+:%^A2UÄ2Y SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_IŽÄNDY-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_EN ; 
+:%^RmVow%>i PLPARSUF_i ;
+:%^RmVow%>i PLINSSUF ;
++Pl:%^RmVow%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_KOIVU/HERY !!= @CODE@ koivu:koivu
+!! Gradation NA
+!! Vowel Harmony Back
+        NMN_KOIVU/HERY-SG ;
+        NMN_KOIVU/HERY-PL ;
+
+LEXICON NMN_KOIVU/HERY-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_U ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KOIVU/HERY-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ; 
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_LUGU/IDY !!= @CODE@ lugu:lugu
+!! Gradation Yes
+!! Vowel Harmony Back
+        NMN_LUGU/IDY-SG ;
+        NMN_LUGU/IDY-PL ;
+
+LEXICON NMN_LUGU/IDY-SG
+ SGNOMSUF ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_U ;
++Sg:%^WGStem  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_LUGU/IDY-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ; 
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_VASKIČČU !!= @CODE@ vaskičču:vaskičč
+!        NMN_VASKIČČU-SG ;
+!        NMN_VASKIČČU-PL ;
+
+LEXICON NMN_VASKIČČU-SG
+:u SGNOMSUF ;
+:a%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%{ui%} SGPARSUF_A2 ;
++Sg:a%^WGStem  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:a OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_VASKIČČU-PL
+:a%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:u%>l%{oö%}i PL-GEN/COM/APRSUF_N ; 
+:u%>l%{oö%}i PLPARSUF_Zero ;
+:u%>l%{oö%}i PLINSSUF ;
++Pl:u%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_SYGYZY !!= @CODE@ sygyzy:sygyzy
+!        NMN_SYGYZY-SG ;
+!        NMN_SYGYZY-PL ;
+
+LEXICON NMN_SYGYZY-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_U ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SYGYZY-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ; 
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_VALGEI/LIBEI !!= * __@CODE@__ valgei:valge
+	NMN_VALGEI/LIBEI-SG	;
+	NMN_VALGEI/LIBEI-PL	;
+
+LEXICON NMN_VALGEI/LIBEI-SG
+:i SGNOMSUF ;
+:%>e SGPARSUF_dU ;
+:%>e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:%>e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_VALGEI/LIBEI-PL
+:%>e PLNOMSUF-USUALLY-WEAK	;
+:%>el%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>el%{oö%}i PLPARSUF_Zero ;
+:%>el%{oö%}i PLINSSUF ;
++Pl:%>el%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_RAHMANNOI !!= @CODE@ rahmannoi:rahmannoi
+	NMN_RAHMANNOI-SG	;
+	NMN_RAHMANNOI-PL	;
+
+LEXICON NMN_RAHMANNOI-SG
+:i SGNOMSUF ;
+:e SGPARSUF_A2 ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_RAHMANNOI-PL
+:e PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_HARDIE !!= @CODE@ hardie:hardie
+	NMN_HARDIE-SG	;
+	NMN_HARDIE-PL	;
+
+LEXICON NMN_HARDIE-SG
+: SGNOMSUF ;
+: SGPARSUF_dU ;
+: SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_HARDIE-PL
+: PLNOMSUF-USUALLY-WEAK	;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KONDII/STIPENDII !!= @CODE@ kondii:kondi
+	NMN_KONDII/STIPENDII-SG	;
+	NMN_KONDII/STIPENDII-PL	;
+
+LEXICON NMN_KONDII/STIPENDII-SG
+:i SGNOMSUF ;
+:e SGPARSUF_dU ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_KONDII/STIPENDII-PL
+:e PLNOMSUF-USUALLY-WEAK	;
+:e%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:e%>l%{oö%}i PLPARSUF_Zero ;
+:e%>l%{oö%}i PLINSSUF ;
++Pl:e%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_SEIČČIE !!= @CODE@ seiččie:seičče
+	NMN_SEIČČIE-SG	;
+	NMN_SEIČČIE-PL	;
+
+LEXICON NMN_SEIČČIE-SG
+:%>e SGNOMSUF ;
+:%^WGStemn SGPARSUF_dU ;
+:me SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:me OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_SEIČČIE-PL
+:me PLNOMSUF-USUALLY-WEAK	;
+:mi PL-GEN/COM/APRSUF_N ;
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_OSTAI !!= @CODE@ ostua:osta%>j
+ NMN_OSTAI-SG ;
+ NMN_OSTAI-PL ;
+
+LEXICON NMN_OSTAI-SG
+:%{uy%} SGNOMSUF ;
+ SGNOMSUF ;
+:%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%>%{ui%} SGPARSUF_A2 ;
++Sg:%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_OSTAI-PL
+:%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:%{oöØ%}%>i PL-GEN/COM/APRSUF_EN ; 
+:%{oöØ%}%>i PLPARSUF_i ;
+:%{oöØ%}%>i PLINSSUF ;
++Pl:%{oöØ%}%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_KANDAI
+!! Stem Vowel 0:a:0 kandai, kandajan, kandajua, kandajinnu
+! NMN_KANDAI-SG ;
+! NMN_KANDAI-PL ;
+
+LEXICON NMN_KANDAI-SG
+:%>%{ijPRC%}%>%{uy%} SGNOMSUF ;
+:%>%{ijPRC%} SGNOMSUF ;
+:%>%{ijPRC%}%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%>%{ijPRC%}%>%{ui%} SGPARSUF_A2 ;
++Sg:%>%{ijPRC%}%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_KANDAI-PL
+:%>%{ijPRC%}%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:%>%{ijPRC%}%>i PL-GEN/COM/APRSUF_EN ; 
+:%>%{ijPRC%}%>i PLPARSUF_i ;
+:%>%{ijPRC%}%>i PLINSSUF ;
++Pl:%>%{ijPRC%}%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PEZII !!= @CODE@ pestä:pezi%>j
+ NMN_PEZII-SG ;
+ NMN_PEZII-PL ;
+
+LEXICON NMN_PEZII-SG
+ SGNOMSUF ;
+:%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%>%{ui%} SGPARSUF_A2 ;
++Sg:%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PEZII-PL
+:%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:%>%{oö%}%>i PL-GEN/COM/APRSUF_N ; 
+:%>%{oö%}%>i PLPARSUF_Zero ;
+:%>%{oö%}%>i PLINSSUF ;
++Pl:%>%{oö%}%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+:%>i PL-GEN/COM/APRSUF_N ; 
+:%>ii PLPARSUF_Zero ;
+:%>ii PLINSSUF ;
++Pl:%>ii OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KESTÄY !!= @CODE@ kestäy:kestä
+ NMN_KESTÄY-SG ;
+ NMN_KESTÄY-PL ;
+
+LEXICON NMN_KESTÄY-SG
+:%{uy%} SGNOMSUF ;
+:v%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:v%>%{ui%} SGPARSUF_A2 ;
++Sg:v%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KESTÄY-PL
+:v%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:v%>i PL-GEN/COM/APRSUF_EN ; 
+:v%>i PLPARSUF_i ;
+:v%>i PLINSSUF ;
++Pl:v%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_RUNO/HÖRÖ !!= @CODE@ runo:runo
+!! Gradation No
+	NMN_RUNO/HÖRÖ-SG ;
+	NMN_RUNO/HÖRÖ-PL ;
+
+LEXICON NMN_RUNO/HÖRÖ-SG
+	SGNOMSUF ;
+ 	SGPARSUF_O ;
+	SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg: 	OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_RUNO/HÖRÖ-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:l%{oö%}i PLPARSUF_Zero ;
+:l%{oö%}i PLINSSUF ;
++Pl:l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_HÖRÖ !!= @CODE@ hörö:hörö
+!! Gradation No
+!	NMN_HÖRÖ-SG ;
+!	NMN_HÖRÖ-PL ;
+
+LEXICON NMN_HÖRÖ-SG
+	SGNOMSUF ;
+ 	SGPARSUF_O ;
+	SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg: 	OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_HÖRÖ-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:l%{oö%}i PLPARSUF_Zero ;
+:l%{oö%}i PLINSSUF ;
++Pl:l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_RUADO/KYNDÖ !!= @CODE@ ruado:ruado
+!! Gradation Yes
+	NMN_RUADO/KYNDÖ-SG ;
+	NMN_RUADO/KYNDÖ-PL ;
+
+LEXICON NMN_RUADO/KYNDÖ-SG
+	SGNOMSUF ;
+ 	SGPARSUF_O ;
+:%^WGStem	SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:%^WGStem 	OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: 	OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+LEXICON NMN_RUADO/KYNDÖ-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:l%{oö%}i PLPARSUF_Zero ;
+:l%{oö%}i PLINSSUF ;
++Pl:l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KYNDÖ !!= @CODE@ kyndö:kyndö
+	NMN_KYNDÖ-SG ;
+	NMN_KYNDÖ-PL ;
+
+LEXICON NMN_KYNDÖ-SG
+	SGNOMSUF ;
+ 	SGPARSUF_O ;
+:%^WGStem	SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:%^WGStem  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+LEXICON NMN_KYNDÖ-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:l%{oö%}i PLPARSUF_Zero ;
+:l%{oö%}i PLINSSUF ;
++Pl:l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_KUU/PII !!= @CODE@ kuu:kuu
+	NMN_KUU/PII-SG	;
+	NMN_KUU/PII-PL	;
+
+LEXICON NMN_KUU/PII-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KUU/PII-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PIÄ !!= @CODE@ piä:piä
+	NMN_PIÄ-SG	;
+	NMN_PIÄ-PL	;
+
+LEXICON NMN_PIÄ-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PIÄ-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_VYÖ !!= @CODE@ vyö:vyö
+	NMN_VYÖ-SG	;
+	NMN_VYÖ-PL	;
+
+LEXICON NMN_VYÖ-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_VYÖ-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_MUA !!= @CODE@ mua:mua
+	NMN_MUA-SG	;
+	NMN_MUA-PL	;
+
+LEXICON NMN_MUA-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_MUA-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KALA !!= @CODE@ kala:kala
+!! Gradation NA
+	NMN_KALA-SG  ; 
+	NMN_KALA-PL  ;
+LEXICON NMN_KALA-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KALA-PL
+ PLNOMSUF-USUALLY-WEAK ;
+:%^A2O%>j PL-GEN/COM/APRSUF_EN ;
+:%^A2O%>i PLPARSUF_Zero ;
+:%^A2O%>i PLINSSUF ;
++Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PADA !!= @CODE@ pada:pada
+!! Yaml: __pada__
+!! Gradation Yes
+	NMN_PADA-SG  ; 
+	NMN_PADA-PL  ;
+LEXICON NMN_PADA-SG
+ SGNOMSUF ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:%^WGStem  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_PADA-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+:%^A2O%>j PL-GEN/COM/APRSUF_EN ;
+:%^A2O%>i PLPARSUF_Zero ;
+:%^A2O%>i PLINSSUF ;
++Pl:%^A2O%>i%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl:%^A2O%>i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_TULLUH/PESSYH !!= @CODE@ pessyh
+        NMN_TULLUH/PESSYH-SG ;
+        NMN_TULLUH/PESSYH-PL ;
+
+!! !Nominative singular in "h"
+LEXICON NMN_TULLUH/PESSYH-SG
+:h SGNOMSUF ;
++Err/Orth:t SGNOMSUF ;
+:%{oö%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:%{oö%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TULLUH/PESSYH-PL
+:%{oö%} PLNOMSUF-USUALLY-WEAK ;
+:zi PL-GEN/COM/APRSUF_EN ; !!= * @CODE@ the +Pl+Com comes here
+:zi PLPARSUF_i ;
+:zi PLINSSUF ;
++Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TULLUH !!= @CODE@ tulluh:tullu
+        NMN_TULLUH-SG ;
+        NMN_TULLUH-PL ;
+
+!! !Nominative singular in "h"
+LEXICON NMN_TULLUH-SG
+:h SGNOMSUF ;
++Err/Orth:t SGNOMSUF ;
+:%{oö%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:%{oö%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TULLUH-PL
+:%{oö%} PLNOMSUF-USUALLY-WEAK ;
+:zi PL-GEN/COM/APRSUF_EN ; !!= * @CODE@ the +Pl+Com comes here
+:zi PLPARSUF_i ;
+:zi PLINSSUF ;
++Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KARJAL !!= @CODE@ karjal:karjal
+	NMN_KARJAL-SG ;
+	NMN_KARJAL-PL ;
+
+LEXICON NMN_KARJAL-SG !!= @CODE@ karjal:karjal
+ SGNOMSUF ;
+:a SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:u SGPARSUF_A2 ;
++Sg:a OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_KARJAL-PL !!= @CODE@ karjal:karjal
+:a PLNOMSUF-USUALLY-WEAK ;
+:%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%{oö%}i PLPARSUF_Zero ;
+:%{oö%}i PLINSSUF ;
++Pl:%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_MADAL !!= @CODE@ madal:madal
+	NMN_MADAL-SG ;
+	NMN_MADAL-PL ;
+
+LEXICON NMN_MADAL-SG !!= @CODE@ madal:madal
+ SGNOMSUF ;
+:a SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:u SGPARSUF_A2 ;
++Sg:a OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_MADAL-PL !!= @CODE@ madal:madal
+:a PLNOMSUF-USUALLY-WEAK ;
+:%>i PL-GEN/COM/APRSUF_N ;
+:%>ii PLPARSUF_Zero ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!! ! Nominative singular in "m"
+
+LEXICON NMN_SUURIM !!= @CODE@ suurim
+        NMN_SUURIM-SG   ;
+        NMN_SUURIM-PL   ;
+
+LEXICON NMN_SUURIM-SG
+ SGNOMSUF ;
+:u SGPARSUF_A2 ;
+
+LEXICON NMN_SUURIM-PL
+:a  PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+
+LEXICON NMN_TUATANDIM
+        NMN_TUATANDIM-SG   ;
+        NMN_TUATANDIM-PL   ;
+
+LEXICON NMN_TUATANDIM-SG
+ SGNOMSUF ;
+:%{ui%} SGPARSUF_A2 ;
+
+LEXICON NMN_TUATANDIM-PL
+:a  PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+
+!LEXICON NMN_TYTÄRDIM
+!        NMN_TYTÄRDIM-SG   ;
+!        NMN_TYTÄRDIM-PL   ;
+
+LEXICON NMN_TYTÄRDIM-SG
+ SGNOMSUF ;
+:i SGPARSUF_A2 ;
+
+LEXICON NMN_TYTÄRDIM-PL
+:ä  PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+
+!LEXICON NMN_TUATINDAM
+!        NMN_TUATINDAM-SG   ;
+!        NMN_TUATINDAM-PL   ;
+
+LEXICON NMN_TUATINDAM-SG
+ SGNOMSUF ;
+:%{ui%} SGPARSUF_A2 ;
+
+LEXICON NMN_TUATINDAM-PL
+:a  PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+
+!! ! Nominative singular in "n"
+LEXICON NMN_SALBOIN 
+	NMN_SALBOIN-SG	;
+	NMN_SALBOIN-PL	;
+
+LEXICON NMN_SALBOIN-SG
+:n SGNOMSUF ;
+:n SGPARSUF_dU ;
+:me SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:me OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_SALBOIN-PL
+:me PLNOMSUF-USUALLY-WEAK	;
+:%>mi PL-GEN/COM/APRSUF_EN ; 
+:%>mi PLPARSUF_i ;
+:%>mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+!:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+!:il%{oö%}i PLPARSUF_Zero ;
+!:il%{oö%}i PLINSSUF ;
+
+LEXICON NMN_ENIN !!= @CODE@ enin:eni
+	NMN_ENIN-SG	;
+	NMN_ENIN-PL	;
+
+LEXICON NMN_ENIN-SG
+:n SGNOMSUF ;
+!:n SGPARSUF_dU ;
+:m%>%{aä%} SGPARSUF_A2 ;
+:m%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:m%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_ENIN-PL
+:m%>%{aä%} PLNOMSUF-USUALLY-WEAK	;
+:mi PL-GEN/COM/APRSUF_EN ; 
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+!! ! Nominative singular in "r"
+LEXICON NMN_PIENAR
+	NMN_PIENAR-SG	;
+	NMN_PIENAR-PL	;
+
+LEXICON NMN_PIENAR-SG
+:%^WGStem SGNOMSUF ;
+:%^WGStem SGPARSUF_dU ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_PIENAR-PL
+:e PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_TYTÄR
+!	NMN_TYTÄR-SG	;
+!	NMN_TYTÄR-PL	;
+
+LEXICON NMN_TYTÄR-SG
+:%^WGStem SGNOMSUF ;
+:%^WGStem SGPARSUF_dU ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_TYTÄR-PL
+:e PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_UDAR
+!	NMN_UDAR-SG	;
+!	NMN_UDAR-PL	;
+
+LEXICON NMN_UDAR-SG
+:%^WGStem SGNOMSUF ;
+:%^WGStem SGPARSUF_dU ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_UDAR-PL
+:e PLNOMSUF-USUALLY-WEAK	;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+:il%{oö%}i PL-GEN/COM/APRSUF_N ;
+:il%{oö%}i PLPARSUF_Zero ;
+:il%{oö%}i PLINSSUF ;
++Pl:il%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!! ! Nominative singular in "s"
+LEXICON NMN_PUHTAHUS/VÄHYS !!= @CODE@ puhtahus:puhtahu
+	NMN_PUHTAHUS/VÄHYS-SG ;
+	NMN_PUHTAHUS/VÄHYS-PL ;
+
+LEXICON NMN_PUHTAHUS/VÄHYS-SG
+:s SGNOMSUF ;
+:%{oö%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:%{oö%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PUHTAHUS/VÄHYS-PL
+:%{oö%} PLNOMSUF-USUALLY-WEAK ;
+:z%>i PL-GEN/COM/APRSUF_EN ; 
+:z%>i PLPARSUF_i ;
+:z%>i PLINSSUF ;
++Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_ALUS/ILVES !!= @CODE@ alus:aluks
+	NMN_ALUS/ILVES-SG ;
+	NMN_ALUS/ILVES-PL ;
+
+LEXICON NMN_ALUS/ILVES-SG
+:%^KS2S SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%^KS2S SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_ALUS/ILVES-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:%>i PL-GEN/COM/APRSUF_EN ; 
+:%>i PLPARSUF_i ;
+:%>i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_MIES !!= @CODE@ mies:mie
+!	NMN_MIES-SG ;
+!	NMN_MIES-PL ;
+
+LEXICON NMN_MIES-SG
+:s SGNOMSUF ;
+:he SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:s SGPARSUF_dU ;
++Sg:he OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_MIES-PL
+:he PLNOMSUF-USUALLY-WEAK ;
+:%>hi PL-GEN/COM/APRSUF_EN ; 
+:%>hi PLPARSUF_i ;
+:%>hi PLINSSUF ;
++Pl:hi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_ARMAS/EVAES !!= @CODE@ armas:arma
+ NMN_ARMAS/EVAES-SG        ;
+ NMN_ARMAS/EVAES-PL        ;
+
+LEXICON NMN_ARMAS/EVAES-SG
+:%^WGStem%>s SGNOMSUF ;
+:%^WGStem%>s SGPARSUF_dU ;
+:h%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:h%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_ARMAS/EVAES-PL
+:h%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:hi PL-GEN/COM/APRSUF_EN ;
+:hi PLPARSUF_i ;
+:hi PLINSSUF ;
++Pl:hi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_VARVAS !!= @CODE@ varvas:varba
+ NMN_VARVAS-SG        ;
+ NMN_VARVAS-PL        ;
+
+LEXICON NMN_VARVAS-SG
+:%^WGStem%>s SGNOMSUF ;
+:%^WGStem%>s SGPARSUF_dU ;
+:h%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:h%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_VARVAS-PL
+:h%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:hi PL-GEN/COM/APRSUF_EN ;
+:hi PLPARSUF_i ;
+:hi PLINSSUF ;
++Pl:hi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_BEMMEL !!= @CODE@ bemmel:bembel
+! NMN_BEMMEL-SG        ;
+! NMN_BEMMEL-PL        ;
+
+LEXICON NMN_BEMMEL-SG
+:%^WGStem SGNOMSUF ;
+:%^WGStem SGPARSUF_dU ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_BEMMEL-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_VIDEL !!= @CODE@ videl:videl
+!! Gradation No
+ NMN_VIDEL-SG        ;
+ NMN_VIDEL-PL        ;
+
+LEXICON NMN_VIDEL-SG
+:%^WGStem SGNOMSUF ;
+:%^WGStem SGPARSUF_dU ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_VIDEL-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TUORES !!= @CODE@ tuores:tuore
+!!= * Yaml: __A-tuores__
+ NMN_TUORES-SG        ;
+ NMN_TUORES-PL        ;
+
+LEXICON NMN_TUORES-SG
+:%^WGStem%>s SGNOMSUF ;
+:%^WGStem%>s SGPARSUF_dU ;
+:he SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
++Sg:he OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_TUORES-PL
+:he PLNOMSUF-USUALLY-WEAK ;
+:hi PL-GEN/COM/APRSUF_EN ;
+:hi PLPARSUF_i ;
+:hi PLINSSUF ;
++Pl:hi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_SUALIŠ !!= @CODE@ suališ:suali
+	NMN_SUALIŠ-SG ;
+	NMN_SUALIŠ-PL ;
+
+LEXICON NMN_SUALIŠ-SG
+:s SGNOMSUF ;
+:i SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:s SGPARSUF_dU ;
++Sg:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SUALIŠ-PL
+:i PLNOMSUF-USUALLY-WEAK ;
+!:%>i PL-GEN/COM/APRSUF_EN ; 
+!:%>i PLPARSUF_i ;
+!:%>i PLINSSUF ;
+!+Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_RAIŠ !!= @CODE@ raiš:ra
+	NMN_RAIŠ-SG	;
+	NMN_RAIŠ-PL	;
+LEXICON NMN_RAIŠ-SG
+:iš SGNOMSUF ;
+:gehe SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:iš SGPARSUF_dU ;
++Sg:gehe OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_RAIŠ-PL
+:gehe PLNOMSUF-USUALLY-WEAK ;
+:gehi PL-GEN/COM/APRSUF_EN ;
+:gehi PLPARSUF_i ;
+:gehi PLINSSUF ;
++Pl:gehi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KUURNIS !!= @CODE@ kuurnis:kuurne
+	NMN_KUURNIS-SG ;
+	NMN_KUURNIS-PL ;
+
+LEXICON NMN_KUURNIS-SG
+:%>is SGNOMSUF ;
+:i SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:s SGPARSUF_dU ;
++Sg:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KUURNIS-PL
+:i PLNOMSUF-USUALLY-WEAK ;
+!:%>i PL-GEN/COM/APRSUF_EN ; 
+!:%>i PLPARSUF_i ;
+!:%>i PLINSSUF ;
+!+Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_OLUT !!= * @CODE@ olut:olu
+ NMN_OLUT-SG ;
+ NMN_OLUT-PL ;
+
+LEXICON NMN_OLUT-SG
+:t SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_OLUT-PL
+:e  PLNOMSUF-USUALLY-WEAK ;
+:je PL-GEN/COM/APRSUF_N ;
+:i PLPARSUF_dU ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KEVÄT !!= * @CODE@ kevät:kevä
+ NMN_KEVÄT-SG ;
+ NMN_KEVÄT-PL ;
+
+LEXICON NMN_KEVÄT-SG
+:t SGNOMSUF ;
+:%^A2UÄ2I%>ä SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:%^A2UÄ2I%>ä OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KEVÄT-PL
+:%^A2UÄ2I%>ä PLNOMSUF-USUALLY-WEAK ;
+:%^A2UÄ2I%>äl%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%^A2UÄ2I%>äl%{oö%}i PLPARSUF_Zero ;
+:%^A2UÄ2I%>äl%{oö%}i PLINSSUF ;
++Pl:%^A2UÄ2I%>äl%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_TUHAT !!= * @CODE@ tuhat:tuha
+!! Gradation None
+! NMN_TUHAT-SG ;
+! NMN_TUHAT-PL ;
+
+LEXICON NMN_TUHAT-SG
+:t SGNOMSUF ;
+:nde SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:nde OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TUHAT-PL
+:nde  PLNOMSUF-USUALLY-WEAK ;
+:nzi PL-GEN/COM/APRSUF_EN ;
+:nzi PLPARSUF_dU ;
+:nzi PLINSSUF ;
++Pl:nzi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TULLUT !!= * @CODE@ tullut:tullu
++Use/NG: NMN_TULLUT-SG ;
++Use/NG: NMN_TULLUT-PL ;
+
+LEXICON NMN_TULLUT-SG
+:t SGNOMSUF ;
+:%{oö%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:t SGPARSUF_dU ;
++Sg:%{oö%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TULLUT-PL
+:%{oö%} PLNOMSUF-USUALLY-WEAK ;
+:z%>i PL-GEN/COM/APRSUF_EN ;
+:z%>i PLPARSUF_i ;
+:z%>i PLINSSUF ;
++Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_TOVESTEH/PEREH !!= @CODE@ pereh:pereh
+	NMN_TOVESTEH/PEREH-SG	;
+	NMN_TOVESTEH/PEREH-PL	;
+LEXICON NMN_TOVESTEH/PEREH-SG
+ SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_TOVESTEH/PEREH-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_HUIKEH/LIIKEH !!= @CODE@ liikeh:liikkeh
+	NMN_HUIKEH/LIIKEH-SG	;
+	NMN_HUIKEH/LIIKEH-PL	;
+LEXICON NMN_HUIKEH/LIIKEH-SG
+:%^WGStem SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%^WGStem SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_HUIKEH/LIIKEH-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_LATE/SIVE !!= @CODE@ sive:side
+	NMN_LATE/SIVE-SG	;
+	NMN_LATE/SIVE-PL	;
+LEXICON NMN_LATE/SIVE-SG
+ SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_ttU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_LATE/SIVE-PL
+:e  PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PENGER !!= @CODE@ penger:penger
+	NMN_PENGER-SG	;
+	NMN_PENGER-PL	;
+LEXICON NMN_PENGER-SG
+ SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_PENGER-PL
+:e  PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_ARTELI/LEIRI !!= @CODE@ arteli:arteli
+	NMN_ARTELI/LEIRI-SG ;
+	NMN_ARTELI/LEIRI-PL ;
+LEXICON NMN_ARTELI/LEIRI-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_ARTELI/LEIRI-PL
+: PLNOMSUF-USUALLY-WEAK ;
+: PL-GEN/COM/APRSUF_EN ;
++Pl: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+: PLINSSUF ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_PAPPI/HÄKKI !!= @CODE@ pappi:pappi
+	NMN_PAPPI/HÄKKI-SG ;
+	NMN_PAPPI/HÄKKI-PL ;
+LEXICON NMN_PAPPI/HÄKKI-SG
+ SGNOMSUF ;
+:%^WGStem SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:%^WGStem  OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON NMN_PAPPI/HÄKKI-PL
+:%^WGStem PLNOMSUF-USUALLY-WEAK ;
+: PL-GEN/COM/APRSUF_EN ;
+: PLPARSUF_i ;
+:%^WGStem PLINSSUF ;
++Pl:%^WGStem OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Pl: OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+!LEXICON NMN_UKSI !!= @CODE@ uksi:uks
+!	NMN_UKSI-SG ;
+!	NMN_UKSI-PL ;
+
+LEXICON NMN_UKSI-SG
+:i SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_UKSI-PL
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_Zero ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_REBOI/JÄNÖI !!= @CODE@ reboi:reboi
+        NMN_REBOI/JÄNÖI-SG ;
+        NMN_REBOI/JÄNÖI-PL ;
+LEXICON NMN_REBOI/JÄNÖI-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_dU ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_REBOI/JÄNÖI-PL
+:	PLNOMSUF-USUALLY-WEAK ;
+:%^ILoss%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%^ILoss%>l%{oö%}i PLPARSUF_Zero ;
+:%^ILoss%>l%{oö%}i PLINSSUF ;
++Pl:%^ILoss%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_PÖČÖI !!= @CODE@ pöčöi:pöččö
+        NMN_PÖČÖI-SG ;
+        NMN_PÖČÖI-PL ;
+LEXICON NMN_PÖČÖI-SG
+:%^WGStemi SGNOMSUF ;
+:%^WGStemi SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:i SGPARSUF_dU ;
++Sg:%^WGStemi OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
++Sg:i OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+LEXICON NMN_PÖČÖI-PL
+:%^WGStemi	PLNOMSUF-USUALLY-WEAK ;
+:%>l%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%>l%{oö%}i PLPARSUF_Zero ;
+:%>l%{oö%}i PLINSSUF ;
++Pl:%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_OZA/SÄYNÄ !!= @CODE@ oza:oza
+	NMN_OZA/SÄYNÄ-SG  ;
+	NMN_OZA/SÄYNÄ-PL  ;
+
+LEXICON NMN_OZA/SÄYNÄ-SG
+ SGNOMSUF ;
+ SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+ SGPARSUF_A2 ;
++Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_OZA/SÄYNÄ-PL
+: PLNOMSUF-USUALLY-WEAK ;
+:%^RmVow%>i PL-GEN/COM/APRSUF_EN ;
+:%^RmVow%>i PLPARSUF_i ;
+:%^RmVow%>i PLINSSUF ;
++Pl:%^RmVow%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_SÄYNÄ !!= @CODE@ säynä:säynä
+!	NMN_SÄYNÄ-SG  ;
+!	NMN_SÄYNÄ-PL  ;
+
+!LEXICON NMN_SÄYNÄ-SG
+! SGNOMSUF ;
+! SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+! SGPARSUF_A2 ;
+!+Sg: OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_SÄYNÄ-PL
+! PLNOMSUF-USUALLY-WEAK ;
+!:%^RmVow%>i PL-GEN/COM/APRSUF_EN ;
+!:%^RmVow%>i PLPARSUF_i ;
+!:%^RmVow%>i PLINSSUF ;
+!+Pl:%^RmVow%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_SAMMAL !!= @CODE@ sammal:sammal
+! NMN_SAMMAL-SG ;
+! NMN_SAMMAL-PL ;
+
+LEXICON NMN_SAMMAL-SG	
+ SGNOMSUF ;
+:e SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:e OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_SAMMAL-PL	
+:e PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TVER !!= @CODE@ tver:tver
+!! Gradation NA
+!! Front	 Vowel
+!! Singular stem vowel 0/i
+!! Plural stem vowel il%{oö%}i
+ NMN_TVER-SG ;
+ NMN_TVER-PL ;
+
+LEXICON NMN_TVER-SG	
+ SGNOMSUF ;
+:i SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_TVER-PL	
+:i PLNOMSUF-USUALLY-WEAK ;
+:i%>l%{oö%}i PL-GEN/COM/APRSUF_EN ;
+:i%>l%{oö%}i PLPARSUF_i ;
+:i%>l%{oö%}i PLINSSUF ;
++Pl:i%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_ŠOUFER !!= @CODE@ šoufer:šoufer
+!! Gradation NA
+!! Back	 Vowel
+!! Singular stem vowel 0/i
+!! Plural stem vowel il%{oö%}i
+! NMN_ŠOUFER-SG ;
+! NMN_ŠOUFER-PL ;
+
+LEXICON NMN_ŠOUFER-SG	
+ SGNOMSUF ;
+:i SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+: SGPARSUF_dU ;
++Sg:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_ŠOUFER-PL	
+:i PLNOMSUF-USUALLY-WEAK ;
+:i%>l%{oö%}i PL-GEN/COM/APRSUF_EN ;
+:i%>l%{oö%}i PLPARSUF_i ;
+:i%>l%{oö%}i PLINSSUF ;
++Pl:i%>l%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_VANUIN !!= @CODE@ vanuin:vanui
+!! Gradation NA
+!! Back	     Vowel
+!! Stem	     consonant n/m
+!! Singular stem vowel 0/0/e
+!! Plural stem vowel i
+ NMN_VANUIN-SG ;
+ NMN_VANUIN-PL ;
+
+LEXICON NMN_VANUIN-SG	
+:n SGNOMSUF ;
+:me SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:n SGPARSUF_A2 ;
++Sg:me OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_VANUIN-PL	
+:me PLNOMSUF-USUALLY-WEAK ;
+:mi PL-GEN/COM/APRSUF_EN ;
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_SAMMUTIN/KEITIN !!= @CODE@ sammutin:sammutti
+!! Gradation Yes
+!! (Nominative and partitive singular forms are weak grade)
+!! Back	     Vowel
+!! Stem	     consonant n/m
+!! Singular stem vowel 0/0/e
+!! Plural stem vowel i
+ NMN_SAMMUTIN/KEITIN-SG ;
+ NMN_SAMMUTIN/KEITIN-PL ;
+
+LEXICON NMN_SAMMUTIN/KEITIN-SG	
+:%^WGStemn SGNOMSUF ;
+:me SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%^WGStemn SGPARSUF_A2 ;
++Sg:me OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_SAMMUTIN/KEITIN-PL	
+:me PLNOMSUF-USUALLY-WEAK ;
+:mi PL-GEN/COM/APRSUF_EN ;
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+LEXICON NMN_VAŽEN !!= @CODE@ važen:važe
+ NMN_VAŽEN-SG ;
+ NMN_VAŽEN-PL ;
+
+LEXICON NMN_VAŽEN-SG	
+:n SGNOMSUF ;
+:me SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:n SGPARSUF_A2 ;
++Sg:me OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_VAŽEN-PL	
+:me PLNOMSUF-USUALLY-WEAK ;
+:mi PL-GEN/COM/APRSUF_EN ;
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_LÄMMIN !!= @CODE@ lämmin:lämbi
+ NMN_LÄMMIN-SG ;
+ NMN_LÄMMIN-PL ;
+
+LEXICON NMN_LÄMMIN-SG	
+:%^WGStemn SGNOMSUF ;
+:mä SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%^WGStemn SGPARSUF_dU ;
++Sg:mä OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_LÄMMIN-PL	
+:mä PLNOMSUF-USUALLY-WEAK ;
+:mi PL-GEN/COM/APRSUF_EN ;
+:mi PLPARSUF_i ;
+:mi PLINSSUF ;
++Pl:mi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TAIGIN !!= @CODE@ taigin:taigin
+ NMN_TAIGIN-SG ;
+ NMN_TAIGIN-PL ;
+
+LEXICON NMN_TAIGIN-SG	
+: SGNOMSUF ;
+:a SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%{ui%} SGPARSUF_A2 ;
++Sg:a OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+LEXICON NMN_TAIGIN-PL	
+:a PLNOMSUF-USUALLY-WEAK ;
+:%{oö%}i PL-GEN/COM/APRSUF_N ;
+:%{oö%}i PLPARSUF_Zero ;
+:%{oö%}i PLINSSUF ;
++Pl:%{oö%}i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KARJALAINE/LIYGILÄINE
+	NMN_KARJALAINE/LIYGILÄINE-SG ;
+	NMN_KARJALAINE/LIYGILÄINE-PL ;
+
+LEXICON NMN_KARJALAINE/LIYGILÄINE-SG
+:ine SGNOMSUF ;
+:ze SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:s SGPARSUF_dU ;
++Sg:ze OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_KARJALAINE/LIYGILÄINE-PL
+:ze PLNOMSUF-USUALLY-WEAK ;
+:zi PL-GEN/COM/APRSUF_EN ;
+:zi PLPARSUF_i ;
+:zi PLINSSUF ;
++Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_LIYGILÄINE
+!	NMN_LIYGILÄINE-SG ;
+!	NMN_LIYGILÄINE-PL ;
+
+!LEXICON NMN_LIYGILÄINE-SG
+!:ine SGNOMSUF ;
+!:ze SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+!:s SGPARSUF_dU ;
+!+Sg:ze OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+!LEXICON NMN_LIYGILÄINE-PL
+!:ze PLNOMSUF-USUALLY-WEAK ;
+!:zi PL-GEN/COM/APRSUF_EN ;
+!:zi PLPARSUF_i ;
+!:zi PLINSSUF ;
+!+Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_NAINE/KIELINE
+	NMN_NAINE/KIELINE-SG ;
+	NMN_NAINE/KIELINE-PL ;
+
+LEXICON NMN_NAINE/KIELINE-SG
+:ne SGNOMSUF ;
+:ze SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:s SGPARSUF_dU ;
++Sg:ze  OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_NAINE/KIELINE-PL
+:ze PLNOMSUF-USUALLY-WEAK ;
+:zi PL-GEN/COM/APRSUF_EN ;
+:zi PLPARSUF_i ;
+:zi PLINSSUF ;
++Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_KIELINE
+!	NMN_KIELINE-SG ;
+!	NMN_KIELINE-PL ;
+
+!LEXICON NMN_KIELINE-SG
+!:ne SGNOMSUF ;
+!:ze SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+!:s SGPARSUF_dU ;
+!+Sg:ze OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+!LEXICON NMN_KIELINE-PL
+!:ze PLNOMSUF-USUALLY-WEAK ;
+!:zi PL-GEN/COM/APRSUF_EN ;
+!:zi PLPARSUF_i ;
+!:zi PLINSSUF ;
+!+Pl:zi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TOINE
+	NMN_TOINE-SG ;
+	NMN_TOINE-PL ;
+
+LEXICON NMN_TOINE-SG
+:ine SGNOMSUF ;
+:ize SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:s SGPARSUF_dU ;
++Sg:ize OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_TOINE-PL
+:ize PLNOMSUF-USUALLY-WEAK ;
+:izi PL-GEN/COM/APRSUF_EN ;
+:izi PLPARSUF_i ;
+:izi PLINSSUF ;
++Pl:izi OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+!! ! Nominative singular in "v"
+LEXICON NMN_ABRAMOV !!= * @CODE@ Abramov:Abramov
+	NMN_ABRAMOV-SG ;
+	NMN_ABRAMOV-PL ;
+
+LEXICON NMN_ABRAMOV-SG
+ SGNOMSUF ;
+:%>%{aä%} SG-ACC/APR/COM/GENSUF-USUALLY-WEAK ;
+:%>%{ui%} SGPARSUF_A2 ;
++Sg:%>%{aä%} OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+LEXICON NMN_ABRAMOV-PL
+:%>%{aä%} PLNOMSUF-USUALLY-WEAK ;
+:i PL-GEN/COM/APRSUF_EN ;
+:i PLPARSUF_i ;
+:i PLINSSUF ;
++Pl:i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+
+
+
+!! !Singular suffixes
+!! 
+LEXICON SG-ACC/APR/COM/GENSUF-USUALLY-WEAK
+ SGACCSUF_n ;
+ SGAPRSUF_llUO ;
+ SGCOMSUF_nke ;
+ SGGENSUF_n ;
++Sg+Ins:%>n K ;
+
+LEXICON SG-ACC/APR/COM/GENSUF
+ SGACCSUF_n ;
+ SGAPRSUF_llUO ;
+ SGCOMSUF_nke ;
+ SGGENSUF_n ;
+
+ SGINSSUF ;
+
+LEXICON SGACCSUF_n
++Sg+Acc:%>n K ;
+
+LEXICON SGAPRSUF_llUO
++Sg+Apr:%>ll%{uy%}%{oö%} K ;
+
+LEXICON SGCOMSUF_nke
++Sg+Com:%>nke K ;
+
+LEXICON SGGENSUF_n
++Sg+Gen:%>n K ;
+
+LEXICON SGINSSUF
++Sg+Ins:%^WGStem%>n K ;
+
+LEXICON SGNOMSUF
++Sg+Nom: K ;
++Sg+Acc: K ;
+
+LEXICON SGPARSUF_dU
++Sg+Par:%>d%{uy%} K ;
+
+LEXICON SGPARSUF_tU
++Sg+Par:%>t%{uy%} K ;
+
+LEXICON SGPARSUF_ttU
++Sg+Par:%>tt%{uy%} K ;
+
+
+LEXICON SGPARSUF_A2
++Sg+Par:%>%{aäoeöuiy%} K ;
+
+LEXICON SGPARSUF_U
++Sg+Par:%>%{uy%} K ;
+!!€# luadi%^WGStem%^E1%>tt%{uy%}%>%{uy%}
+!!€0 luaji000ttu%>u
+
+LEXICON SGPARSUF_O
++Sg+Par:%>%{oö%} K ;
+
+
+!! !Plural suffixes
+LEXICON PL-GEN/COM/APRSUF_EN
++Pl+Gen:%>en K ;
++Pl+Com:%>enke K ;
++Pl+Apr:%>ell%{uy%}%{oö%} K ;
+
+LEXICON PL-GEN/COM/APRSUF_N
++Pl+Gen:%>n K ;
++Pl+Com:%>nke K ;
++Pl+Apr:%>ll%{uy%}%{oö%} K ;
+
+LEXICON PLINSSUF
++Pl+Ins:%>n K ;
+
+LEXICON PLNOMSUF-USUALLY-WEAK
++Pl+Nom:%>t K ;
++Pl+Acc:%>t K ;
+
+LEXICON PLNOMSUF
++Pl+Nom:%^WGStem%>t K ;
++Pl+Acc:%^WGStem%>t K ;
+
+LEXICON PLPARSUF_Zero
++Pl+Par: K ;
+
+LEXICON PLPARSUF_i
++Pl+Par:%>i K ;
+
+LEXICON PLPARSUF_dU
++Pl+Par:%>d%{uy%} K ;
+
+LEXICON ILLSUF_he
++Ill:%>he K ;
+
+LEXICON Noun-NB-01
++Ade:%^WGStem%>l K ;
++Abl:%^WGStem%>l K ;
++Abl+Use/NG:%^WGStem%>lpäi K ;
++All:%^WGStem%>le K ;
++Abe:%^WGStem%>tt%{aä%}h K ;
++Abe+Err/Orth:%^WGStem%>tt%{aä%} K ;
++Abe:%^WGStem%>t%{aä%} K ;
++Ela:%^WGStem%>s K ;
++Ela+Use/NG:%^WGStem%>späi K ;
++Ess:%^WGStem%>nn%{uy%} K ;
++Ine:%^WGStem%>s K ;
+!+Ins:%^WGStem%>n K ; 
++Ill:%>h K ;
++Tra:%^WGStem%>kse K ;
++Prl:%^WGStem%>či K ;
++Ter:%>ss%{aä%}h K ;
+
+LEXICON OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES
+ OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE ;
+ OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE ;
+
+LEXICON OBLIQUE-CASES-TYPICALLY-WITH-WEAK-GRADE
++Ade:%>l K ;
++Abl:%>l K ;
++Abl+Use/NG:%>lpäi K ;
++All:%>le K ;
++All+PxSg3:%>lleh K ; ! More PX is needed 2015-11
++Abe:%>tt%{aä%}h K ;
++Abe:%>t%{aä%} K ;
++Abe+Err/Orth:%>tt%{aä%} K ;
++Ela:%>s K ;
++Ela+Use/NG:%>späi K ;
++Ess:%>nn%{uy%} K ;
++Ine:%>s K ;
+!+Ins:%>n K ; 
++Tra:%>kse K ;
++Prl:%>či K ;
+
+LEXICON OBLIQUE-CASES-TYPICALLY-WITH-STRONG-GRADE
++Ill:%>h K ;
++Ter:%>ss%{aä%}h K ;
+
+!! !SINGULAR POSSESSA
+
+LEXICON SGNOM/PXSP3 !!= @CODE@ adding -h
++Sg+Nom+PxSP3:%>h K ;
+
+! vim: set ft=xfst-lexc:
+

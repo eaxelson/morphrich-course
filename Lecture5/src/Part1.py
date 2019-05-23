@@ -4,11 +4,28 @@
 #
 # * Twolc & xfst rewrite rules
 #
+# TODO: demonstrate how twolc rules can be generated with hfst_dev.regex('').
+#
 # <ul>
 # <li>1. <a href="#"></a></li>
 # </ul>
 #
-# Have a look at some Olonetsian Karelian lexc/twolc files in Giella repo:
+# ## Twolc rewrite rules
+#
+# From the previous lecture:
+#
+# > # First, compile the lexc files:
+# > #
+# > # TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
+# > from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
+# > 
+# > kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
+# > print(kala.lookup('kala+N+Pl+Ade'))
+# > 
+# > # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
+#
+# Have a look at Olonetsian Karelian lexc files in Giella repo that we used in the previous lecture
+# as well as the twolc file olo-phon.twolc:
 #
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc">affixes/nouns.lexc</a>
@@ -16,69 +33,20 @@
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/phonology/olo-phon.twolc">olo-phon.twolc</a>
 #
 # or use a copies available in this directory. We will use a simplified test case where stems/nouns.lexc will be
-# replaced with a single-stem file kala.lexc.
-
-# Multicharacter symbols and root and end lexica are listed in file
-# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
-
-# We used a simplified one-stem version of stems/nouns.lexc named kala.lexc.
+# replaced with a single-stem file kala.lexc as we did in Lecture 4:
 #
 # ```
 # LEXICON nouns
 # kala+N:kala N_KALA ;
 # ```
+#
+# Remember that multicharacter symbols and root and end lexica are listed in file
+# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
+#
+# We use again the affix and clitics files as such.
 
-# Then, we can use the affix file as such. The most important parts are:
-#
-# ```
-# LEXICON N_KALA !!= @CODE@ kala:kala
-# !! Gradation NA
-# !! Harmony: Back
-# !! stem final a changes to u in Sg Par
-# !! stem final a changes to o before i in Pl stem
-# : ATTESTED-NOUN-STEM ;
-#         N_KALA-SG  ;
-#         N_KALA-PL  ;
-# LEXICON N_KALA-SG
-# :%{back%} NMN_KALA ;
-# LEXICON N_KALA-PL
-# :%{back%} NMN_KALA-PL ;
-# LEXICON N-HUM_KALA
-# +Sem/Hum: NMN_KALA ;
-# # ```                
-#
-# and the continuation lexica (N_KALA-SG, N_KALA-PL, NMN_KALA, NMN_KALA-PL, N-HUM_KALA).
+# First, compile the lexc files as we did in Lecture 4:
 
-# The clitics file (WORD-END is defined in file root.lexc):
-#
-# ```
-# !! Clitics
-# !  --------------------
-# !! Livvi clitics
-# 
-# LEXICON K
-# +Clt/gi:%>gi WORD-END "also / -kin" ;
-# !+Clt/hAi:%>h%{aä%}i WORD-END " / -hAn" ;
-# +Clt/hAi:%>häi WORD-END " / -hAn" ;
-# +Clt/bo:%>bo WORD-END " / -pA" ;
-# +Qst:%>go WORD-END " / -kO" ;
-# WORD-END ; 
-#
-# # ```
-
-# We use olo-phon.lexc as such. Note e.g.:
-#
-# ``` 
-# LEXICON NMN_KALA-PL
-#  PLNOMSUF-USUALLY-WEAK ;
-#  :%^A2O%>j PL-GEN/COM/APRSUF_EN ;
-#  :%^A2O%>i PLPARSUF_Zero ;
-#  :%^A2O%>i PLINSSUF ;
-#  +Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
-# ```
-
-# First, compile the lexc files:
-#
 # TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
 from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
 
@@ -87,7 +55,7 @@ print(kala.lookup('kala+N+Pl+Ade'))
 
 # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
 
-# Phonetic rules in file olo-phon.twolc, e.g.:
+# We introduce phonological rewrite rules given in file olo-phon.twolc. Note e.g.:
 #
 # ```
 # "a:o in the plural and preterite"
@@ -96,7 +64,7 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # ```
 
 # Then compile twolc rules (TODO: result is written to file):
-# This takes some time and we get verbose output:
+# This takes some time and we get verbose output (TODO: use python's stdout in hfst_dev module...):
 #
 # ```
 # Reading alphabet.

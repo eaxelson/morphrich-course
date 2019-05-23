@@ -1,21 +1,30 @@
 # # MORPHOLOGICALLY RICH LANGUAGES WITH HFST TOOLS - LECTURE 1
 #
 # <ul>
-# <li>1. <a href="#1.-Prerequisites">Prerequisites</a></li>
-# <li>2. <a href="#2.-Course-material">Course material</a></li>
-# <li>3. <a href="#3.-Course-overview">Course overview</a></li>
-# <li>4. <a href="#4.-Majority-vs.-minority-language-technology">Majority vs. minority language technology</a></li>
+# <li>1. <a href="#1.-Background">Background</a></li>
+# <li>2. <a href="#2.-Prerequisites">Prerequisites</a></li>
+# <li>3. <a href="#3.-Course-material">Course material</a></li>
+# <li>4. <a href="#4.-Course-overview">Course overview</a></li>
+# <li>5. <a href="#5.-Majority-vs.-minority-language-technology">Majority vs. minority language technology</a></li>
 # </ul>
+
+# ## 1. Background
 #
-# ## HFST - Helsinki Finite-State Technology
+# This web course is based on a course by Jack Rueter & Sjur Moshagen organized at the University of Helsinki
+# named 'Language Technology for Finno-Ugric Languages - Methods, Tools and Applications'.
+# The course belongs to the MA Programme 'Linguistic Diversity in the Digital Age'.
 #
-# The HFST toolkit is intended for processing natural language
-# morphologies. The toolkit is demonstrated by wide-coverage
-# implementations of a number of languages of varying morphological
-# complexity. HFST is written mainly in C++, but there is also a Python interface
-# which is demonstrated on these notebooks.
+# This course gives an introduction to mainly rule-based language technology as used in many full-scale,
+# production projects using the <a href="https://giellalt.uit.no/">GiellaLT</a> and
+# <a href="https://en.wikipedia.org/wiki/Apertium">Apertium</a> infrastructures.
+# The technologies and methodologies presented can be used on any language,
+# although the focus is on morphologically complex ones.
 #
-# ## 1. Prerequisites
+# We use the Python interface of <a href="https://hfst.github.io/">HFST</a>
+# toolkit which is intended for processing natural language morphologies.
+# of varying morphological complexity.  
+
+# ## 2. Prerequisites
 #
 # <ul>
 # <li>Foundations of general linguistics</li>
@@ -23,8 +32,8 @@
 # <li>Some programming experience is desirable</li>
 # <li>Knowledge of Natural Language Processing (NLP) is also a plus</li>
 # </ul>
-#
-# ## 2. Course material
+
+# ## 3. Course material
 #
 # If you want a book:
 #
@@ -47,23 +56,8 @@
 # <li>For installation of the HFST package for Python, see our <a href="https://pypi.org/project/hfst_dev/">PyPI pages</a>.</li>
 # <li>For more information about the interface, see our <a href="https://github.com/hfst/python-hfst-4.0/wiki">Github wiki pages</a>.</li>
 # </ul>
-#
-# First, import the package and list its contents with `help`.
 
-import hfst_dev
-help(hfst_dev)
-
-# Then, see for more information on some of the functions, e.g. `compile_lexc_file`.
-
-help(hfst_dev.compile_lexc_file)
-
-# Also print the version number of the package.
-
-print(hfst_dev.__version__)
-
-# ## 3. Course overview
-#
-# This web course is based on a course by Jack Rueter & Sjur Moshagen organized at the University of Helsinki.
+# ## 4. Course overview
 #
 # <table>
 # <tr> <th>Lecture</th> <th>Topics</th> </tr>
@@ -75,7 +69,7 @@ print(hfst_dev.__version__)
 # <tr> <td>6</td> <td>Shared language-independent modeling (examples from Saamic languages, perhaps hierarchical)</td> </tr>
 # </table>
 
-# ## 4. Majority vs. minority language technology
+# ## 5. Majority vs. minority language technology
 #
 # Of course there is no such thing as minority or majority language technology per se,
 # but there still is some truth to the concept. First a brief historic detour:

@@ -6,8 +6,12 @@
 # * production and reuse of test materials for development of analysers/generators
 #
 # <ul>
-# <li>1. <a href="#"></a></li>
+# <li>1. <a href="#1.-Test-material"></a>Test material</li>
+# <li>2. <a href="#2.-Lexc-formalism">Lexc formalism</a></li>
 # </ul>
+#
+
+# ## 1. Test material
 #
 # Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
 # file for Olonetsian Karelian nouns (N-kala_gt-norm.yaml).
@@ -15,7 +19,7 @@
 # <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml">Giella repo</a>
 # or use a copy available in this directory.
 
-# First the configuration that defines the analysis and generation transducers for hfst and xfst tools:
+# First the configuration that defines the analysis and generation transducers for hfst and xfst tools (we'll get back to this later):
 #
 # ```
 #
@@ -28,7 +32,7 @@
 #     Morph: ../../../src/analyser-gt-norm.xfst
 #     App: lookup
 #
-# # ```
+# ```
 
 # Then the tests that define a full paradigm for the given test word:
 #
@@ -119,7 +123,7 @@
 
 # If there are hundreds or thousands of forms, best to list them alphabetically...
 # See <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml">verb inflection</a>.
-# There are 141 forms listed but there are even more.
+# There are 141 forms listed but there are even more forms.
 
 
 # Compare e.g. with <a href="https://victorio.uit.no/langtech/trunk/langs/nds/test/src/gt-norm-yamls/V-waien_gt-norm.yaml">Low German verb inflection</a>:
@@ -143,3 +147,86 @@
 #      waien+V+Imprt+Sg2:  wai
 #      waien+V+Imprt+Pl2:  waiet
 # ```
+
+# ## 2. Lexc formalism
+#
+# Have a look at some Olonetsian Karelian lexc files in Giella repo:
+#
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a>
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc">affixes/nouns.lexc</a>
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/clitics.lexc">affixes/clitics.lexc</a>
+#
+# or use a copies available in this directory. We will use a simplified test case where stems/nouns.lexc will be
+# replaced with a single-stem file kala.lexc.
+
+# Multicharacter symbols and root and end lexica are listed in file
+# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
+
+# We used a simplified one-stem version of stems/nouns.lexc named kala.lexc.
+#
+# ```
+# LEXICON nouns
+# kala+N:kala N_KALA ;
+# ```
+
+# Then, we can use the affix file as such. The most important parts are:
+#
+# ```
+# LEXICON N_KALA !!= @CODE@ kala:kala
+# !! Gradation NA
+# !! Harmony: Back
+# !! stem final a changes to u in Sg Par
+# !! stem final a changes to o before i in Pl stem
+# : ATTESTED-NOUN-STEM ;
+#         N_KALA-SG  ;
+#         N_KALA-PL  ;
+# LEXICON N_KALA-SG
+# :%{back%} NMN_KALA ;
+# LEXICON N_KALA-PL
+# :%{back%} NMN_KALA-PL ;
+# LEXICON N-HUM_KALA
+# +Sem/Hum: NMN_KALA ;
+# # ```                
+#
+# and the continuation lexica (N_KALA-SG, N_KALA-PL, NMN_KALA, NMN_KALA-PL, N-HUM_KALA).
+
+# The clitics file (WORD-END is defined in file root.lexc):
+#
+# ```
+# !! Clitics
+# !  --------------------
+# !! Livvi clitics
+# 
+# LEXICON K
+# +Clt/gi:%>gi WORD-END "also / -kin" ;
+# !+Clt/hAi:%>h%{aä%}i WORD-END " / -hAn" ;
+# +Clt/hAi:%>häi WORD-END " / -hAn" ;
+# +Clt/bo:%>bo WORD-END " / -pA" ;
+# +Qst:%>go WORD-END " / -kO" ;
+# WORD-END ; 
+#
+# # ```
+
+# We use olo-phon.lexc as such. Note e.g.:
+#
+# ``` 
+# LEXICON NMN_KALA-PL
+#  PLNOMSUF-USUALLY-WEAK ;
+#  :%^A2O%>j PL-GEN/COM/APRSUF_EN ;
+#  :%^A2O%>i PLPARSUF_Zero ;
+#  :%^A2O%>i PLINSSUF ;
+#  +Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+# ```
+
+# First, compile the lexc files:
+#
+# TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
+from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
+
+kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
+print(kala.lookup('kala+N+Pl+Ade'))
+
+# Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
+#
+# Concatenative morphology is not enough, we need phonological rules.
+# We will get back to them in the next lecture.

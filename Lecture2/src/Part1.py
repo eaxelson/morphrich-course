@@ -2,19 +2,13 @@
 #
 # <ul>
 # <li>1. <a href="#1.-The-Giella-infra">The Giella infra</a></li>
-# <li>2. <a href="#2.-</a></li>
-# <li>3. <a href="#3.-Some-finite-state-tasks</a>Some finite-state tasks</li>
+# <li>2. <a href="#2.-Some-finite-state-tasks</a>Some finite-state tasks</li>
 # </ul>
 #
-# Intro to the Giella infra and a variety of finite-state tasks
-# 
-# * stress on reusability and language independence
-# 
 # Reading material:
 # 
-# * <a href="https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md">Foma Simple Intro</a>
 # * <a href="http://emmtee.net/oe/nodalida13/conference/43.pdf">Building an open-source development infrastructure for language technology projects</a>
-# 
+ 
 # ## 1. The Giella infra
 # 
 # From the previous lecture:
@@ -32,7 +26,7 @@
 # 
 # Now let us look at the infrastructure in more detail.
 # 
-# On the top level we have the following directories (plus a few more that I have removed for clarity):
+# On the top level we have the following directories (plus a few more that have been removed for clarity):
 # 
 # ```
 # .
@@ -210,21 +204,27 @@
 # ```
 # This text file corresponds to the following mobile keyboard:
 # 
-# <a href="img/sme-ios.png">North Sámi on iOS</a>
+# <img src="img/sme-ios.png">
 # 
 # As can be seen, the on-screen keyboard matches the layout definition exactly.
 # 
 # We use the exact same setup for desktop keyboards. The infrastructure / build commands will take the above text definition of the keyboard, and turn it into an iOS app, an Android app, a Windows keyboard installer and so on.
-# 
-# ## 2. Install Hfst / Foma, optionally the full giella infra
-# 
-# * <a href="https://fomafst.github.io/">foma</a>
-# * <a href="https://github.com/hfst/hfst/wiki/Download-And-Install">hfst</a>
-# * <a href="http://divvun.no/doc/infra/infraremake/GettingStartedWithTheNewInfra.html#Only+the+GT+core+and+the+wanted+language%28s%29">The Giella infra</a> (TODO: fix link)
-# 
+
 # ## 3. Some finite-state tasks
 # 
 # We run through (some of) the excercises here (TODO: make a corresponding page for HFST at github wiki):
 # 
 # * <a href="https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md">Foma Simple Intro</a>
 
+# First, import the package and list its contents with `help`.
+
+import hfst_dev
+help(hfst_dev)
+
+# Then, see for more information on some of the functions, e.g. `compile_lexc_file`.
+
+help(hfst_dev.compile_lexc_file)
+
+# Also print the version number of the package.
+
+print(hfst_dev.__version__)
