@@ -2,7 +2,7 @@
 #
 # <ul>
 # <li>1. <a href="#1.-The-Giella-infra">The Giella infra</a></li>
-# <li>2. <a href="#2.-Some-finite-state-tasks</a>Some finite-state tasks</li>
+# <li>2. <a href="#2.-Some-finite-state-tasks">Some finite-state tasks</a></li>
 # </ul>
 #
 # Reading material:
@@ -210,7 +210,7 @@
 # 
 # We use the exact same setup for desktop keyboards. The infrastructure / build commands will take the above text definition of the keyboard, and turn it into an iOS app, an Android app, a Windows keyboard installer and so on.
 
-# ## 3. Some finite-state tasks
+# ## 2. Some finite-state tasks
 # 
 # We run through (some of) the excercises here (TODO: make a corresponding page for HFST at github wiki):
 # 

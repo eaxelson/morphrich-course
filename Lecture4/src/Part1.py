@@ -6,7 +6,7 @@
 # * production and reuse of test materials for development of analysers/generators
 #
 # <ul>
-# <li>1. <a href="#1.-Test-material"></a>Test material</li>
+# <li>1. <a href="#1.-Test-material">Test material</a></li>
 # <li>2. <a href="#2.-Lexc-formalism">Lexc formalism</a></li>
 # </ul>
 #
@@ -221,7 +221,7 @@
 # First, compile the lexc files:
 #
 # TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
-from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
+from hfst_dev import compile_lexc_file, HfstTransducer
 
 kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
 print(kala.lookup('kala+N+Pl+Ade'))

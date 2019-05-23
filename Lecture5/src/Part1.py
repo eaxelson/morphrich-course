@@ -7,22 +7,22 @@
 # TODO: demonstrate how twolc rules can be generated with hfst_dev.regex('').
 #
 # <ul>
-# <li>1. <a href="#"></a></li>
+# <li>1. <a href="#1.-Twolc-rewrite-rules">Twolc rewrite rules</a></li>
 # </ul>
 #
-# ## Twolc rewrite rules
+# ## 1. Twolc rewrite rules
 #
 # From the previous lecture:
 #
-# > # First, compile the lexc files:
-# > #
-# > # TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
-# > from hfst_dev import compile_lexc_file, compile_twolc_file, HfstInputStream, regex, HfstTransducer, intersect, EPSILON
+# > ```# First, compile the lexc files:```
 # > 
-# > kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
-# > print(kala.lookup('kala+N+Pl+Ade'))
+# > ```# TODO: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
+# > from hfst_dev import compile_lexc_file, HfstTransducer```
 # > 
-# > # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
+# > ```kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
+# > print(kala.lookup('kala+N+Pl+Ade'))```
+# >
+# > ```# Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)```
 #
 # Have a look at Olonetsian Karelian lexc files in Giella repo that we used in the previous lecture
 # as well as the twolc file olo-phon.twolc:
@@ -90,10 +90,8 @@ kala.compose_intersect(rules)
 print(kala.lookup('kala+N+Pl+Ade'))
 print(kala.lookup('kala+N+Pl+Abl'))
 
-# and get the result (('kalo>i>l', 0.0),)
+# and get the result ```(('kalo>i>l', 0.0),)``` ('>' means morpheme boundary). Compare with test file lines:
 #
-# '>' means morpheme boundary
-
 # ```
 # kala+N+Pl+Ade: kaloil
 # kala+N+Pl+Abl: [kaloilpäi, kaloil]
