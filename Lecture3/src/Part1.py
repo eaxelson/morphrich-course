@@ -2,15 +2,75 @@
 #
 # Topics: simple lexc (numerals, dates, clocks)
 #
-# Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian</a>.
-#
 # <ul>
-# <li>1. <a href="#1.-Numerals">Numerals</a></li>
-# <li>2. <a href="#2.-Dates">Dates</a></li>
-# <li>3. <a href="#3.-Clocks">Clocks</a></li>
+# <li>1. <a href="#1.-Lexc-formalism">Lexc formalism</a></li>
+# <li>2. <a href="#2.-Numerals">Numerals</a></li>
+# <li>3. <a href="#3.-Dates">Dates</a></li>
+# <li>4. <a href="#4.-Clocks">Clocks</a></li>
 # </ul>
 
-# ## 1. Numerals
+# ## 1. Lexc formalism
+#
+# In its simplest form: LEXICON Root and '#' which means no continuation lexicon:
+#
+# ```
+# LEXICON Root
+# cat # ;
+# ```
+
+from hfst_dev import compile_lexc_script
+tr = compile_lexc_script("""
+LEXICON Root
+cat # ;
+""")
+print(tr.extract_paths(output='raw'))
+
+# An example with multicharacter symbols and continuation lexica:
+#
+# ```
+# Multichar_Symbols
+#  +N # Noun
+#  +V # Verb
+#
+# LEXICON Root
+# cat NOUN ;
+# mew NOUN ;
+# mew VERB ;
+# 
+# LEXICON NOUN
+# +N END ;
+#
+# LEXICON VERB
+# +V END ;
+#
+# LEXICON END
+# # ;
+# ```
+
+tr = compile_lexc_script("""
+Multichar_Symbols
+ +N # Noun
+ +V # Verb
+
+LEXICON Root
+cat NOUN ;
+mew NOUN ;
+mew VERB ;
+
+LEXICON NOUN
+0:+N END ;
+
+LEXICON VERB
+0:+V END ;
+
+LEXICON END
+# ;
+""")
+print(tr.extract_paths(output='raw'))
+
+# ## 2. Numerals
+#
+# # Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian</a>.
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-numbers-digit2text.lexc">transcriptor-numbers-digit2text.lexc</a>
 # (or use a copy available in this directory). The file describes how digits are converted into text.
@@ -35,7 +95,7 @@ print(tr.lookup('345678.'))
 # * Numerals 20-99:
 #   * In Finnish: the pattern N + KYMMENTÄ (+ M)
 #   * In English: same pattern but 20, 30 separate: two -> twenty, three -> thirty)
-#   * c.f. German zwei/zwo -> zwanzig, Swedish två -> tjugo
+#   * cf. German zwei/zwo -> zwanzig, Swedish två -> tjugo
 #
 # Also note that Finnish cardinals use singular partitive, e.g. 340: kolmesataaneljäkymmentä ('three of a hundred + four of a ten').
 #
@@ -51,10 +111,10 @@ print(tr.lookup('345678.'))
 # * plural nominative: sadannetneljännetkymmenennetviidennet
 # * plural translative: sadansiksineljänsiksikymmenensiksiviidensiksi
 
-# ## 2. Dates
+# ## 3. Dates
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-date-digit2text.lexc">transcriptor-date-digit2text.lexc</a>
-# (or use a copy available in this directory).
+# (or use a copy available in this directory). The file describes how dates are converted into text.
 #
 # Ordinals and month names are both needed. Since there are only 31 ordinals, they can be listed individually.
 
@@ -76,24 +136,29 @@ for month in range(1,13):
 
 # Result: pakkaskuu, tuhukuu, kevätkuu, sulakuu, oraskuu, kezäkuu, heinykuu, elokuu, syvyskuu, ligakuu, kylmykuu, talvikuu
 #
-# * c.f. Finnish: tammikuu, helmikuu, maaliskuu, huhtikuu, toukokuu, kesäkuu, heinäkuu, elokuu, syyskuu, lokakuu, marraskuu, joulukuu
-# * c.f. Estonian: jaanuar, veebruar, märts, aprill, mai, juuni, juuli, august, september, oktoober, november, detsember
+# * cf. Finnish: tammikuu, helmikuu, maaliskuu, huhtikuu, toukokuu, kesäkuu, heinäkuu, elokuu, syyskuu, lokakuu, marraskuu, joulukuu
+# * cf. Estonian: jaanuar, veebruar, märts, aprill, mai, juuni, juuli, august, september, oktoober, november, detsember
+# * cf. English: January, February, March, April, May, June, July, August, September, October, November, December
   
-# ## 3. Clocks
+# ## 4. Clocks
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-clock-digit2text.lexc">transcriptor-clock-digit2text.lexc</a>
-# (or use a copy available in this directory).
+# (or use a copy available in this directory). The file describes how clocks are converted into text.
 #
+# Print all clocks between 11:00 and 11:59. TODO: are these in Finnish?
 
 tr = compile_lexc_file('transcriptor-clock-digit2text.lexc')
 hour = '11'
 for minutes in range(0,60):
     minutes = str(minutes)
+    # add missing zero to numbers 1-9
     if len(minutes) == 1:
         minutes = '0' + minutes
     clock = hour + ':' + minutes
     print(clock + '\t' + str(tr.lookup(clock)))
 
+# The pattern is:
+#
 # <table>
 # <tr> <th>Clock</th> <th>Translation</th> </tr>
 # <tr> <td>11:00</td> <td>'eleven'</td> </tr>
@@ -103,5 +168,7 @@ for minutes in range(0,60):
 # <tr> <td>11:31 - 11:40</td> <td>'N past half twelve'</td> </tr>
 # <tr> <td>11:40 - 11:59</td> <td>'N to twelve'</td> </tr>
 # </table>
+#
+# Also try a clock aftern noon:
 
 print(tr.lookup('22:15')) # TODO

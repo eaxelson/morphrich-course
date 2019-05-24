@@ -7,7 +7,7 @@
 #
 # <ul>
 # <li>1. <a href="#1.-Test-material">Test material</a></li>
-# <li>2. <a href="#2.-Lexc-formalism">Lexc formalism</a></li>
+# <li>2. <a href="#1.-Nouns">Nouns</a></li>
 # </ul>
 #
 
@@ -148,7 +148,7 @@
 #      waien+V+Imprt+Pl2:  waiet
 # ```
 
-# ## 2. Lexc formalism
+# ## 2. Nouns
 #
 # Have a look at some Olonetsian Karelian lexc files in Giella repo:
 #
@@ -161,6 +161,35 @@
 
 # Multicharacter symbols and root and end lexica are listed in file
 # <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
+#
+# The root lexicon:
+#
+# ```
+# !! !!!Lexicon Root
+# 
+# LEXICON Root
+# 
+#    adjectives  ;     !!= * @CODE@
+#    adpositions    ;  !!= * @CODE@
+#    adverbs  ;     !!= * @CODE@
+#    conjunctors  ;    !!= * @CODE@
+#    determiners  ;    !!= * @CODE@
+#    interjections  ;  !!= * @CODE@
+#    nouns   ;     !!= * @CODE@
+#    pronouns    ;     !!= * @CODE@
+#    propernouns    ;  !!= * @CODE@
+#    propernouns-toponyms    ;  !!= * @CODE@
+#    quantifiers    ;  !!= * @CODE@
+#    verbs  ;     !!= * @CODE@
+#    rus-Cyrl-2-Lat-ProperNouns ;  !!= * @CODE@ Derived from urj-Cyrl
+# ```
+#
+# and the end lexicon:
+#
+# ```
+# LEXICON WORD-END
+# # ;
+# ```
 
 # We used a simplified one-stem version of stems/nouns.lexc named kala.lexc.
 #

@@ -1,0 +1,4 @@
+Alphabet a k n p N ;
+Rules
+"N to m"
+N:m <=> _ :p ;

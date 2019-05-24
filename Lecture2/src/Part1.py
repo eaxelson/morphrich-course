@@ -208,7 +208,9 @@
 # 
 # As can be seen, the on-screen keyboard matches the layout definition exactly.
 # 
-# We use the exact same setup for desktop keyboards. The infrastructure / build commands will take the above text definition of the keyboard, and turn it into an iOS app, an Android app, a Windows keyboard installer and so on.
+# We use the exact same setup for desktop keyboards.
+# The infrastructure / build commands will take the above text definition of the keyboard,
+# and turn it into an iOS app, an Android app, a Windows keyboard installer and so on.
 
 # ## 2. Some finite-state tasks
 # 
