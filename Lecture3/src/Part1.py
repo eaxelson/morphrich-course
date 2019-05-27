@@ -145,7 +145,7 @@ for month in range(1,13):
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-clock-digit2text.lexc">transcriptor-clock-digit2text.lexc</a>
 # (or use a copy available in this directory). The file describes how clocks are converted into text.
 #
-# Print all clocks between 11:00 and 11:59. TODO: are these in Finnish?
+# Print all clocks between 11:00 and 11:59.
 
 tr = compile_lexc_file('transcriptor-clock-digit2text.lexc')
 hour = '11'
@@ -171,4 +171,5 @@ for minutes in range(0,60):
 #
 # Also try a clock aftern noon:
 
-print(tr.lookup('22:15')) # TODO
+print(tr.lookup('22:15'))
+print(tr.lookup('10:15'))
