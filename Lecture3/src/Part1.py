@@ -11,12 +11,12 @@
 
 # ## 1. Lexc formalism
 #
-# In its simplest form: LEXICON Root and '#' which means no continuation lexicon:
+# A lexc file/script consists of lexicons with one or more entries. The entries can have a continuation
+# lexicon defined. There must be one lexicon named `Root` which is the root lexicon. The entries can be
+# given as strings or regular expressions.
 #
-# ```
-# LEXICON Root
-# cat # ;
-# ```
+# Below is a lexc file with a root lexicon with one entry ('cat') that has no continuation lexicon.
+# Keyword `LEXICON` defines a lexicon and `#` after an entry means that the entry has no continuation lexicon.
 
 from hfst_dev import compile_lexc_script
 tr = compile_lexc_script("""
@@ -25,34 +25,18 @@ cat # ;
 """)
 print(tr.extract_paths(output='raw'))
 
-# An example with multicharacter symbols and continuation lexica:
-#
-# ```
-# Multichar_Symbols
-#  +N # Noun
-#  +V # Verb
-#
-# LEXICON Root
-# cat NOUN ;
-# mew NOUN ;
-# mew VERB ;
-# 
-# LEXICON NOUN
-# +N END ;
-#
-# LEXICON VERB
-# +V END ;
-#
-# LEXICON END
-# # ;
-# ```
+# When we compile the script, we get a transducer that recognizes the string 'cat'.
+
+# We continue with a toy example that uses multicharacter symbols and continuation lexicons.
+# `Multichar_Symbols` defines a set of symbols that are tokenized as single symbols in lexicon entries.
+# A colon `:` separates input and output sides in lexicon entries. A zero `0` represents the epsilon.
 
 tr = compile_lexc_script("""
 Multichar_Symbols
  +N # Noun
  +V # Verb
 
-LEXICON Root
+LEXICON Root    ! This is a comment
 cat NOUN ;
 mew NOUN ;
 mew VERB ;
@@ -63,14 +47,68 @@ LEXICON NOUN
 LEXICON VERB
 0:+V END ;
 
+! This is another comment
 LEXICON END
 # ;
 """)
 print(tr.extract_paths(output='raw'))
 
+# When we compile the script, we get a transducer that recognizes the following strings:
+#
+# <table>
+# <tr> <th>Input</th> <th>Output</th> </tr>
+# <tr> <td>cat</td> <td>cat+N</td> </tr>
+# <tr> <td>mew</td> <td>mew+N</td> </tr>
+# <tr> <td>mew</td> <td>mew+V</td> </tr>
+# </table>
+#
+# Note that he end lexicon `END` consist of one empty entry with no continuation lexicon.
+
+# We modify the example with regular expressions (regexps) and weights.
+#
+# Regexps are enclosed in angle brackets and follow the <a href="https://github.com/hfst/python-hfst-4.0/wiki/PackageHfst#regex-regexp-kwargs">xfst regexp formalism</a>.
+# Note that many characters in regexps have a special meaning and must be escaped with a per cent sign to be interpreted literally.
+#
+# Weights can be given in regexps (see <a href="https://github.com/hfst/python-hfst-4.0/wiki/Weights#using-weights-in-regular-expressions">weights in xfst regexps</a>)
+# and for individual lexicon entries (`"weight: WEIGHT"`).
+
+tr = compile_lexc_script("""
+Multichar_Symbols
+ +N # Noun
+ +V # Verb
+
+LEXICON Root
+cat NOUN "weight: 1" ;    ! Weights given for lexicon entries
+mew NOUN "weight: 5.2" ;
+mew VERB "weight: 1.4" ;
+
+LEXICON NOUN
+<0:%+N::0.5> END ;        ! Weights given inside regexps
+!  This is the same as:
+!  0:+N END "weight: 0.5" ;
+
+LEXICON VERB
+<0:%+V::0.4> END ;
+
+LEXICON END
+# ;
+""")
+print(tr.extract_paths(output='raw'))
+
+# When we compile the following script, we get a transducer that recognizes the following strings:
+#
+# <table>
+# <tr> <th>Input</th> <th>Output</th> <th>Weight</th> </tr>
+# <tr> <td>cat</td> <td>cat+N</td> <td>1 + 0.5 = 1.5</td> </tr>
+# <tr> <td>mew</td> <td>mew+N</td> <td>5.2 + 0.5 = 5.7</td> </tr>
+# <tr> <td>mew</td> <td>mew+V</td> <td>1.4 + 0.4 = 1.8</td> </tr>
+# </table>
+#
+# Note how weights are added when we traverse through the lexicons.
+
 # ## 2. Numerals
 #
-# # Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian</a>.
+# Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian</a>.
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-numbers-digit2text.lexc">transcriptor-numbers-digit2text.lexc</a>
 # (or use a copy available in this directory). The file describes how digits are converted into text.
@@ -86,30 +124,30 @@ print(tr.lookup('345678'))
 print(tr.lookup('345678.'))
 
 # Note that Uralic numerals follow a pattern different from e.g. Germanic ones.
-# Below are listed numerals 1-99 for Finnish and English:
+# Below are listed numerals 1—99 for Finnish and English:
 #
-# * In both languages, numerals 1-10 must be listed individually.
-# * Numerals 11-19:
-#   * In Finnish: 11-19 follow the pattern N + TOISTA
-#   * In English: 11, 12, 13 must be listed separately and 14-19 follow the pattern N + TEEN (but e.g. five -> fifteen)
-# * Numerals 20-99:
+# * In both languages, numerals 1—10 must be listed individually.
+# * Numerals 1119:
+#   * In Finnish: 1119 follow the pattern N + TOISTA
+#   * In English: 11, 12, 13 must be listed separately and 14—19 follow the pattern N + TEEN (but e.g. five &#8658; fifteen)
+# * Numerals 20—99:
 #   * In Finnish: the pattern N + KYMMENTÄ (+ M)
-#   * In English: same pattern but 20, 30 separate: two -> twenty, three -> thirty)
-#   * cf. German zwei/zwo -> zwanzig, Swedish två -> tjugo
+#   * In English: same pattern but 20, 30 separate: two &#8658; twenty, three &#8658; thirty)
+#   * cf. German zwei/zwo &#8658; zwanzig, Swedish två &#8658; tjugo
 #
 # Also note that Finnish cardinals use singular partitive, e.g. 340: kolmesataaneljäkymmentä ('three of a hundred + four of a ten').
 #
 # Ordinal numbers:
 #
-# * In Finnish: ordinality is visible in all parts: 145. -> sada*s*neljä*s*kymmene*s*viide*s*
-# * In English: ordinality is visible only in last part: 145. -> hundred fourty-fifth
+# * In Finnish: ordinality is visible in all parts: 145. &#8658; sada<b>s</b>neljä<b>s</b>kymmene<b>s</b>viide<b>s</b>
+# * In English: ordinality is visible only in last part: 145. &#8658; hundred fourty-fif<b>th</b>
 #
 # In Finnish: cardinals and ordinals are inflected in case and in number (singular, plural). For example for the ordinal 145:
 #
-# * singular nominative: sadasneljäskymmenesviides
-# * singular translative: sadanneksineljänneksikymmenenneksiviidenneksi
-# * plural nominative: sadannetneljännetkymmenennetviidennet
-# * plural translative: sadansiksineljänsiksikymmenensiksiviidensiksi
+# * singular nominative: sada<b>s</b>neljä<b>s</b>kymmene<b>s</b>viide<b>s</b>
+# * singular translative: sada<b>nneksi</b>neljä<b>nneksi</b>kymmene<b>nneksi</b>viide<b>nneksi</b>
+# * plural nominative: sada<b>nnet</b>neljä<b>nnet</b>kymmene<b>nnet</b>viide<b>nnet</b>
+# * plural translative: sada<b>nsiksi</b>neljä<b>nsiksi</b>kymmene<b>nsiksi</b>viide<b>nsiksi</b>
 
 # ## 3. Dates
 #
@@ -131,7 +169,9 @@ print(tr.lookup('1.1.'))
 # Print all names of months
 
 for month in range(1,13):
+    # use first day of month
     res = tr.lookup('1.' + str(month) + '.')
+    # use first result, ignore weight and perform some simple replaces to get the name of the month
     print(res[0][0].replace('enzimäine päivy ','').replace('du',''))
 
 # Result: pakkaskuu, tuhukuu, kevätkuu, sulakuu, oraskuu, kezäkuu, heinykuu, elokuu, syvyskuu, ligakuu, kylmykuu, talvikuu
@@ -162,14 +202,17 @@ for minutes in range(0,60):
 # <table>
 # <tr> <th>Clock</th> <th>Translation</th> </tr>
 # <tr> <td>11:00</td> <td>'eleven'</td> </tr>
-# <tr> <td>11:01 - 11:19</td> <td>'N past eleven'</td> </tr>
-# <tr> <td>11:20 - 11:29</td> <td>'N to half twelve'</td> </tr>
+# <tr> <td>11:01—11:19</td> <td>'N past eleven'</td> </tr>
+# <tr> <td>11:20—11:29</td> <td>'N to half twelve'</td> </tr>
 # <tr> <td>11:30</td> <td>'half twelve'</td> </tr>
-# <tr> <td>11:31 - 11:40</td> <td>'N past half twelve'</td> </tr>
-# <tr> <td>11:40 - 11:59</td> <td>'N to twelve'</td> </tr>
+# <tr> <td>11:31—11:40</td> <td>'N past half twelve'</td> </tr>
+# <tr> <td>11:40—11:59</td> <td>'N to twelve'</td> </tr>
 # </table>
-#
-# Also try a clock aftern noon:
+
+# Also try clocks after noon:
 
 print(tr.lookup('22:15'))
 print(tr.lookup('10:15'))
+
+for clocks in (('00:00','12:00'),('00:30','12:30'),('11:59','23:59'),('05:32','17:32'),('02:11','14:11')):
+    assert(tr.lookup(clocks[0]) == tr.lookup(clocks[1]))

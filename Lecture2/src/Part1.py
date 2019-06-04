@@ -151,11 +151,14 @@
 # 
 # To start work on a new language, we essentially just copy this dir.
 # 
-# To enhance or change existing languages, we edit the template and *merge* the changes with all language dirs (using the `svn merge` function).
+# To enhance or change existing languages,
+# we edit the template and *merge* the changes with all language dirs (using the `svn merge` function).
 # 
-# The cost for this operation is tremendeously lower than having to edit each language, and is also much less error prone. It is the heart of the scalability of the infrastructure.
+# The cost for this operation is tremendeously lower than having to edit each language,
+# and is also much less error prone. It is the heart of the scalability of the infrastructure.
 # 
-# It does require that all language independent changes are done via the templates, and *only there*. Otherwise you will get `svn` conflicts when merging, and the cost increases very fast.
+# It does require that all language independent changes are done via the templates, and *only there*.
+# Otherwise you will get `svn` conflicts when merging, and the cost increases very fast.
 # 
 # ### Testing
 #  
@@ -189,7 +192,8 @@
 # 
 # ### Keyboards in the Giella infra
 # 
-# We use a very simple syntax (mobile keyboard shown) to specify the keyboard layout, essentially typing out the keyboard as we want it in a text file:
+# We use a very simple syntax (mobile keyboard shown) to specify the keyboard layout,
+# essentially typing out the keyboard as we want it in a text file:
 # 
 # ```
 # modes:

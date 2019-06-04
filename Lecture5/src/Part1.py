@@ -180,7 +180,7 @@ print(kala.lookup('kaloil'))
 #
 # Rewrite rules can also be written using the xfst formalism.
 #
-# The "N to m" rule ```# N:m <=> _ :p ;``` would be:
+# The "N to m" rule ```# N:m <=> _ :p ;``` would be (TODO):
 #
 # ```
 # N -> m || _ p ;

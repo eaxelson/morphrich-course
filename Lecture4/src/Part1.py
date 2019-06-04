@@ -2,12 +2,12 @@
 #
 # Topics:
 #
-# * lexc: practices and automated documentation
-# * production and reuse of test materials for development of analysers/generators
+# * writing test material
+# * applying simple concatenative morphology
 #
 # <ul>
 # <li>1. <a href="#1.-Test-material">Test material</a></li>
-# <li>2. <a href="#1.-Nouns">Nouns</a></li>
+# <li>2. <a href="#2.-Nouns">Nouns</a></li>
 # </ul>
 #
 
@@ -234,7 +234,7 @@
 # +Qst:%>go WORD-END " / -kO" ;
 # WORD-END ; 
 #
-# # ```
+# ```
 
 # We use olo-phon.lexc as such. Note e.g.:
 #
@@ -257,5 +257,5 @@ print(kala.lookup('kala+N+Pl+Ade'))
 
 # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
 #
-# Concatenative morphology is not enough, we need phonological rules.
+# Simple concatenative morphology is not enough, but we also need phonological rules.
 # We will get back to them in the next lecture.

@@ -11,8 +11,8 @@
 # ## 1. Background
 #
 # This web course is based on a course by Jack Rueter & Sjur Moshagen organized at the University of Helsinki
-# named 'Language Technology for Finno-Ugric Languages - Methods, Tools and Applications'.
-# The course belongs to the MA Programme 'Linguistic Diversity in the Digital Age'.
+# named <i>Language Technology for Finno-Ugric Languages - Methods, Tools and Applications</i>.
+# The course belongs to the MA Programme <i>Linguistic Diversity in the Digital Age</i>.
 #
 # This course gives an introduction to mainly rule-based language technology as used in many full-scale,
 # production projects using the <a href="https://giellalt.uit.no/">GiellaLT</a> and
@@ -21,7 +21,7 @@
 # although the focus is on morphologically complex ones.
 #
 # We use the Python interface of <a href="https://hfst.github.io/">HFST</a>
-# toolkit which is intended for processing natural language morphologies.
+# toolkit which is intended for processing natural language morphologies
 # of varying morphological complexity.  
 
 # ## 2. Prerequisites
@@ -64,7 +64,7 @@
 # <tr> <td>1</td> <td>Course intro, field overview, majority vs minority language technology</td> </tr>
 # <tr> <td>2</td> <td>Intro to the Giella infra and a variety of finite-state tasks, stress on reusability and language independence</td> </tr>
 # <tr> <td>3</td> <td>Simple lexc (numerals, dates, clocks)</td> </tr>
-# <tr> <td>4</td> <td>Lexc (practices and automated documentation) (production and reuse of test materials for development of analysers/generators)</td> </tr>
+# <tr> <td>4</td> <td>Writing test material and applying simple concatenative morphology</td> </tr>
 # <tr> <td>5</td> <td>Twolc & xfst rewrite rules</td> </tr>
 # <tr> <td>6</td> <td>Shared language-independent modeling (examples from Saamic languages, perhaps hierarchical)</td> </tr>
 # </table>
@@ -94,7 +94,7 @@
 #         * a keyboard (soft or hard)
 #         * fonts
 #         * an encoding standard
-#         * standards for languages, writing systems, areas, etc
+#         * standards for languages, writing systems, areas, etc.
 #         * operating systems that can render your text properly using all the above (and this is still not the case for some writing systems: <a href="https://en.wikipedia.org/wiki/Mongolian_script#Font_issues">«As of 2015 there are no fonts that successfully display all of Mongolian correctly when written in Unicode.»</a>, cf also Kildin Sámi and any other language forced to use combining diacritics because Unicode does not allow any new precomposed letters)
 #         * Internet <img src="img/internet.jpg">
 #
@@ -124,20 +124,25 @@
 # 
 # ### Today
 # 
-# There's a hierarchy or a scale, with English on the one end, and the roughly 1600 languages without any writing system at all on the other end, and the rest of the languages in between.
+# There's a hierarchy or a scale, with English on the one end,
+# and the roughly 1600 languages without any writing system at all on the other end, and the rest of the languages in between.
 # In terms of LT support, most languages of the world go towards the low end.
 # 
-# This picture is very gross. Even high-end languages like German does not have everything that English has, or the quality isn't as good as for English.
+# This picture is very gross.
+# Even high-end languages like German do not have everything that English has, or the quality isn't as good as for English.
 # 
-# And there are really big languages with tens of millions of speakers with no language technology support at all, as documented in the article linked to for this lecture.
+# And there are really big languages with tens of millions of speakers with no language technology support at all,
+# as documented in the article linked to for this lecture.
 # 
 # <img src="img/293-2067-1-PB.jpg">
 # 
 # #### Linguistic differences
 # 
-# There's a tendency that large language communities moves towards a simplified grammar. The top three languages of the world (Mandarin, Spanish, English) all have very modest (or no) morphology.
+# There's a tendency that large language communities move towards a simplified grammar.
+# The top three languages of the world (Mandarin, Spanish, English) all have very modest (or no) morphology.
 # 
-# On the other hand, often minority languages have complex to very complex grammars. We have worked mostly with circumpolar languages, like Uralic languages, Greenlandic and native languages in Canada.
+# On the other hand, often minority languages have complex to very complex grammars.
+# We have worked mostly with circumpolar languages, like Uralic languages, Greenlandic and native languages in Canada.
 # All of these languages have complex to very complex morphology or morphophonology (or both!).
 # 
 # <a href="img/gtlangs_circumpolar_names.png">International cooperation</a>
@@ -145,28 +150,33 @@
 # 
 # #### Consequences
 # 
-# Combine the typological differences with the differences in economy and technology, and the result is that the dominating language technologies are such that linguistic analysis doesn't really matter.
-# Morphology is a problem rather than a feature, and the same goes for phonology: the technologies basically assumes a linear string of (mostly) invariant words, and calculate statistical or other patterns from these strings.
+# Combine the typological differences with the differences in economy and technology,
+# and the result is that the dominating language technologies are such that linguistic analysis doesn't really matter.
+# Morphology is a problem rather than a feature, and the same goes for phonology:
+# the technologies basically assumes a linear string of (mostly) invariant words, and calculate statistical or other patterns from these strings.
 # 
 # This makes it even harder to develop tools for the languages we care about - the mainstream technology is more or less useless, at least presently.
 # 
 # For the minority language communities this means that:
 # 
 # * young people want access to technology, and if they can't get it in their mother tongue they will use another language — minority language speakers are very often bi- or multilingual
-# * lack of LT is becoming a strong force in language death - a language that is not being used is a dead language
+# * lack of LT is becoming a strong force in language death — a language that is not being used is a dead language
 # 
 # ### The alternatives
 # 
-# Fortunately there are still nation-state languages with complex morphology and with universities and research groups working on alternative technologies, HU being one such place.
+# Fortunately there are still nation-state languages with complex morphology
+# and with universities and research groups working on alternative technologies,
+# University of Helsinki being one such place.
 # 
-# Using technology developed here, it is possible to build tools and LT solutions that will work well for in principle any language in the world.
+# Using technology developed here,
+# it is possible to build tools and LT solutions that will work well for in principle any language in the world.
 # 
 # This course is an introduction to these technologies and the tools that can be built with them, and the framework around them.
 # 
 # 
 # #### Support for minority languages
 # 
-# Our work (Jack and me + the groups we represent) have focused on minority languages, starting out with the Sámi languages.
+# Our work has focused on minority languages, starting out with the Sámi languages.
 # 
 # * rule-based technology
 # * writing support, support for building a written culture
@@ -176,7 +186,8 @@
 # 
 # <a href="img/crk-Latn.png">Plains cree keyboard menu entry</a>
 # 
-# So — does it make sense to talk about minority and majority LT? Not in itself, but because of the material basis or reality that LT must build on, and that have been presented above, it does.
+# So — does it make sense to talk about minority and majority LT?
+# Not in itself, but because of the material basis or reality that LT must build on, and that have been presented above, it does.
 # 
 # #### Majority language technology (= "English" LT)
 # 
@@ -207,18 +218,22 @@
 #     * by covering *and tagging* both descriptive and normative features of the grammar it can be used for both descriptive and normative tasks
 #     * in general, by making all features of a grammar explicit in the linguistic analysis, one can easily modify the grammar for various purposes
 # * lack of corpus material - there just isn't enough text to build statistical or neural models, if there is text at all
-# * mirroring the internalised grammar of people requires just people, not huge corpora or training data
+# * mirroring the internalized grammar of people requires just people, not huge corpora or training data
 # 
 # 
 # #### Reusable LT tool components
 # 
-# The basic machinery of a speller is the same independent of language. At the same time it is a lot of work to develop a decent speller engine, and make it work with MS Office, LibreOffice, InDesign, etc
+# The basic machinery of a speller is the same independent of language.
+# At the same time it is a lot of work to develop a decent speller engine,
+# and make it work with MS Office, LibreOffice, InDesign, etc
 # 
-# Factoring out those components, ensuring they are language independent, makes it possible to reuse them for any language.
+# Factoring out those components,
+# ensuring they are language independent, makes it possible to reuse them for any language.
 # 
 # The same goes for grammar checkers, hyphenators, machine translation, language learning tools, and so on.
 # 
-# The work we have done, and are doing, for the Sámi languages will thus become available and usable for any other language building on our resources.
+# The work we have done, and are doing,
+# for the Sámi languages will thus become available and usable for any other language building on our resources.
 # 
 # #### Scalable infrastructure
 # 
@@ -239,7 +254,7 @@
 # 
 # ## Summary
 # 
-# * given the realities of today, it makes some sense to talk about minority language LT - but the picture is more complicated than just a minority majority dichotomy
+# * given the realities of today, it makes some sense to talk about minority language LT ⇒ but the picture is more complicated than just a minority vs. majority dichotomy
 # * the up-front costs of LT is huge, leaving most languages out of even basic LT support
 # * working rule-based and with reusability in mind helps reduce the costs
 # * building on what has been done for other languages helps further reducing the costs
