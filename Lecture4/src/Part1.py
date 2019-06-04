@@ -17,9 +17,10 @@
 # file for Olonetsian Karelian nouns (N-kala_gt-norm.yaml).
 # Download it from
 # <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml">Giella repo</a>
-# or use a copy available in this directory.
+# or use a copy available in this directory. We'll go through the contents of the file.
 
-# First the configuration that defines the analysis and generation transducers for hfst and xfst tools (we'll get back to this later):
+# First there is the configuration that defines the analysis and generation transducers
+# for hfst and xfst tools (we'll get back to this later).
 #
 # ```
 #
@@ -34,7 +35,18 @@
 #
 # ```
 
-# Then the tests that define a full paradigm for the given test word:
+# Then there are the tests that define a full paradigm for the given test word,
+# in this case 'kala' ('fish'). A yaml test file lists several pairs of input and
+# output strings that must all be found in the transducer.
+# The input and output strings are separated by a colon and a whitespace ': '.
+# There can be several output strings for one input string.
+# They are given inside square brackets and separated by commas.
+#
+# Since we are dealing with a morphological generator,
+# the analysis is on the left side and the generated word form on the right side.
+# For each analysis, we list the possible generated forms. E.g. for singular abessive
+# ('without a/the fish'), we have two possible forms: 'kalata' and 'kalattah'.
+#
 #
 # ```
 # Tests:
@@ -121,7 +133,7 @@
 #      kala+N+Pl+Apr+Clt/gi: kalojelluogi
 # ```
 
-# If there are hundreds or thousands of forms, best to list them alphabetically...
+# If there are hundreds or thousands of forms, it is best to list them alphabetically.
 # See <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml">verb inflection</a>.
 # There are 141 forms listed but there are even more forms.
 
@@ -147,6 +159,8 @@
 #      waien+V+Imprt+Sg2:  wai
 #      waien+V+Imprt+Pl2:  waiet
 # ```
+
+# We'll use the Olonets-Karelian yaml test file in the next lecture.
 
 # ## 2. Nouns
 #
@@ -215,7 +229,7 @@
 # :%{back%} NMN_KALA-PL ;
 # LEXICON N-HUM_KALA
 # +Sem/Hum: NMN_KALA ;
-# # ```                
+# ```
 #
 # and the continuation lexica (N_KALA-SG, N_KALA-PL, NMN_KALA, NMN_KALA-PL, N-HUM_KALA).
 
@@ -255,7 +269,7 @@ from hfst_dev import compile_lexc_file, HfstTransducer
 kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
 print(kala.lookup('kala+N+Pl+Ade'))
 
-# Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
+# Without the rules, the result is `kala{back}^A2O>i>l`
 #
 # Simple concatenative morphology is not enough, but we also need phonological rules.
 # We will get back to them in the next lecture.
