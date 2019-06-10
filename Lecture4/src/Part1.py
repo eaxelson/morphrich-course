@@ -262,11 +262,9 @@
 # ```
 
 # First, compile the lexc files:
-#
-# TODO: we have to catenate the files: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
-from hfst_dev import compile_lexc_file, HfstTransducer
+from hfst_dev import compile_lexc_files, HfstTransducer
 
-kala = compile_lexc_file('root_kala_nouns_clitics.lexc')
+kala = compile_lexc_files(('root.lexc','kala.lexc','nouns.lexc','clitics.lexc'))
 print(kala.lookup('kala+N+Pl+Ade'))
 
 # Without the rules, the result is `kala{back}^A2O>i>l`

@@ -202,11 +202,9 @@ for minutes in range(0,60):
 # <table>
 # <tr> <th>Clock</th> <th>Translation</th> </tr>
 # <tr> <td>11:00</td> <td>'eleven'</td> </tr>
-# <tr> <td>11:01—11:19</td> <td>'N past eleven'</td> </tr>
-# <tr> <td>11:20—11:29</td> <td>'N to half twelve'</td> </tr>
+# <tr> <td>11:01—11:29</td> <td>'N minutes of twelfth'</td> </tr>
 # <tr> <td>11:30</td> <td>'half twelve'</td> </tr>
-# <tr> <td>11:31—11:40</td> <td>'N past half twelve'</td> </tr>
-# <tr> <td>11:40—11:59</td> <td>'N to twelve'</td> </tr>
+# <tr> <td>11:31—11:59</td> <td>'N minutes short of twelfth'</td> </tr>
 # </table>
 
 # Also try clocks after noon:
