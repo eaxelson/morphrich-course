@@ -1,21 +1,17 @@
 # # MORPHOLOGICALLY RICH LANGUAGES WITH HFST TOOLS - LECTURE 5
 #
-# Topics:
-#
-# * Twolc & xfst rewrite rules
-#
-# TODO: demonstrate how twolc rules can be generated with hfst_dev.regex('').
+# Topics: Twolc & xfst rewrite rules
 #
 # <ul>
 # <li>1. <a href="#1.-Twolc-formalism">Twolc formalism</a></li>
 # <li>2. <a href="#2.-Twolc-rewrite-rules-for-Olonets-Karelian">Twolc rewrite rules for Olonets-Karelian</a></li>
-# <li>3. <a href="#3.-Xfst-rewrite-rules">Xfst rewrite rules</a></li>
+# <li>3. <a href="#3.-Xfst-rewrite-rules">Xfst rewrite rules (TODO)</a></li>
 # </ul>
 
 # ## 1. Twolc formalism
 #
 # A twol-grammar consists of five parts: Alphabet, Diacritics, Sets, Definitions and Rules.
-# Each part contains statements, that end in a ; character and comments, that begin with a ! character and span to the end of the line.
+# Each part contains statements that end in `;`, possibly followed by comments that begin with `!` and span to the end of the line.
 # Two-level rules consist of a center, a rule-operator and contexts.
 # Twolc is often used for writing phonological rules that are applied to a lexicon written in lexc.
 #
@@ -27,7 +23,7 @@
 # kaNpa # ;
 # ```
 #
-# twolc file (n2m.twolc):
+# twolc file (<i>n2m.twolc</i>):
 # ```
 # Alphabet a k m n p N ;
 # Rules
@@ -42,6 +38,7 @@ kaNpa # ;
 """)
 
 from hfst_dev import compile_twolc_file, HfstInputStream
+# TODO: result is now written to file
 compile_twolc_file('n2m.twolc','n2m.hfst',verbose=True)
 istr = HfstInputStream('n2m.hfst')
 rules = istr.read_all()
@@ -60,7 +57,6 @@ print(lexicon.lookup('kaNpa'))
 #
 # > ```# First, compile the lexc files:```
 # > 
-# > ```# TODO: cat root.lexc kala.lexc nouns.lexc clitics.lexc > root_kala_nouns_clitics.lexc
 # > from hfst_dev import compile_lexc_files, HfstTransducer```
 # > 
 # > ```kala = compile_lexc_files(('root.lexc','kala.lexc','nouns.lexc','clitics.lexc'))
@@ -71,7 +67,7 @@ print(lexicon.lookup('kaNpa'))
 # Have a look at Olonetsian Karelian lexc files in Giella repo that we used in the previous lecture
 # as well as the twolc file olo-phon.twolc:
 #
-# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a>
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a> (was replaced with <i>kala.lexc</i>)
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc">affixes/nouns.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/clitics.lexc">affixes/clitics.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/phonology/olo-phon.twolc">olo-phon.twolc</a>
@@ -84,10 +80,7 @@ print(lexicon.lookup('kaNpa'))
 # kala+N:kala N_KALA ;
 # ```
 #
-# Remember that multicharacter symbols and root and end lexica are listed in file
-# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
-#
-# We use again the affix and clitics files as such.
+# Remember that multicharacter symbols and root and end lexica are listed in file <i>root.lexc</i>.
 
 # First, compile the lexc files as we did in Lecture 4:
 
@@ -97,7 +90,7 @@ print(kala.lookup('kala+N+Pl+Ade'))
 
 # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
 
-# We introduce phonological rewrite rules given in file olo-phon.twolc. Note e.g.:
+# We introduce phonological rewrite rules given in file <i>olo-phon.twolc</i>. Note e.g.:
 #
 # ```
 # "a:o in the plural and preterite"
@@ -106,7 +99,8 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # ```
 
 # Then compile twolc rules (TODO: result is written to file):
-# This takes some time and we get verbose output (TODO: use python's stdout in hfst_dev module...):
+# This takes some time and we get verbose output
+# (TODO: use python's stdout in hfst_dev module so that the output will show in python...):
 #
 # ```
 # Reading alphabet.
@@ -126,13 +120,14 @@ istr.close()
 # We get 86 rules in total:
 print(len(rules))
 
-# We compose-intersect the lexicon with the rules
+# We compose-intersect the lexicon with the rules (TODO: explain what compose-intersection does)
 
 kala.compose_intersect(rules)
 print(kala.lookup('kala+N+Pl+Ade'))
 print(kala.lookup('kala+N+Pl+Abl'))
 
-# and get the result ```(('kalo>i>l', 0.0),)``` ('>' means morpheme boundary). Compare with test file lines:
+# and get the result ```(('kalo>i>l', 0.0),)``` ('>' means morpheme boundary).
+# Compare the results with test file lines:
 #
 # ```
 # kala+N+Pl+Ade: kaloil

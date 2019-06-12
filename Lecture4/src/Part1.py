@@ -1,9 +1,6 @@
 # # MORPHOLOGICALLY RICH LANGUAGES WITH HFST TOOLS - LECTURE 4
 #
-# Topics:
-#
-# * writing test material
-# * applying simple concatenative morphology
+# Topics: writing test material, applying simple concatenative morphology
 #
 # <ul>
 # <li>1. <a href="#1.-Test-material">Test material</a></li>
@@ -166,15 +163,15 @@
 #
 # Have a look at some Olonetsian Karelian lexc files in Giella repo:
 #
+# * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc">affixes/nouns.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/clitics.lexc">affixes/clitics.lexc</a>
 #
 # or use a copies available in this directory. We will use a simplified test case where stems/nouns.lexc will be
-# replaced with a single-stem file kala.lexc.
+# replaced with a single-stem file <i>kala.lexc</i>, so <i>nouns.lexc</i> will contain affixes/nouns.lexc.
 
-# Multicharacter symbols and root and end lexica are listed in file
-# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>.
+# Multicharacter symbols and root and end lexica are listed in file <i>root.lexc</i>.
 #
 # The root lexicon:
 #
@@ -205,14 +202,16 @@
 # # ;
 # ```
 
-# We used a simplified one-stem version of stems/nouns.lexc named kala.lexc.
+# We will use a simplified one-stem version of stems/nouns.lexc named <i>kala.lexc</i>.
 #
 # ```
 # LEXICON nouns
 # kala+N:kala N_KALA ;
 # ```
 
-# Then, we can use the affix file as such. The most important parts are:
+# We can use the affix file <i>affixes/nouns.lexc</i> as such
+# (no need to rename it since stems/nouns.lexc will not be used).
+# The most important parts are:
 #
 # ```
 # LEXICON N_KALA !!= @CODE@ kala:kala
@@ -232,8 +231,18 @@
 # ```
 #
 # and the continuation lexica (N_KALA-SG, N_KALA-PL, NMN_KALA, NMN_KALA-PL, N-HUM_KALA).
+# Note e.g.:
+#
+# ``` 
+# LEXICON NMN_KALA-PL
+#  PLNOMSUF-USUALLY-WEAK ;
+#  :%^A2O%>j PL-GEN/COM/APRSUF_EN ;
+#  :%^A2O%>i PLPARSUF_Zero ;
+#  :%^A2O%>i PLINSSUF ;
+#  +Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
+# ```
 
-# The clitics file (WORD-END is defined in file root.lexc):
+# The clitics file <i>clitics.lexc</i> (WORD-END is defined in file root.lexc):
 #
 # ```
 # !! Clitics
@@ -248,17 +257,6 @@
 # +Qst:%>go WORD-END " / -kO" ;
 # WORD-END ; 
 #
-# ```
-
-# We use olo-phon.lexc as such. Note e.g.:
-#
-# ``` 
-# LEXICON NMN_KALA-PL
-#  PLNOMSUF-USUALLY-WEAK ;
-#  :%^A2O%>j PL-GEN/COM/APRSUF_EN ;
-#  :%^A2O%>i PLPARSUF_Zero ;
-#  :%^A2O%>i PLINSSUF ;
-#  +Pl:%^A2O%>i OBLIQUE-CASES-NOT-GENITIVE-DERIVATIVES ;
 # ```
 
 # First, compile the lexc files:

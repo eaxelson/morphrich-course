@@ -20,9 +20,11 @@
 # The technologies and methodologies presented can be used on any language,
 # although the focus is on morphologically complex ones.
 #
-# We use the Python interface of <a href="https://hfst.github.io/">HFST</a>
-# toolkit which is intended for processing natural language morphologies
-# of varying morphological complexity.  
+# We use the Python interface of <a href="https://hfst.github.io/">HFST</a> (Helsinki Finite-State Technology)
+# toolkit. HFST is intended for processing natural language morphologies
+# of varying morphological complexity. At this point, we will use the
+# <a href="https://github.com/hfst/python-hfst-4.0/wiki">development version</a>
+# (<i>hfst_dev</i>) of the Python package.
 
 # ## 2. Prerequisites
 #
@@ -55,6 +57,7 @@
 # <li>HFST <a href="https://hfst.github.io">main page</a>.</li>
 # <li>For installation of the HFST package for Python, see our <a href="https://pypi.org/project/hfst_dev/">PyPI pages</a>.</li>
 # <li>For more information about the interface, see our <a href="https://github.com/hfst/python-hfst-4.0/wiki">Github wiki pages</a>.</li>
+# <li><a href="https://giellalt.uit.no/">GiellaLT</a>.</li>
 # </ul>
 
 # ## 4. Course overview

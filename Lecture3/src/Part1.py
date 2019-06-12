@@ -62,14 +62,14 @@ print(tr.extract_paths(output='raw'))
 # <tr> <td>mew</td> <td>mew+V</td> </tr>
 # </table>
 #
-# Note that he end lexicon `END` consist of one empty entry with no continuation lexicon.
+# Note that the end lexicon `END` consist of one empty entry with no continuation lexicon.
 
 # We modify the example with regular expressions (regexps) and weights.
 #
 # Regexps are enclosed in angle brackets and follow the <a href="https://github.com/hfst/python-hfst-4.0/wiki/PackageHfst#regex-regexp-kwargs">xfst regexp formalism</a>.
 # Note that many characters in regexps have a special meaning and must be escaped with a per cent sign to be interpreted literally.
 #
-# Weights can be given in regexps (see <a href="https://github.com/hfst/python-hfst-4.0/wiki/Weights#using-weights-in-regular-expressions">weights in xfst regexps</a>)
+# Weights can be defined in regexps (see <a href="https://github.com/hfst/python-hfst-4.0/wiki/Weights#using-weights-in-regular-expressions">weights in xfst regexps</a>)
 # and for individual lexicon entries (`"weight: WEIGHT"`).
 
 tr = compile_lexc_script("""
@@ -78,12 +78,12 @@ Multichar_Symbols
  +V # Verb
 
 LEXICON Root
-cat NOUN "weight: 1" ;    ! Weights given for lexicon entries
+cat NOUN "weight: 1" ;    ! Weights defined for lexicon entries
 mew NOUN "weight: 5.2" ;
 mew VERB "weight: 1.4" ;
 
 LEXICON NOUN
-<0:%+N::0.5> END ;        ! Weights given inside regexps
+<0:%+N::0.5> END ;        ! Weights defined inside regexps
 !  This is the same as:
 !  0:+N END "weight: 0.5" ;
 
@@ -108,7 +108,7 @@ print(tr.extract_paths(output='raw'))
 
 # ## 2. Numerals
 #
-# Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian</a>.
+# Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian transcriptions</a>.
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-numbers-digit2text.lexc">transcriptor-numbers-digit2text.lexc</a>
 # (or use a copy available in this directory). The file describes how digits are converted into text.
@@ -124,18 +124,23 @@ print(tr.lookup('345678'))
 print(tr.lookup('345678.'))
 
 # Note that Uralic numerals follow a pattern different from e.g. Germanic ones.
-# Below are listed numerals 1—99 for Finnish and English:
+# Numerals 1—99 are listed for Finnish and English below:
 #
 # * In both languages, numerals 1—10 must be listed individually.
-# * Numerals 1119:
-#   * In Finnish: 1119 follow the pattern N + TOISTA
-#   * In English: 11, 12, 13 must be listed separately and 14—19 follow the pattern N + TEEN (but e.g. five &#8658; fifteen)
+# * Numerals 11—19:
+#   * In Finnish: 11—19 follow the pattern N + TOISTA ('N of a second')
+#   * In English:
+#     * 11, 12, 13 must be listed separately (eleven, twelve, thirteen)
+#     * 14—19 follow a pattern similar to Finnish N + TEEN
+#     * phonological/ortographical changes in five &#8658; fifteen and eight &#8658; eighteen
 # * Numerals 20—99:
-#   * In Finnish: the pattern N + KYMMENTÄ (+ M)
-#   * In English: same pattern but 20, 30 separate: two &#8658; twenty, three &#8658; thirty)
-#   * cf. German zwei/zwo &#8658; zwanzig, Swedish två &#8658; tjugo
+#   * In Finnish: the pattern N + KYMMENTÄ (+ M) ('N of a ten (M)')
+#   * In English:
+#     * similar pattern N + TY (+ M)
+#     * but 20 and 30: two &#8658; twenty, three &#8658; thirty (cf. German zwei/zwo &#8658; zwanzig, Swedish två &#8658; tjugo)
+#     * phonological/ortographical changes in five &#8658; fifty and eight &#8658; eighty
 #
-# Also note that Finnish cardinals use singular partitive, e.g. 340: kolmesataaneljäkymmentä ('three of a hundred + four of a ten').
+# Also note that Finnish cardinals use singular partitive, e.g. 340: kolmesataaneljäkymmentä ('three of a hundred four of a ten').
 #
 # Ordinal numbers:
 #

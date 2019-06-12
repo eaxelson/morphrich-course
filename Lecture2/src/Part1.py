@@ -149,10 +149,10 @@
 #     └── tokenisers
 # ```
 # 
-# To start work on a new language, we essentially just copy this dir.
+# To start work on a new language, we essentially just <a href="https://giellalt.uit.no/tools/docu-svn-user.html">copy</a> this directory. 
 # 
 # To enhance or change existing languages,
-# we edit the template and *merge* the changes with all language dirs (using the `svn merge` function).
+# we edit the template and *merge* the changes with all language directories (using the `svn merge` function).
 # 
 # The cost for this operation is tremendeously lower than having to edit each language,
 # and is also much less error prone. It is the heart of the scalability of the infrastructure.
@@ -188,7 +188,7 @@
 # 
 # This can be used both as a development gold standard, and as regression testing later.
 # 
-# There is more about testing <a href="http://divvun.no/doc/infra/infraremake/AddingMorphologicalTestData.html">here</a>. (todo: fix link)
+# There is more about testing <a href="https://giellalt.uit.no/tools/HfstTester.html">here</a>. (TODO: is this the right link?)
 # 
 # ### Keyboards in the Giella infra
 # 
@@ -217,8 +217,9 @@
 # and turn it into an iOS app, an Android app, a Windows keyboard installer and so on.
 
 # ## 2. Some finite-state tasks
-# 
-# We run through (some of) the excercises here (TODO: make a corresponding page for HFST at github wiki):
+#
+# Te get acquainted with the HFST interface and finite-state basics,
+# we will run through (some of) the excercises here (TODO: make a corresponding page for HFST at github wiki):
 # 
 # * <a href="https://github.com/mhulden/foma/blob/master/foma/docs/simpleintro.md">Foma Simple Intro</a>
 
@@ -227,9 +228,17 @@
 import hfst_dev
 help(hfst_dev)
 
-# Then, see for more information on some of the functions, e.g. `compile_lexc_file`.
+# Then, see for more information on some of the functions, e.g.
 
 help(hfst_dev.compile_lexc_file)
+
+# and a variant of the above
+
+help(hfst_dev.compile_lexc_files)
+
+# and a variant that takes a string instead of a filename
+
+help(hfst_dev.compile_lexc_script)
 
 # Also print the version number of the package.
 
