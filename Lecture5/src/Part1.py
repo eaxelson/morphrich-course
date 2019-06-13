@@ -4,26 +4,28 @@
 #
 # <ul>
 # <li>1. <a href="#1.-Twolc-formalism">Twolc formalism</a></li>
-# <li>2. <a href="#2.-Twolc-rewrite-rules-for-Olonets-Karelian">Twolc rewrite rules for Olonets-Karelian</a></li>
-# <li>3. <a href="#3.-Xfst-rewrite-rules">Xfst rewrite rules (TODO)</a></li>
+# <li>2. <a href="#2.-Twolc-rewrite-rules-for-Olonets-Karelian">Twolc rewrite rules for Olonets Karelian</a></li>
+# <li>3. <a href="#3.-Twolc-vs.-xfst-rewrite-rules">Twolc vs. xfst rewrite rules (TODO)</a></li>
 # </ul>
 
 # ## 1. Twolc formalism
 #
-# A twol-grammar consists of five parts: Alphabet, Diacritics, Sets, Definitions and Rules.
+# A twol-grammar consists of five parts: `Alphabet`, `Diacritics`, `Sets`, `Definitions` and `Rules`.
 # Each part contains statements that end in `;`, possibly followed by comments that begin with `!` and span to the end of the line.
 # Two-level rules consist of a center, a rule-operator and contexts.
 # Twolc is often used for writing phonological rules that are applied to a lexicon written in lexc.
+# The rules are applied via intersection instead of composition. (TODO: explain more?)
 #
 # A minimalistic example of lexc combined with twolc:
 #
-# lexc file:
+# lexc script containing one entry `kaNpa`:
 # ```
 # LEXICON Root
 # kaNpa # ;
 # ```
 #
-# twolc file (<i>n2m.twolc</i>):
+# twolc script (available in file <i>n2m.twolc</i>) that rewrites (is this the correct term?)
+# `N` to `m` before `p`:
 # ```
 # Alphabet a k m n p N ;
 # Rules
@@ -37,8 +39,9 @@ LEXICON Root
 kaNpa # ;
 """)
 
+# TODO: implement also function compile_twolc_script
+# TODO: rewrite compile_twolc_file so that it returns the result instead of writing it to file
 from hfst_dev import compile_twolc_file, HfstInputStream
-# TODO: result is now written to file
 compile_twolc_file('n2m.twolc','n2m.hfst',verbose=True)
 istr = HfstInputStream('n2m.hfst')
 rules = istr.read_all()
@@ -51,7 +54,7 @@ print(lexicon.lookup('kaNpa'))
 #
 # For more information about twolc, see <a href="https://github.com/hfst/hfst/wiki/HfstTwolc#syntax">hfst-twolc command line tool manual page</a>.
 
-# ## 2. Twolc rewrite rules for Olonets-Karelian
+# ## 2. Twolc rewrite rules for Olonets Karelian
 #
 # From the previous lecture:
 #
@@ -64,16 +67,16 @@ print(lexicon.lookup('kaNpa'))
 # >
 # > ```# Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)```
 #
-# Have a look at Olonetsian Karelian lexc files in Giella repo that we used in the previous lecture
-# as well as the twolc file olo-phon.twolc:
+# Have a look at Olonets Karelian lexc files in Giella repo that we used in the previous lecture
+# as well as the twolc file <i>olo-phon.twolc</i>:
 #
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a> (was replaced with <i>kala.lexc</i>)
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/nouns.lexc">affixes/nouns.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/affixes/clitics.lexc">affixes/clitics.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/phonology/olo-phon.twolc">olo-phon.twolc</a>
 #
-# or use a copies available in this directory. We will use a simplified test case where stems/nouns.lexc will be
-# replaced with a single-stem file kala.lexc as we did in Lecture 4:
+# or use a copies available in this directory. We will use a simplified test case where <i>stems/nouns.lexc</i> will be
+# replaced with a single-stem file <i>kala.lexc</i> as we did in Lecture 4:
 #
 # ```
 # LEXICON nouns
@@ -98,9 +101,8 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # a:o <=> Cns: _ (%{back%}:) (%^WGStem:) %^A2O: ;
 # ```
 
-# Then compile twolc rules (TODO: result is written to file):
-# This takes some time and we get verbose output
-# (TODO: use python's stdout in hfst_dev module so that the output will show in python...):
+# Then compile twolc rules. This takes some time and we get verbose output
+# (TODO: use python's stdout in hfst_dev module so that the output will actually show...):
 #
 # ```
 # Reading alphabet.
@@ -126,7 +128,7 @@ kala.compose_intersect(rules)
 print(kala.lookup('kala+N+Pl+Ade'))
 print(kala.lookup('kala+N+Pl+Abl'))
 
-# and get the result ```(('kalo>i>l', 0.0),)``` ('>' means morpheme boundary).
+# and get the result `(('kalo>i>l', 0.0),)` ('>' means morpheme boundary).
 # Compare the results with test file lines:
 #
 # ```
@@ -139,13 +141,15 @@ for testcase in ('kala+N+Pl+Ade','kala+N+Pl+Abl'):
     for res in results:
         print(res[0].replace('>',''))
 
-# Get rid of morpheme boundary '>'.
+# Get rid of morpheme boundary '>' so we don't have to replace it every time.
+
 from hfst_dev import EPSILON
 kala.substitute('>',EPSILON)
 kala.minimize()
 
 # Check that each generated form produced by kala is listed
-# as a possible result in yaml file (TODO: a separate function for this?):
+# as a possible result in yaml test file <i>N-kala_gt-norm.yaml</i>
+# (TODO: implement a separate function for this in hfst_dev module):
 
 with open ("N-kala_gt-norm.yaml", "r") as myfile:
     data=myfile.readlines()
@@ -160,6 +164,7 @@ for line in data:
         results = kala.lookup(analysis)
         for res in results:
             # res[0] is the output form, res[1] is the weight
+            # TODO: maybe the result should be a class?
             if res[0] not in generation:
                 print('unknown result for analysis "' + analysis + '": "' + res[0] + '"')
 
@@ -169,12 +174,7 @@ kala.invert()
 kala.minimize()
 print(kala.lookup('kaloil'))
 
-# ## 3. Xfst rewrite rules
+# ## 3. Twolc vs. xfst rewrite rules
 #
-# Rewrite rules can also be written using the xfst formalism.
+# TODO: Explain the differences between twolc and xfst formalism.
 #
-# The "N to m" rule ```# N:m <=> _ :p ;``` would be (TODO):
-#
-# ```
-# N -> m || _ p ;
-# ```

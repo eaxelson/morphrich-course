@@ -27,9 +27,11 @@ print(tr.extract_paths(output='raw'))
 
 # When we compile the script, we get a transducer that recognizes the string 'cat'.
 
-# We continue with a toy example that uses multicharacter symbols and continuation lexicons.
+# We continue with an example that uses multicharacter symbols and continuation lexicons.
 # `Multichar_Symbols` defines a set of symbols that are tokenized as single symbols in lexicon entries.
-# A colon `:` separates input and output sides in lexicon entries. A zero `0` represents the epsilon.
+# `:` separates input and output sides in lexicon entries. `0` represents the epsilon.
+# `!` starts a comment that continues until the end of line. Note that `#` can also be used
+# for comments in `Multichar_Symbols` section.
 
 tr = compile_lexc_script("""
 Multichar_Symbols
@@ -64,13 +66,13 @@ print(tr.extract_paths(output='raw'))
 #
 # Note that the end lexicon `END` consist of one empty entry with no continuation lexicon.
 
-# We modify the example with regular expressions (regexps) and weights.
+# We modify the example with regular expressions (i.e. regexps) and weights.
 #
 # Regexps are enclosed in angle brackets and follow the <a href="https://github.com/hfst/python-hfst-4.0/wiki/PackageHfst#regex-regexp-kwargs">xfst regexp formalism</a>.
 # Note that many characters in regexps have a special meaning and must be escaped with a per cent sign to be interpreted literally.
 #
 # Weights can be defined in regexps (see <a href="https://github.com/hfst/python-hfst-4.0/wiki/Weights#using-weights-in-regular-expressions">weights in xfst regexps</a>)
-# and for individual lexicon entries (`"weight: WEIGHT"`).
+# and for individual lexicon entries (`"weight: WEIGHT"`). The weights in this toy example are quite arbitrary. Real weights should be based on probabilities extracted from large corpora.
 
 tr = compile_lexc_script("""
 Multichar_Symbols
@@ -105,10 +107,12 @@ print(tr.extract_paths(output='raw'))
 # </table>
 #
 # Note how weights are added when we traverse through the lexicons.
+# This is the case in the tropical semiring (TODO: add a link or an explanation) where weights
+# are interpreted as penalties, i.e. a bigger weight means that a path is less probable.
 
 # ## 2. Numerals
 #
-# Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets-Karelian transcriptions</a>.
+# Get acquainted with <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/">Olonets Karelian transcriptions</a>.
 #
 # Download <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/transcriptions/transcriptor-numbers-digit2text.lexc">transcriptor-numbers-digit2text.lexc</a>
 # (or use a copy available in this directory). The file describes how digits are converted into text.
@@ -124,7 +128,7 @@ print(tr.lookup('345678'))
 print(tr.lookup('345678.'))
 
 # Note that Uralic numerals follow a pattern different from e.g. Germanic ones.
-# Numerals 1—99 are listed for Finnish and English below:
+# Numerals 1—99 are listed below for Finnish and English:
 #
 # * In both languages, numerals 1—10 must be listed individually.
 # * Numerals 11—19:
@@ -132,20 +136,20 @@ print(tr.lookup('345678.'))
 #   * In English:
 #     * 11, 12, 13 must be listed separately (eleven, twelve, thirteen)
 #     * 14—19 follow a pattern similar to Finnish N + TEEN
-#     * phonological/ortographical changes in five &#8658; fifteen and eight &#8658; eighteen
+#     * but phonological/ortographical changes in five &#8658; fifteen and eight &#8658; eighteen
 # * Numerals 20—99:
 #   * In Finnish: the pattern N + KYMMENTÄ (+ M) ('N of a ten (M)')
 #   * In English:
 #     * similar pattern N + TY (+ M)
 #     * but 20 and 30: two &#8658; twenty, three &#8658; thirty (cf. German zwei/zwo &#8658; zwanzig, Swedish två &#8658; tjugo)
-#     * phonological/ortographical changes in five &#8658; fifty and eight &#8658; eighty
+#     * also phonological/ortographical changes in five &#8658; fifty and eight &#8658; eighty
 #
 # Also note that Finnish cardinals use singular partitive, e.g. 340: kolmesataaneljäkymmentä ('three of a hundred four of a ten').
 #
 # Ordinal numbers:
 #
 # * In Finnish: ordinality is visible in all parts: 145. &#8658; sada<b>s</b>neljä<b>s</b>kymmene<b>s</b>viide<b>s</b>
-# * In English: ordinality is visible only in last part: 145. &#8658; hundred fourty-fif<b>th</b>
+# * In English: ordinality is visible only in the last part: 145. &#8658; hundred fourty-fif<b>th</b>
 #
 # In Finnish: cardinals and ordinals are inflected in case and in number (singular, plural). For example for the ordinal 145:
 #
@@ -168,8 +172,8 @@ print(tr.lookup('1.1.'))
 #
 # Date can be expressed with:
 #
-# * partitive: 'enzimäine päivy pakkaskuudu' ("first day of pakkaskuu")
-# * genitive: 'pakkaskuun enzimäine päivy' ("pakkaskuu's first day").
+# * partitive: 'enzimäine päivy pakkaskuudu' ("first day of Pakkaskuu")
+# * genitive: 'pakkaskuun enzimäine päivy' ("Pakkaskuu's first day").
 
 # Print all names of months
 
@@ -206,10 +210,10 @@ for minutes in range(0,60):
 #
 # <table>
 # <tr> <th>Clock</th> <th>Translation</th> </tr>
-# <tr> <td>11:00</td> <td>'eleven'</td> </tr>
+# <tr> <td>11:00</td> <td>'eleven hours' or 'eleven sharp'</td> </tr>
 # <tr> <td>11:01—11:29</td> <td>'N minutes of twelfth'</td> </tr>
 # <tr> <td>11:30</td> <td>'half twelve'</td> </tr>
-# <tr> <td>11:31—11:59</td> <td>'N minutes short of twelfth'</td> </tr>
+# <tr> <td>11:31—11:59</td> <td>'N minutes short of twelve'</td> </tr>
 # </table>
 
 # Also try clocks after noon:

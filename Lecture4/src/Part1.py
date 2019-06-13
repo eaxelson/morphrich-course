@@ -4,14 +4,14 @@
 #
 # <ul>
 # <li>1. <a href="#1.-Test-material">Test material</a></li>
-# <li>2. <a href="#2.-Nouns">Nouns</a></li>
+# <li>2. <a href="#2.-Olonets-Karelian-Nouns">Olonets Karelian Nouns</a></li>
 # </ul>
 #
 
 # ## 1. Test material
 #
 # Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
-# file for Olonetsian Karelian nouns (N-kala_gt-norm.yaml).
+# file for Olonets Karelian nouns (N-kala_gt-norm.yaml).
 # Download it from
 # <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml">Giella repo</a>
 # or use a copy available in this directory. We'll go through the contents of the file.
@@ -157,11 +157,11 @@
 #      waien+V+Imprt+Pl2:  waiet
 # ```
 
-# We'll use the Olonets-Karelian yaml test file in the next lecture.
+# We'll use the Olonets Karelian yaml test file in the next lecture.
 
-# ## 2. Nouns
+# ## 2. Olonets Karelian Nouns
 #
-# Have a look at some Olonetsian Karelian lexc files in Giella repo:
+# Have a look at some Olonets Karelian lexc files in Giella repo:
 #
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/root.lexc">root.lexc</a>
 # * <a href="https://victorio.uit.no/langtech/trunk/langs/olo/src/morphology/stems/nouns.lexc">stems/nouns.lexc</a>
