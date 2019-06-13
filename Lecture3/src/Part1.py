@@ -23,9 +23,9 @@ tr = compile_lexc_script("""
 LEXICON Root
 cat # ;
 """)
-print(tr.extract_paths(output='raw'))
+print(tr.extract_paths(output='text'))
 
-# When we compile the script, we get a transducer that recognizes the string 'cat'.
+# When we compile the script, we get a transducer that recognizes the string 'cat' (with weight zero).
 
 # We continue with an example that uses multicharacter symbols and continuation lexicons.
 # `Multichar_Symbols` defines a set of symbols that are tokenized as single symbols in lexicon entries.
@@ -53,9 +53,9 @@ LEXICON VERB
 LEXICON END
 # ;
 """)
-print(tr.extract_paths(output='raw'))
+print(tr.extract_paths(output='text'))
 
-# When we compile the script, we get a transducer that recognizes the following strings:
+# When we compile the script, we get a transducer that recognizes the following strings (all with weight zero):
 #
 # <table>
 # <tr> <th>Input</th> <th>Output</th> </tr>
@@ -95,7 +95,7 @@ LEXICON VERB
 LEXICON END
 # ;
 """)
-print(tr.extract_paths(output='raw'))
+print(tr.extract_paths(output='text'))
 
 # When we compile the following script, we get a transducer that recognizes the following strings:
 #
@@ -216,7 +216,7 @@ for minutes in range(0,60):
 # <tr> <td>11:31—11:59</td> <td>'N minutes short of twelve'</td> </tr>
 # </table>
 
-# Also try clocks after noon:
+# Also try clocks after noon and compare them with clocks before noon:
 
 print(tr.lookup('22:15'))
 print(tr.lookup('10:15'))

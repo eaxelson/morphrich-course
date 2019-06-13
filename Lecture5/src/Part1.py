@@ -60,7 +60,7 @@ print(lexicon.lookup('kaNpa'))
 #
 # > ```# First, compile the lexc files:```
 # > 
-# > from hfst_dev import compile_lexc_files, HfstTransducer```
+# > ```from hfst_dev import compile_lexc_files, HfstTransducer```
 # > 
 # > ```kala = compile_lexc_files(('root.lexc','kala.lexc','nouns.lexc','clitics.lexc'))
 # > print(kala.lookup('kala+N+Pl+Ade'))```
@@ -129,7 +129,7 @@ print(kala.lookup('kala+N+Pl+Ade'))
 print(kala.lookup('kala+N+Pl+Abl'))
 
 # and get the result `(('kalo>i>l', 0.0),)` ('>' means morpheme boundary).
-# Compare the results with test file lines:
+# Compare the results with test file <i>N-kala_gt-norm.yaml</i> lines:
 #
 # ```
 # kala+N+Pl+Ade: kaloil

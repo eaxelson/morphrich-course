@@ -11,7 +11,7 @@
 # ## 1. Test material
 #
 # Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
-# file for Olonets Karelian nouns (N-kala_gt-norm.yaml).
+# file for Olonets Karelian nouns (<i>N-kala_gt-norm.yaml</i>).
 # Download it from
 # <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml">Giella repo</a>
 # or use a copy available in this directory. We'll go through the contents of the file.
@@ -35,7 +35,7 @@
 # Then there are the tests that define a full paradigm for the given test word,
 # in this case 'kala' ('fish'). A yaml test file lists several pairs of input and
 # output strings that must all be found in the transducer.
-# The input and output strings are separated by a colon and a whitespace ': '.
+# The input and output strings are separated by a colon followed by a whitespace `: `.
 # There can be several output strings for one input string.
 # They are given inside square brackets and separated by commas.
 #
@@ -132,7 +132,7 @@
 
 # If there are hundreds or thousands of forms, it is best to list them alphabetically.
 # See <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml">verb inflection</a>.
-# There are 141 forms listed but there are even more forms.
+# There are 141 forms listed in the test file but there are even more forms.
 
 
 # Compare e.g. with <a href="https://victorio.uit.no/langtech/trunk/langs/nds/test/src/gt-norm-yamls/V-waien_gt-norm.yaml">Low German verb inflection</a>:
@@ -157,7 +157,7 @@
 #      waien+V+Imprt+Pl2:  waiet
 # ```
 
-# We'll use the Olonets Karelian yaml test file in the next lecture.
+# We will use the Olonets Karelian test file in the next lecture to test a morphological generator introduced below.
 
 # ## 2. Olonets Karelian Nouns
 #
@@ -261,7 +261,6 @@
 
 # First, compile the lexc files:
 from hfst_dev import compile_lexc_files, HfstTransducer
-
 kala = compile_lexc_files(('root.lexc','kala.lexc','nouns.lexc','clitics.lexc'))
 print(kala.lookup('kala+N+Pl+Ade'))
 
