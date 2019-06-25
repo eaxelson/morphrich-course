@@ -39,13 +39,14 @@ LEXICON Root
 kaNpa # ;
 """)
 
-# TODO: implement also function compile_twolc_script
-# TODO: rewrite compile_twolc_file so that it returns the result instead of writing it to file
-from hfst_dev import compile_twolc_file, HfstInputStream
-compile_twolc_file('n2m.twolc','n2m.hfst',verbose=True)
-istr = HfstInputStream('n2m.hfst')
-rules = istr.read_all()
-istr.close()
+from hfst_dev import compile_twolc_script
+script="""
+Alphabet a k m n p N ;
+Rules
+"N to m"
+N:m <=> _ :p ;
+"""
+rules = compile_twolc_script(script,verbose=True)
 
 lexicon.compose_intersect(rules)
 print(lexicon.lookup('kaNpa'))
@@ -101,23 +102,8 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # a:o <=> Cns: _ (%{back%}:) (%^WGStem:) %^A2O: ;
 # ```
 
-# Then compile twolc rules. This takes some time and we get verbose output
-# (TODO: use python's stdout in hfst_dev module so that the output will actually show...):
-#
-# ```
-# Reading alphabet.
-# Reading sets.
-# Reading and compiling definitions.
-# Reading rules and compiling their contexts and centers.
-# Compiling rules.
-# Storing rules.
-# ```
-
-compile_twolc_file('olo-phon.twolc','olo-phon.hfst',verbose=True)
-
-istr = HfstInputStream('olo-phon.hfst')
-rules = istr.read_all()
-istr.close()
+# Then compile twolc rules.
+rules = compile_twolc_file('olo-phon.twolc',verbose=True)
 
 # We get 86 rules in total:
 print(len(rules))
