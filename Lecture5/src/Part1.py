@@ -103,6 +103,7 @@ print(kala.lookup('kala+N+Pl+Ade'))
 # ```
 
 # Then compile twolc rules.
+from hfst_dev import compile_twolc_file
 rules = compile_twolc_file('olo-phon.twolc',verbose=True)
 
 # We get 86 rules in total:
