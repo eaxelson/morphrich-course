@@ -11,7 +11,7 @@
 # ## 1. Test material
 #
 # Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
-# file for Olonets Karelian nouns (<i>N-kala_gt-norm.yaml</i>).
+# file for Olonets Karelian noun kala, 'fish' (<i>N-kala_gt-norm.yaml</i>).
 # Download it from
 # <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-kala_gt-norm.yaml">Giella repo</a>
 # or use a copy available in this directory. We'll go through the contents of the file.
@@ -271,7 +271,31 @@ from hfst_dev import compile_lexc_files, HfstTransducer
 kala = compile_lexc_files(('root.lexc','kala.lexc','nouns.lexc','clitics.lexc'))
 print(kala.lookup('kala+N+Pl+Ade'))
 
-# Without the rules, the result is `kala{back}^A2O>i>l`
+# Without the rules, the result is `kala{back}^A2O>i>l`.
 #
-# Simple concatenative morphology is not enough, but we also need phonological rules.
+# Simple concatenative morphology is not enough, but we also need phonological rules
+# to handle stem vowel change (i.e. `^A2O`) and get the correct result `kaloil`.
 # We will get back to them in the next lecture.
+
+# Let's try another word.
+# Have a look at the <a href="https://en.wikipedia.org/wiki/YAML">yaml</a>
+# file for Olonets Karelian noun koivu, 'birch' (<i>N-koivu_gt-norm.yaml</i>).
+# Download it from
+# <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/N-koivu_gt-norm.yaml">Giella repo</a>
+# or use a copy available in this directory.
+#
+# We will use a simplified one-stem version of stems/nouns.lexc named <i>koivu.lexc</i>.
+#
+# ```
+# LEXICON nouns
+# koivu+N:koivu N_KOIVU ;
+# ```
+
+# Compile the lexc files:
+koivu = compile_lexc_files(('root.lexc','koivu.lexc','nouns.lexc','clitics.lexc'))
+print(koivu.lookup('koivu+N+Pl+Ade'))
+
+# Without the rules, the result is `koivu{back}>l{oö}i>l`.
+#
+# Simple concatenative morphology is not enough in this case either.
+# Phonological rules are needed to handle wovel harmony (i.e. `{oö}`) and get the correct result `koivuloil`.
