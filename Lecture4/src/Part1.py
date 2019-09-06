@@ -39,6 +39,13 @@
 # There can be several output strings for one input string.
 # They are given inside square brackets and separated by commas.
 #
+# (When there is more than one form, the practice in the GIELLA infrastructure
+# is to place the normative/preferred form first. Hence, the Fish+N+Sg+Abe form “kalata”
+# is prefered over the form “kalatah”. This, of course, is not always the case,
+# for example the school may also have an influence on terminology,
+# i.e. Fish+N+Sg+Acc is realised as what the Finnish school would call
+# a genitive singular and nominative singular. [kalan, kala], respectively)
+#
 # Since we are dealing with a morphological generator,
 # the analysis is on the left side and the generated word form on the right side.
 # For each analysis, we list the possible generated forms. E.g. for singular abessive
@@ -130,7 +137,7 @@
 #      kala+N+Pl+Apr+Clt/gi: kalojelluogi
 # ```
 
-# If there are hundreds or thousands of forms, it is best to list them alphabetically.
+# If there are hundreds or thousands of forms, it may be best to list them alphabetically.
 # See <a href="https://victorio.uit.no/langtech/trunk/langs/olo/test/src/gt-norm-yamls/V-suvaija_gt-norm.yaml">verb inflection</a>.
 # There are 141 forms listed in the test file but there are even more forms.
 

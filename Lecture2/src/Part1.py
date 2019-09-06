@@ -62,7 +62,15 @@
 # ├── rcf
 # └── rom
 # ```
-# 
+#
+# There is a tool in the `main/langs` directory:
+#
+# ```
+# ./what-language-is LANGCODE
+# ```
+#
+# where LANGCODE is the ISO 639-3 code.
+#
 # Each language dir within `*langs/` has the following directory structure (the keyboard dirs have a much simpler structure):
 # 
 # ```
@@ -168,7 +176,7 @@
 # * lemmas
 # * in-source test data
 # 
-# Example test data:
+# Example test data for South Sami (sma) verb båetedh, 'to come':
 # 
 # ```
 # Tests:

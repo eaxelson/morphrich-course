@@ -69,7 +69,7 @@
 # <tr> <td>3</td> <td>Simple lexc (numerals, dates, clocks)</td> </tr>
 # <tr> <td>4</td> <td>Writing test material and applying simple concatenative morphology</td> </tr>
 # <tr> <td>5</td> <td>Twolc & xfst rewrite rules</td> </tr>
-# <tr> <td>6</td> <td>Shared language-independent modeling (examples from Saamic languages, perhaps hierarchical)</td> </tr>
+# <tr> <td>6</td> <td>Shared language-independent modeling (examples from Saami languages, perhaps hierarchical)</td> </tr>
 # </table>
 
 # ## 5. Majority vs. minority language technology
@@ -85,12 +85,12 @@
 #     * many of them technologically simple, you could use what you carried with you and found around you
 #         * <a href="img/cuneiform.jpg">Cuneiforms</a>
 #         * <a href="img/b190.jpg">Runes</a>
-#     * using bible translations as a proxy, <a href="https://en.wikipedia.org/wiki/List_of_Bible_translations_by_language">roughly 1600 of the about 7000 languages of the world still doesn't have a writing system</a> at all
+#     * using bible translations as a proxy, <a href="https://en.wikipedia.org/wiki/List_of_Bible_translations_by_language">roughly 1600 of the about 7000 languages of the world still don't have a writing system</a> at all
 # * typing:
-#     * Gutenberg increased production speed tremendously, and similarly reduced costs
+#     * Gutenberg increased production speed tremendously and similarly reduced costs
 #     * but the initial costs got much higher — now a pen or a knife or a stick was not enough anymore, you need types, lots of types, and a big machine
 #     * Gutenberg <img src="img/printpress.jpg">
-# * digitalisation:
+# * digitisation:
 #     * reducing the cost of text production dramatically once more
 #     * but the initial costs and barriers again goes up, as you need:
 #         * a computer to write (and potentially all your readers as well)
@@ -98,7 +98,7 @@
 #         * fonts
 #         * an encoding standard
 #         * standards for languages, writing systems, areas, etc.
-#         * operating systems that can render your text properly using all the above (and this is still not the case for some writing systems: <a href="https://en.wikipedia.org/wiki/Mongolian_script#Font_issues">«As of 2015 there are no fonts that successfully display all of Mongolian correctly when written in Unicode.»</a>, cf also Kildin Sámi and any other language forced to use combining diacritics because Unicode does not allow any new precomposed letters)
+#         * operating systems that can render your text properly using all the above (and this is still not the case for some writing systems: <a href="https://en.wikipedia.org/wiki/Mongolian_script#Font_issues">«As of 2015 there are no fonts that successfully display all of Mongolian correctly when written in Unicode.»</a>, cf also Kildin Sámi, Mansi, Khanty and any other language forced to use combining diacritics because Unicode does not allow any new precomposed letters)
 #         * Internet <img src="img/internet.jpg">
 #
 #
@@ -156,7 +156,7 @@
 # Combine the typological differences with the differences in economy and technology,
 # and the result is that the dominating language technologies are such that linguistic analysis doesn't really matter.
 # Morphology is a problem rather than a feature, and the same goes for phonology:
-# the technologies basically assumes a linear string of (mostly) invariant words, and calculate statistical or other patterns from these strings.
+# the technologies basically assume a linear string of (mostly) invariant words, and calculate statistical or other patterns from these strings.
 # 
 # This makes it even harder to develop tools for the languages we care about - the mainstream technology is more or less useless, at least presently.
 # 
@@ -172,9 +172,9 @@
 # University of Helsinki being one such place.
 # 
 # Using technology developed here,
-# it is possible to build tools and LT solutions that will work well for in principle any language in the world.
+# it is possible to build tools and LT solutions that will work well for, in principle, any language in the world.
 # 
-# This course is an introduction to these technologies and the tools that can be built with them, and the framework around them.
+# This course is an introduction to these technologies and the tools that can be built with them, as well as the framework around them.
 # 
 # 
 # #### Support for minority languages
@@ -190,7 +190,7 @@
 # <a href="img/crk-Latn.png">Plains cree keyboard menu entry</a>
 # 
 # So — does it make sense to talk about minority and majority LT?
-# Not in itself, but because of the material basis or reality that LT must build on, and that have been presented above, it does.
+# Not in itself, but because of the material basis or reality that LT must build on, and have been presented above, it does.
 # 
 # #### Majority language technology (= "English" LT)
 # 
@@ -226,8 +226,8 @@
 # 
 # #### Reusable LT tool components
 # 
-# The basic machinery of a speller is the same independent of language.
-# At the same time it is a lot of work to develop a decent speller engine,
+# The basic machinery in a speller is the same regardless of the language.
+# At the same time it takes a lot of work to develop a decent speller engine,
 # and make it work with MS Office, LibreOffice, InDesign, etc
 # 
 # Factoring out those components,
@@ -261,4 +261,4 @@
 # * the up-front costs of LT is huge, leaving most languages out of even basic LT support
 # * working rule-based and with reusability in mind helps reduce the costs
 # * building on what has been done for other languages helps further reducing the costs
-# * this course will focus on mostly minority languages from the Uralic language family
+# * this course will focus mainly on minority languages from the Uralic language family
