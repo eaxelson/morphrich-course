@@ -8,27 +8,41 @@
 # <li>3. <a href="#3.-...">...</a></li>
 # </ul>
 
-# Finnish koivu koivujen (concatenative)
-# Finnish kala kalojen (vowel change)
-# Olonets-Karelian meččy mečän (gradation + vowel change)
-# Olonets-Karelian pata puan (gradation + diphtongisation)
-# Finnish ajatella ajattelen (two gradations)
-# Also otti-lähti, ota-lähde. Act/Pass, Tempus, Numerus, Modus (Inf/Fin) = 2 x 4 or 5 = 8 or 10 possibilities.
-
-# Long-distance dependencies can be useful in spellchecking or pedagogically.
-# Wrong kind of paradigm instead of plain typing errors.
-# E.g. auto -> audon, suo -> suoita.
-# Allow over-generation and mark wrong forms with "Err/Orth", e.g. in vro.
-
-# Stem or ending that is altered? Where should the flag/filter/trigger be placed?
-
-# E.g. Estonian +N and +A, do they follow the same pattern? With some exceptions ('nen'-endings).
-# And numerals: Finnish yhdesti, kahdesti, kolmesti, neljästi, kymmenesti, kahdestitoista, sadasti, miljoonasti?
-# Ingrian numerals.
-
-# Veps and Olonets exist, Ludian must be added.
+# ## 1. Inflection in Uralic languages
 #
-# Diphtong to single vocal, last vowel drops. E.g. Finnish sauna -> Estonian saun.
+# * concatenative: e.g. Finnish koivu - koivujen
+# * vowel change: e.g. Finnish kala - kalojen
+# * gradation + wovel change: e.g. Olonets-Karelian meččy - mečän
+# * gradation + diphtongisation: e.g. Olonets-Karelian pata - puan
+# * multiple gradations: e.g. Finnish ajatella - ajattelen
+#
+# Inflection can be present in two parts of a word: e.g. otti-lähti - ota-lähde.
+# There is a long-distance dependency. Features that must be the same are
+# Act/Pass, Tempus, Numerus, Person, Modus (sometimes even Inf/Fin), making a total of
+# 2 x 4 x 2 x 3 x 4 (x 2) = 64 x 3 = 192 (x 2) combinations. If these are modeled by
+# simply listing all possible word-forms, the model gets big. Alternative solution:
+# flag diacritics.
+#
+# Sometimes we want to keep the incorrect forms in the model but mark them as wrong.
+# This can be useful spellchecking or pedagogically.
+# The learner of a language can be informed that they have used the wrong kind of paradigm
+# instead of interpreting their answer as a typing error.
+# E.g. Finnish auto -> audon, suo -> suoita.
+# Allow over-generation and mark wrong forms with "Err/Orth", see e.g. vro language in giella infra.
+#
+# Stem or ending that is altered? Where should the flag/filter/trigger be placed?
+# E.g. Finnish singular illative: käsi - käteen. Is it käte+Vn, kätee+n, kät+een?
+#
+# Another example: Estonian nouns and adjectives, +N and +A, do they follow the same pattern?
+# Do we want to have separate paradigms, or use the same (with some exceptions ('nen'-endings))?
+# How productive should the model be? E.g. Finnish numerals: yhdesti, kahdesti, kolmesti, neljästi,
+# kymmenesti, kahdestitoista, sadasti, miljoonasti?
+# Also Ingrian numerals.
+
+# ## 2. Adding a similar language
+#
+# E.g. in Giella infra, Veps and Olonets exist, Ludian must be added.
+# In Ludian, diphtongs are changed to a single vocal, last vowel drops. Cf. Finnish sauna -> Estonian saun.
 #
 # <table>
 # <tr><th>vep</th><th>lud</th><th>olo</th><th>en</th></tr>
