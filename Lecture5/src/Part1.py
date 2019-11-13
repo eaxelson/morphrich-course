@@ -16,6 +16,9 @@
 # Twolc is often used for writing phonological rules that are applied to a lexicon written in lexc.
 # The rules are applied via intersection instead of composition. (TODO: explain more?)
 #
+# (It is important to mention the use and declaration of Multichar_Symbols in root.lexc
+# or wherever that happens to be.)
+#
 # A minimalistic example of lexc combined with twolc:
 #
 # lexc script containing one entry `kaNpa`:
@@ -94,6 +97,22 @@ print(kala.lookup('kala+N+Pl+Ade'))
 
 # Without the rules, the result is (('kala{back}^A2O>i>l', 0.0),)
 
+# Compare with Finnish, where, instead of having a trigger to cause a:o,
+# there are three different I-triggers addressing plural, past tense and the conditional
+# - i-trigger also changes to i or j.
+# In Olonets-Karelian the ^A2O trigger changes to zero and the i:j alteration
+# is dealt with as a separate phenomenon. Separate phenomena are easier to clean up (maybe).
+
+# In Vro:
+#
+# ```
+# "o2õ"
+# !! __@RULENAME@__
+# o:õ <=> [Cns - [m|p|b|v]] _ o: (HarmDummies:) %^OO2Õ: %> i ;
+# !!€ joo%^OO2Õ%>i
+# !!€ jõ00%>i
+# ```
+
 # We introduce phonological rewrite rules given in file <i>olo-phon.twolc</i>. Note e.g.:
 #
 # ```
@@ -108,6 +127,22 @@ rules = compile_twolc_file('olo-phon.twolc',verbose=True)
 
 # We get 86 rules in total:
 print(len(rules))
+
+# (The multichar symbol %^A2O might be mentioned or underlined here.)
+# Triggers can be used for phenomena to the left and the right.
+# Be sure to sort out which direction each trigger points to,
+# e.g. in Finnish and Olonets-Karelian vowel harmony is triggered by %{back%}
+# and %{front%}, and the things affected lie to the right.
+# Consonant gradation, however, happens on the left.
+
+# Consonant fradation, as we know, happens not only in the final coda of the stem
+# but in the penultimate coda, as well:
+# ```
+# meččy:mečän
+# Agjatoi:agjattoma ‘loputon’
+# ajatella:ajattelee
+# bringahutella+V:bringahuttel V_KUVITELLA  "heilutella" ;
+# ```
 
 # We compose-intersect the lexicon with the rules (TODO: explain what compose-intersection does)
 
@@ -129,6 +164,9 @@ for testcase in ('kala+N+Pl+Ade','kala+N+Pl+Abl'):
         print(res[0].replace('>',''))
 
 # Get rid of morpheme boundary '>' so we don't have to replace it every time.
+
+# Why do we use boundaries in the first place? Boundary marker helps writing rules when we know where
+# one morpheme end and the next begins.
 
 from hfst_dev import EPSILON
 kala.substitute('>',EPSILON)
@@ -161,7 +199,19 @@ kala.invert()
 kala.minimize()
 print(kala.lookup('kaloil'))
 
+# Test the same with koivu, 'birch'.
+
 # ## 3. Twolc vs. xfst rewrite rules
 #
 # TODO: Explain the differences between twolc and xfst formalism.
 #
+# * One thing is ordering.
+# * HFST has upkeep.
+# * Multichar-symbols in different places.
+#
+# Unexpected morphology:
+#
+# * Fin 'joulumpi' ('Xmaser')
+# * Eng fun, funner, funnest ('it is fun' -> 'fun' looks like adjective)
+# * Quick: quickly, quicklier, slowlier
+# * "German bringen is a strong verb, and it conjugates almost just like in English" -> bring: brang: brung?
