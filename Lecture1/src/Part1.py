@@ -62,6 +62,8 @@
 
 # ## 4. Course overview
 #
+# At the moment, the course contains the following lectures:
+#
 # <table>
 # <tr> <th>Lecture</th> <th>Topics</th> </tr>
 # <tr> <td>1</td> <td>Course intro, field overview, majority vs minority language technology</td> </tr>
@@ -69,8 +71,13 @@
 # <tr> <td>3</td> <td>Simple lexc (numerals, dates, clocks)</td> </tr>
 # <tr> <td>4</td> <td>Writing test material and applying simple concatenative morphology</td> </tr>
 # <tr> <td>5</td> <td>Twolc & xfst rewrite rules</td> </tr>
-# <tr> <td>6</td> <td>Shared language-independent modeling (examples from Saami languages, perhaps hierarchical)</td> </tr>
 # </table>
+#
+# Lectures under construction:
+#
+# * 6. Shared language-independent modeling (examples from Saami languages, perhaps hierarchical)
+# * ...
+#
 
 # ## 5. Majority vs. minority language technology
 #
